@@ -12,12 +12,13 @@ public class LightSensor extends Sensor {
 	// variables
 	// -----------------------------------------------------------------------------
 	
-	final static long POLLING_DELAY = 1000;
+	final static long POLLING_DELAY = 100;
 	
 	// sensor
 	final NXTLightSensor light_sensor;
 	final Port sensor_port;
 	final int player_id;
+	final float threshhold = 0.5f;
 	
 	protected  final Game game;
 
@@ -50,7 +51,7 @@ public class LightSensor extends Sensor {
 			while (!this.thread.isInterrupted()) {
 				this.light_sensor.setFloodlight(true);
 				ambient.fetchSample(sample, 0);
-				if (sample[0] > 0.65f && !this.thread.isInterrupted()) {
+				if (sample[0] > threshhold && !this.thread.isInterrupted()) {
 					this.game.removeLife(this.player_id);
 				}
 				Thread.sleep(POLLING_DELAY);

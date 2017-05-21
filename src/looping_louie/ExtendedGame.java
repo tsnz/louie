@@ -9,6 +9,10 @@ public class ExtendedGame extends Game {
 	// -----------------------------------------------------------------------------
 
 	private boolean motor_moving_forward; // 1 = forward, 0 = backward
+	// minimal speed
+	private int min_speed = 50;
+	// maximal randomly generated speed. max_generated_random_speed + min_speed = max speed
+	private int max_generated_random_speed = 200;
 
 	// -----------------------------------------------------------------------------
 	// functions
@@ -27,6 +31,7 @@ public class ExtendedGame extends Game {
 
 	@Override
 	protected void setupSensors() {
+// Currently set up in super		
 //		Sensor sensor1 = new LightSensor(SensorPort.S1, 0, this, this.gameReadyToStartLatch);
 //		this.sensors.add(sensor1);
 		this.setupLightSensors();
@@ -54,8 +59,8 @@ public class ExtendedGame extends Game {
 	 */
 	public void newRandomSpeed() {
 		Random randomGenerator = new Random();
-		int randomSpeed = randomGenerator.nextInt(250);		
-		this.motor.setSpeed(randomSpeed);
+		int randomSpeed = randomGenerator.nextInt(this.max_generated_random_speed);		
+		this.motor.setSpeed(randomSpeed + this.min_speed);
 	}
 
 }

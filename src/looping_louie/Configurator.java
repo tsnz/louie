@@ -38,7 +38,7 @@ public class Configurator {
 
 	// game speed menu
 	private static String speed_menu_title = "Geschwindigkeit";
-	private static String[] speed_menu_entries = { "150", "200", "250", "300", "400" };
+	private static String[] speed_menu_entries = { "100", "150", "200", "250" };
 	private static TextMenu speed_menu = new TextMenu(speed_menu_entries, 1, speed_menu_title);	
 
 	// -----------------------------------------------------------------------------

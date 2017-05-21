@@ -13,7 +13,7 @@ public class Configuration {
 	
 	
 	// Stored defaults
-	final static int defaultSpeed = 300;
+	final static int defaultSpeed = 150;
 	final static int defaultLifes = 3;
 	final static boolean defaultRandom = false;
 	
