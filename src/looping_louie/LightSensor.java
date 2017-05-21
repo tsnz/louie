@@ -10,9 +10,9 @@ public class LightSensor extends Sensor {
 
 	// -----------------------------------------------------------------------------
 	// variables
-	// -----------------------------------------------------------------------------
-	
-	final static long POLLING_DELAY = 100;
+	// -----------------------------------------------------------------------------	
+	final long POLLING_DELAY;
+	final long INVINCIBILITY_FRAME;
 	
 	// sensor
 	final NXTLightSensor light_sensor;
@@ -33,6 +33,8 @@ public class LightSensor extends Sensor {
 		this.light_sensor = new NXTLightSensor(sensor_port);
 		this.gameReadyToStartLatch = gameReadyToStart;
 		this.start();
+		this.POLLING_DELAY = game.configuration.getPollingDelay();
+		this.INVINCIBILITY_FRAME = game.configuration.getInvincibilityFrame();
 	}
 
 	@Override
@@ -53,8 +55,9 @@ public class LightSensor extends Sensor {
 				ambient.fetchSample(sample, 0);
 				if (sample[0] > threshhold && !this.thread.isInterrupted()) {
 					this.game.removeLife(this.player_id);
+					Thread.sleep(POLLING_DELAY);
 				}
-				Thread.sleep(POLLING_DELAY);
+				Thread.sleep(INVINCIBILITY_FRAME);
 			}
 		} catch (InterruptedException e) {
 			// close sensor

@@ -10,9 +10,9 @@ public class StandardGame extends Game {
 	// functions
 	// -----------------------------------------------------------------------------
 
-	public StandardGame(Configuration configuration) {
+	public StandardGame(Configuration configuration, Display display) {
 		// use constructor of parent class (Game)
-		super(configuration);
+		super(configuration, display);
 	}
 
 	@Override

@@ -16,6 +16,8 @@ public class Configuration {
 	final static int defaultSpeed = 150;
 	final static int defaultLifes = 3;
 	final static boolean defaultRandom = false;
+	final static int POLLING_DELAY = 100;
+	final static int INVINCIBILITY_FRAME = 1000;
 	
 	// -----------------------------------------------------------------------------
 	// functions
@@ -46,11 +48,19 @@ public class Configuration {
 		this.random = random;
 	}
 
-	public int getLifes() {
+	public int getDefaultLifes() {
 		return lifes;
 	}
 
 	public void setLifes(int lifes) {
 		this.lifes = lifes;
+	}
+	
+	public int getPollingDelay() {
+		return Configuration.POLLING_DELAY;
+	}
+	
+	public int getInvincibilityFrame() {
+		return Configuration.INVINCIBILITY_FRAME;		
 	}
 }

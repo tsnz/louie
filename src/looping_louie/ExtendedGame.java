@@ -18,9 +18,9 @@ public class ExtendedGame extends Game {
 	// functions
 	// -----------------------------------------------------------------------------
 
-	public ExtendedGame(Configuration configuration) {
+	public ExtendedGame(Configuration configuration, Display display) {
 		// use constructor of parent class (Game)
-		super(configuration);
+		super(configuration, display);
 	}
 
 	@Override

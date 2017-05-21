@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 
 import lejos.hardware.Button;
+import lejos.hardware.Sound;
 import lejos.hardware.lcd.LCD;
 import lejos.hardware.motor.NXTRegulatedMotor;
 import lejos.hardware.port.MotorPort;
@@ -16,6 +17,7 @@ public abstract class Game implements Runnable {
 	// -----------------------------------------------------------------------------
 	// variables
 	// -----------------------------------------------------------------------------
+	Sound sounds;
 
 	// thread
 	protected Thread thread;
@@ -27,7 +29,10 @@ public abstract class Game implements Runnable {
 	protected final RegulatedMotor motor = new NXTRegulatedMotor(MotorPort.A);
 
 	// configurator
-	protected final Configuration configuration;
+	public final Configuration configuration;
+
+	// display
+	protected final Display display;
 
 	// game variables
 	protected int[] player_lifes;
@@ -41,11 +46,12 @@ public abstract class Game implements Runnable {
 	 * 
 	 * @param configuration
 	 */
-	public Game(Configuration configuration) {
+	public Game(Configuration configuration, Display display) {
 		this.configuration = configuration;
+		this.display = display;
 		this.player_lifes = new int[4];
 		for (int i = 0; i < 4; i++) {
-			this.player_lifes[i] = configuration.getLifes();
+			this.player_lifes[i] = configuration.getDefaultLifes();
 		}
 		this.gameFinishedLatch = new CountDownLatch(1);
 		this.gameReadyToStartLatch = new CountDownLatch(1);
@@ -84,8 +90,9 @@ public abstract class Game implements Runnable {
 			Sensor sensor = new LightSensor(ports[i], i, this, this.gameReadyToStartLatch);
 			this.sensors.add(sensor);
 		}
-		//Sensor sensor = new LightSensor(MotorPort.D, 0, this, this.gameReadyToStartLatch);
-		//this.sensors.add(sensor);
+		// Sensor sensor = new LightSensor(MotorPort.D, 0, this,
+		// this.gameReadyToStartLatch);
+		// this.sensors.add(sensor);
 	}
 
 	/**
@@ -102,8 +109,36 @@ public abstract class Game implements Runnable {
 	 * Start game
 	 */
 	private void begin() {
+		this.countdown();
 		this.motor.forward();
 		this.gameReadyToStartLatch.countDown();
+		this.display.displayInitialLifes(this.configuration.getDefaultLifes());
+	}
+
+	/**
+	 * Count down before game starts
+	 */
+	public void countdown() {		
+		try {
+			Sound.beep();
+			LCD.clear();
+			LCD.drawInt(3, 7, 4);
+			Thread.sleep(1000);
+			LCD.clear();
+			LCD.drawInt(2, 7, 4);			
+			Sound.beep();
+			Thread.sleep(1000);
+			LCD.clear();
+			LCD.drawInt(1, 7, 4);
+			Sound.beep();
+			Thread.sleep(1000);
+			LCD.clear();
+			LCD.drawString("GO", 6, 4);
+			Sound.twoBeeps();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -123,9 +158,15 @@ public abstract class Game implements Runnable {
 	 */
 	public synchronized void removeLife(int player) {
 		this.player_lifes[player] += -1;
+		this.display.displayLifesForPlayer(player, this.player_lifes[player]);
+		if (this.player_lifes[player] >= 1) {
+			Sound.twoBeeps();
+		} else {
+			Sound.beep();
+		}
 		if (this.player_lifes[player] == 0) {
 			this.motor.stop();
-			LCD.drawString("Player " + Integer.toString(player) + " lost!", 0, 4);
+			this.display.displayLossForPlayer(player);
 			Button.waitForAnyPress();
 			this.gameFinishedLatch.countDown();
 		}

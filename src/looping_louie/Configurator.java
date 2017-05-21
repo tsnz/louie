@@ -6,6 +6,7 @@ import lejos.utility.TextMenu;
 public class Configurator {
 
 	private Configuration configuration;
+	private Display display;
 	
 	// -----------------------------------------------------------------------------
 	// variables
@@ -53,7 +54,7 @@ public class Configurator {
 
 		// create new default configuration if none is found
 		this.configuration = new Configuration();
-
+		this.display = new Display();
 	}
 
 	/**
@@ -72,11 +73,11 @@ public class Configurator {
 			switch (selected_entry) {
 			// start standard game
 			case 0:
-				Game game = new StandardGame(this.configuration);
+				Game game = new StandardGame(this.configuration, this.display);
 				break;
 			// start extended game
 			case 1:
-				ExtendedGame extendedGame = new ExtendedGame(this.configuration);				
+				ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display);				
 				break;
 			// options
 			case 2:
