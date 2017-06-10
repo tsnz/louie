@@ -60,7 +60,7 @@ public abstract class Game implements Runnable {
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}	
 	}
 
 	/**
@@ -110,7 +110,7 @@ public abstract class Game implements Runnable {
 	 */
 	private void begin() {
 		this.countdown();
-		this.motor.forward();
+		this.motor.backward();
 		this.gameReadyToStartLatch.countDown();
 		this.display.displayInitialLifes(this.configuration.getDefaultLifes());
 	}
