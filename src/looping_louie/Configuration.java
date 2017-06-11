@@ -13,11 +13,14 @@ public class Configuration {
 	
 	
 	// Stored defaults
-	final static int defaultSpeed = 150;
+	final static int defaultSpeed = 80;
 	final static int defaultLifes = 3;
 	final static boolean defaultRandom = false;
-	final static int POLLING_DELAY = 100;
+	final static int SENSOR_POLLING_DELAY = 10;
 	final static int INVINCIBILITY_FRAME = 1000;
+	final static int ARM_CONFIGURATION_SPEED = 10;
+	final static int ARM_CONFIGURATION_AGLE = 4;
+	final static int ARM_CONFIGURATION_SLEEP_TIME = 200;
 	
 	// -----------------------------------------------------------------------------
 	// functions
@@ -57,7 +60,7 @@ public class Configuration {
 	}
 	
 	public int getPollingDelay() {
-		return Configuration.POLLING_DELAY;
+		return Configuration.SENSOR_POLLING_DELAY;
 	}
 	
 	public int getInvincibilityFrame() {

@@ -3,7 +3,6 @@ package looping_louie;
 import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 
-import lejos.hardware.Button;
 import lejos.hardware.Sound;
 import lejos.hardware.lcd.LCD;
 import lejos.hardware.motor.NXTRegulatedMotor;
@@ -24,9 +23,11 @@ public abstract class Game implements Runnable {
 	protected CountDownLatch gameFinishedLatch;
 	protected CountDownLatch gameReadyToStartLatch;
 
-	// sensors and motor
-	protected ArrayList<Sensor> sensors = new ArrayList<>();
-	protected final RegulatedMotor motor = new NXTRegulatedMotor(MotorPort.A);
+	// sensors, motor and listeners
+	protected ArrayList<LightSensor> lightSensors = new ArrayList<>();	
+	protected LightSensor configurationSensor;
+	protected final RegulatedMotor motor = new NXTRegulatedMotor(MotorPort.D);
+	protected MotorListener motorListener;
 
 	// configurator
 	public final Configuration configuration;
@@ -44,23 +45,20 @@ public abstract class Game implements Runnable {
 	/**
 	 * Constructor
 	 * 
-	 * @param configuration
+	 * @param configuration to get settings for the game from
 	 */
 	public Game(Configuration configuration, Display display) {
+		// set local variables using parameters
 		this.configuration = configuration;
 		this.display = display;
+		// prepare player lifes
 		this.player_lifes = new int[4];
 		for (int i = 0; i < 4; i++) {
 			this.player_lifes[i] = configuration.getDefaultLifes();
 		}
+		// create latches to manage game start and stop
 		this.gameFinishedLatch = new CountDownLatch(1);
-		this.gameReadyToStartLatch = new CountDownLatch(1);
-		try {
-			this.startGame();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
+		this.gameReadyToStartLatch = new CountDownLatch(1);	
 	}
 
 	/**
@@ -75,7 +73,7 @@ public abstract class Game implements Runnable {
 		this.thread.start();
 		// resume once game finished
 		this.thread.join();
-	}
+	}		
 
 	/**
 	 * Setup all available light sensors
@@ -85,14 +83,15 @@ public abstract class Game implements Runnable {
 		// available ports
 		Port[] ports = new Port[] { SensorPort.S1, SensorPort.S2, SensorPort.S3, SensorPort.S4 };
 
+		//
+		LightSensor sensor = new LightSensor(ports[0], 0, this);
+		this.configurationSensor = sensor;
+		this.lightSensors.add(sensor);
 		// create a light sensor for each port
-		for (int i = 0; i < 4; i++) {
-			Sensor sensor = new LightSensor(ports[i], i, this, this.gameReadyToStartLatch);
-			this.sensors.add(sensor);
-		}
-		// Sensor sensor = new LightSensor(MotorPort.D, 0, this,
-		// this.gameReadyToStartLatch);
-		// this.sensors.add(sensor);
+		for (int i = 1; i < 4; i++) {
+			LightSensor lightsensor = new LightSensor(ports[i], i, this);
+			this.lightSensors.add(lightsensor);
+		}		
 	}
 
 	/**
@@ -109,6 +108,10 @@ public abstract class Game implements Runnable {
 	 * Start game
 	 */
 	private void begin() {
+		calibrateArm();
+		motorListener = new MotorListener(gameReadyToStartLatch, this.motor, this.lightSensors);				
+		this.motor.resetTachoCount();
+		this.motor.setSpeed(this.configuration.getSpeed());
 		this.countdown();
 		this.motor.backward();
 		this.gameReadyToStartLatch.countDown();
@@ -140,16 +143,47 @@ public abstract class Game implements Runnable {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Calibrate arm by moving it to its default starting position
+	 * This is necessary for the correct sensor timings
+	 */
+	public void calibrateArm() {
+		
+		boolean calibrated = false;
+		
+		this.motor.setSpeed(Configuration.ARM_CONFIGURATION_SPEED);		
+		
+		while(!calibrated) {
+			
+			this.motor.rotate(Configuration.ARM_CONFIGURATION_AGLE);
+			
+			// check for arms position and move arm to player one
+			if(this.lightSensors.get(0).checkForBreach()) {
+				calibrated = true;			
+			} //else if (this.lightSensors.get(1).checkForBreach()) {				
+//				calibrated = true;
+//				this.motor.rotate(90);			
+//			} else if (this.lightSensors.get(2).checkForBreach()) {
+//				calibrated = true;
+//				this.motor.rotate(-180);
+//			} else if (this.lightSensors.get(3).checkForBreach()) {
+//				calibrated = true;
+//				this.motor.rotate(-90);
+//			}
+									
+			try {
+				Thread.sleep(Configuration.ARM_CONFIGURATION_SLEEP_TIME);
+			} catch (InterruptedException e) {
+				// can be ignored since no interruption is possible
+			}
+		}		
+	}
 
 	/**
 	 * Free up used resources
 	 */
-	protected void cleanup() {
-		this.motor.close();
-		for (Sensor sensor : sensors) {
-			sensor.stop();
-		}
-	}
+	protected abstract void cleanup();
 
 	/**
 	 * Remove life from player. Stops game if player reaches 0 lifes
@@ -165,9 +199,8 @@ public abstract class Game implements Runnable {
 			Sound.beep();
 		}
 		if (this.player_lifes[player] == 0) {
-			this.motor.stop();
-			this.display.displayLossForPlayer(player);
-			Button.waitForAnyPress();
+			this.motor.stop();			
+			this.display.displayLossForPlayer(player);			
 			this.gameFinishedLatch.countDown();
 		}
 	}
@@ -181,8 +214,7 @@ public abstract class Game implements Runnable {
 		try {
 			this.gameFinishedLatch.await();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// interruption not possible since this is the main thread
 		}
 		this.cleanup();
 		return;

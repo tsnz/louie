@@ -2,7 +2,7 @@ package looping_louie;
 
 import java.util.concurrent.CountDownLatch;
 
-public abstract class Sensor implements Runnable {
+public abstract class Sensor {
 
 	// -----------------------------------------------------------------------------
 	// variables
@@ -19,11 +19,11 @@ public abstract class Sensor implements Runnable {
 	/**
 	 * Starts listener
 	 */
-	protected void start() {
-		this.thread = new Thread(this);
-		this.thread.setDaemon(true);
-		thread.start();
-	}
+//	protected void start() {
+//		this.thread = new Thread(this);
+//		this.thread.setDaemon(true);
+//		this.thread.start();
+//	}
 	
 	
 	
@@ -31,13 +31,6 @@ public abstract class Sensor implements Runnable {
 	 * Stops listener. Returns after thread is closed
 	 */
 	public void stop() {
-		this.thread.interrupt();
-		try {
-			this.thread.join();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		this.cleanup();
 	}
 	

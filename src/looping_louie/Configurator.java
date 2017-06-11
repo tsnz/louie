@@ -1,17 +1,23 @@
 package looping_louie;
 
+import java.util.ArrayList;
+
+import lejos.hardware.Button;
+import lejos.hardware.Key;
 import lejos.hardware.lcd.LCD;
+import lejos.hardware.port.Port;
+import lejos.hardware.port.SensorPort;
 import lejos.utility.TextMenu;
 
 public class Configurator {
 
 	private Configuration configuration;
 	private Display display;
-	
+
 	// -----------------------------------------------------------------------------
 	// variables
 	// -----------------------------------------------------------------------------
-	
+
 	// -----------------------------------------------------------------------------
 	// error messages
 
@@ -21,7 +27,6 @@ public class Configurator {
 	// -----------------------------------------------------------------------------
 	// menus
 
-
 	// main menu
 	private static String display_title = "Looping Louie";
 	private static String[] main_menu_entries = { "Standardpiel", "Erweitertes Spiel", "Optionen" };
@@ -29,7 +34,8 @@ public class Configurator {
 
 	// options menu
 	private static String options_menu_title = "Optionen";
-	private static String[] options_menu_entries = { "Leben", "Geschwindigkeit", "Richtungswechsel" };
+	private static String[] options_menu_entries = { "Leben", "Geschwindigkeit", "Richtungswechsel",
+			"Sensoren konfigurieren" };
 	private static TextMenu options_menu = new TextMenu(options_menu_entries, 1, options_menu_title);
 
 	// game life menu
@@ -40,12 +46,12 @@ public class Configurator {
 	// game speed menu
 	private static String speed_menu_title = "Geschwindigkeit";
 	private static String[] speed_menu_entries = { "100", "150", "200", "250" };
-	private static TextMenu speed_menu = new TextMenu(speed_menu_entries, 1, speed_menu_title);	
+	private static TextMenu speed_menu = new TextMenu(speed_menu_entries, 1, speed_menu_title);
 
 	// -----------------------------------------------------------------------------
 	// functions
 	// -----------------------------------------------------------------------------
-	
+
 	/**
 	 * Constructor
 	 */
@@ -66,18 +72,30 @@ public class Configurator {
 		// stay in menu until escape is pressed
 		while (!exit) {
 			LCD.clear();
-			
+
 			// get user selection
 			int selected_entry = main_menu.select();
-			
+
 			switch (selected_entry) {
 			// start standard game
 			case 0:
 				Game game = new StandardGame(this.configuration, this.display);
+				try {
+					game.startGame();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				break;
 			// start extended game
 			case 1:
-				ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display);				
+				ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display);
+				try {
+					extendedGame.startGame();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 			// options
 			case 2:
@@ -87,6 +105,8 @@ public class Configurator {
 			default:
 				exit = true;
 			}
+			// Wait for player to confirm 'player lost' screen
+			Button.waitForAnyPress();
 		}
 	}
 
@@ -108,9 +128,43 @@ public class Configurator {
 			case 1:
 				this.selectGameSpeed();
 				break;
+			case 3:
+				showSensorOutput();
+				break;
 			default:
 				exit = true;
 			}
+		}
+	}
+
+	private void showSensorOutput() {
+		LCD.clear();
+
+		// available ports
+		Port[] ports = new Port[] { SensorPort.S1, SensorPort.S2, SensorPort.S3, SensorPort.S4 };
+		// list to store all created sensors
+		ArrayList<LightSensor> lightSensors = new ArrayList<>();
+		// create a light sensor for each port
+		for (int i = 0; i < 4; i++) {
+			LightSensor lightsensor = new LightSensor(ports[i]);
+			lightSensors.add(lightsensor);
+		}
+
+		boolean configurationFinished = false;
+		while (!configurationFinished) {
+			for (int i = 0; i < 4; i++) {
+				LCD.drawString("Sensor " + Integer.toString(i) + ": " + lightSensors.get(i).getValue() , //Float.toString(lightSensors.get(i).getValue())
+						0, i);
+			}
+
+			int pressedKey = Button.waitForAnyEvent();
+			LCD.drawInt(pressedKey, 0, 6);
+			// 8192 = escape bitmap
+			if (pressedKey == 8192)
+				configurationFinished = true;
+		}
+		for (LightSensor sensor : lightSensors) {
+			sensor.cleanup();
 		}
 	}
 

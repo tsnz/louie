@@ -5,7 +5,7 @@ import java.util.concurrent.CountDownLatch;
 
 import lejos.hardware.lcd.LCD;
 
-public class TimeSensor extends Sensor {
+public class TimeSensor extends Sensor implements Runnable {
 
 	// -----------------------------------------------------------------------------
 	// variables
@@ -31,6 +31,15 @@ public class TimeSensor extends Sensor {
 
 		this.start();
 	}
+	
+	/**
+	 * Starts listener
+	 */
+	protected void start() {
+		this.thread = new Thread(this);
+		this.thread.setDaemon(true);
+		this.thread.start();
+	}
 
 	@Override
 	public void run() {
@@ -51,15 +60,19 @@ public class TimeSensor extends Sensor {
 			}
 
 		} catch (InterruptedException e) {
-			// close sensor
-			// no action, sensor is closed after catch
+			return;
 		}
 		return;
 	}
 
 	@Override
 	protected void cleanup() {
-		// TODO Auto-generated method stub
-
+		this.thread.interrupt();
+		try {
+			this.thread.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
