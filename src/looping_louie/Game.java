@@ -72,7 +72,7 @@ public abstract class Game implements Runnable {
 		this.thread = new Thread(this);
 		this.thread.setDaemon(true);
 		this.thread.start();
-		// resume once game finished
+		// resume once game is finished
 		this.thread.join();
 	}		
 

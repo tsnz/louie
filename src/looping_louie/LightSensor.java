@@ -77,8 +77,8 @@ public class LightSensor extends Sensor {
 	 * @return returns true if sensor is breached
 	 */
 	public boolean checkForBreach() {
-		this.ambient.fetchSample(this.sample, 0);
-		LCD.drawString(Float.toString(this.sample[0]), 1, 1);
+		// query sample and compare to threshold
+		this.ambient.fetchSample(this.sample, 0);		
 		if (this.sample[0] < threshhold) {
 			return true;
 		}

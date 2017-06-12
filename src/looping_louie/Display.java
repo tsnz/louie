@@ -44,8 +44,7 @@ public class Display {
 	 * Display integer on LCD
 	 * @param integerToDisplay integer to on LCD
 	 */
-	public void displayInteger(int integerToDisplay) {
-		LCD.clear();
+	public void displayInteger(int integerToDisplay) {		
 		LCD.drawInt(integerToDisplay, 6, 4);
 	}
 	
@@ -66,10 +65,15 @@ public class Display {
 			// center string if length is < 18 and centered == true
 			if (centered)
 				x = (DISPLAY_WIDTH - stringToDisplay.length()) / 2;
-		}		
-			
-		LCD.clear();
+		}							
 		LCD.drawString(stringToDisplay, x, y);
+	}
+	
+	/**
+	 * Clear LCD display
+	 */
+	public void clearDisplay() {
+		LCD.clear();
 	}
 
 }

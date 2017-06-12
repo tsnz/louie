@@ -12,6 +12,8 @@ public class Configurator {
 
 	private Configuration configuration;
 	private Display display;
+	
+	final static int RETURN_KEY_BITMAP = 8192;
 
 	// -----------------------------------------------------------------------------
 	// variables
@@ -147,14 +149,13 @@ public class Configurator {
 		boolean configurationFinished = false;
 		while (!configurationFinished) {
 			for (int i = 0; i < 4; i++) {
-				LCD.drawString("Sensor " + Integer.toString(i) + ": " + lightSensors.get(i).getValue(), // Float.toString(lightSensors.get(i).getValue())
-						0, i);
+				this.display.displayString("Sensor " + Integer.toString(i) + ": " + Math.round((float) lightSensors.get(i).getValue() * 100 )/ 100, i + 2,
+						false); // display sensor value rounded to 2 decimal places
 			}
 
-			int pressedKey = Button.waitForAnyEvent();
-			LCD.drawInt(pressedKey, 0, 6);
-			// 8192 = escape bitmap
-			if (pressedKey == 8192)
+			int pressedKey = Button.waitForAnyEvent();			
+ 
+			if (pressedKey == RETURN_KEY_BITMAP)
 				configurationFinished = true;
 		}
 		for (LightSensor sensor : lightSensors) {
