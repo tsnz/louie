@@ -16,6 +16,8 @@ public abstract class Game implements Runnable {
 	// -----------------------------------------------------------------------------
 	// variables
 	// -----------------------------------------------------------------------------
+	static final String START = "START!";
+	
 	Sound sounds;
 
 	// thread
@@ -24,8 +26,7 @@ public abstract class Game implements Runnable {
 	protected CountDownLatch gameReadyToStartLatch;
 
 	// sensors, motor and listeners
-	protected ArrayList<LightSensor> lightSensors = new ArrayList<>();	
-	protected LightSensor configurationSensor;
+	protected ArrayList<LightSensor> lightSensors = new ArrayList<>();		
 	protected final RegulatedMotor motor = new NXTRegulatedMotor(MotorPort.D);
 	protected MotorListener motorListener;
 
@@ -58,7 +59,7 @@ public abstract class Game implements Runnable {
 		}
 		// create latches to manage game start and stop
 		this.gameFinishedLatch = new CountDownLatch(1);
-		this.gameReadyToStartLatch = new CountDownLatch(1);	
+		this.gameReadyToStartLatch = new CountDownLatch(1);			
 	}
 
 	/**
@@ -82,13 +83,9 @@ public abstract class Game implements Runnable {
 
 		// available ports
 		Port[] ports = new Port[] { SensorPort.S1, SensorPort.S2, SensorPort.S3, SensorPort.S4 };
-
-		//
-		LightSensor sensor = new LightSensor(ports[0], 0, this);
-		this.configurationSensor = sensor;
-		this.lightSensors.add(sensor);
+		
 		// create a light sensor for each port
-		for (int i = 1; i < 4; i++) {
+		for (int i = 0; i < 4; i++) {
 			LightSensor lightsensor = new LightSensor(ports[i], i, this);
 			this.lightSensors.add(lightsensor);
 		}		
@@ -124,23 +121,19 @@ public abstract class Game implements Runnable {
 	public void countdown() {		
 		try {
 			Sound.beep();
-			LCD.clear();
-			LCD.drawInt(3, 7, 4);
+			this.display.displayInteger(3);
 			Thread.sleep(1000);
-			LCD.clear();
-			LCD.drawInt(2, 7, 4);			
+			this.display.displayInteger(2);
 			Sound.beep();
 			Thread.sleep(1000);
-			LCD.clear();
-			LCD.drawInt(1, 7, 4);
+			this.display.displayInteger(1);
 			Sound.beep();
 			Thread.sleep(1000);
-			LCD.clear();
-			LCD.drawString("GO", 6, 4);
+			this.display.displayString(START, 4, true);
 			Sound.twoBeeps();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// can be ignored. Interruption not possible since this is the only running thread.
+			// String cannot be too long since it is not dynamically changing
 		}
 	}
 	

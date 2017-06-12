@@ -81,7 +81,7 @@ public class LightSensor extends Sensor {
 	}
 
 	@Override
-	protected void cleanup() {
+	protected void stop() {
 		this.light_sensor.close();
 	}
 }

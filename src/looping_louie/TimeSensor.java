@@ -10,7 +10,11 @@ public class TimeSensor extends Sensor implements Runnable {
 	// -----------------------------------------------------------------------------
 	// variables
 	// -----------------------------------------------------------------------------
-
+	
+	// thread
+	protected Thread thread;
+	protected CountDownLatch gameReadyToStartLatch;
+	
 	// times in ms
 	private static final int MIN_WAIT_TIME = 3000;
 	private static final int MAX_RANDOM_DELAY = 10000;
@@ -50,8 +54,7 @@ public class TimeSensor extends Sensor implements Runnable {
 			while (!this.thread.isInterrupted()) {
 				long randomDelay = randomGenerator.nextInt(TimeSensor.MAX_RANDOM_DELAY);
 				randomDelay += TimeSensor.MIN_WAIT_TIME;
-				Thread.sleep(randomDelay);
-				// not Delay from lejos: not interruptable!
+				Thread.sleep(randomDelay); // not Delay from lejos since it is not interruptable!				
 				LCD.drawString("Toggeling after " + Long.toString(randomDelay), 0, 5);
 				// call method without parameters
 				// this.method.accept(null);
@@ -66,7 +69,7 @@ public class TimeSensor extends Sensor implements Runnable {
 	}
 
 	@Override
-	protected void cleanup() {
+	protected void stop() {
 		this.thread.interrupt();
 		try {
 			this.thread.join();

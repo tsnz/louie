@@ -3,7 +3,6 @@ package looping_louie;
 import java.util.ArrayList;
 
 import lejos.hardware.Button;
-import lejos.hardware.Key;
 import lejos.hardware.lcd.LCD;
 import lejos.hardware.port.Port;
 import lejos.hardware.port.SensorPort;
@@ -66,8 +65,7 @@ public class Configurator {
 	/**
 	 * Show initial menu after program start
 	 */
-	public void startupMainMenu() {
-
+	public void startupMainMenu() {		
 		boolean exit = false;
 		// stay in menu until escape is pressed
 		while (!exit) {
@@ -164,7 +162,7 @@ public class Configurator {
 				configurationFinished = true;
 		}
 		for (LightSensor sensor : lightSensors) {
-			sensor.cleanup();
+			sensor.stop();
 		}
 	}
 
