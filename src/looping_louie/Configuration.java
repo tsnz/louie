@@ -13,14 +13,13 @@ public class Configuration {
 	
 	
 	// Stored defaults
-	final static int defaultSpeed = 80;
-	final static int defaultLifes = 3;
-	final static boolean defaultRandom = false;
-	final static int SENSOR_POLLING_DELAY = 10;
-	final static int INVINCIBILITY_FRAME = 1000;
+	final static int DEFAULT_SPEED = 80;
+	final static int DEFAULT_LIFES = 3;
+	final static boolean DEFAULT_RANDOM = false;	
 	final static int ARM_CONFIGURATION_SPEED = 10;
 	final static int ARM_CONFIGURATION_AGLE = 4;
 	final static int ARM_CONFIGURATION_SLEEP_TIME = 200;
+	final static int MOTOR_LISTENER_SLEEP_TIME = 30;
 	
 	// -----------------------------------------------------------------------------
 	// functions
@@ -30,9 +29,9 @@ public class Configuration {
 	 * Constructor
 	 */
 	public Configuration() {
-		this.speed = Configuration.defaultSpeed;
-		this.lifes = Configuration.defaultLifes;
-		this.random = Configuration.defaultRandom;
+		this.speed = Configuration.DEFAULT_SPEED;
+		this.lifes = Configuration.DEFAULT_LIFES;
+		this.random = Configuration.DEFAULT_RANDOM;
 	}
 	
 	public int getSpeed() {
@@ -57,13 +56,5 @@ public class Configuration {
 
 	public void setLifes(int lifes) {
 		this.lifes = lifes;
-	}
-	
-	public int getPollingDelay() {
-		return Configuration.SENSOR_POLLING_DELAY;
-	}
-	
-	public int getInvincibilityFrame() {
-		return Configuration.INVINCIBILITY_FRAME;		
 	}
 }

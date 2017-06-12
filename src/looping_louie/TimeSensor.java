@@ -3,30 +3,39 @@ package looping_louie;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
-import lejos.hardware.lcd.LCD;
-
 public class TimeSensor extends Sensor implements Runnable {
 
 	// -----------------------------------------------------------------------------
 	// variables
 	// -----------------------------------------------------------------------------
-	
+
 	// thread
-	protected Thread thread;
-	protected CountDownLatch gameReadyToStartLatch;
-	
+	private Thread thread;
+	private CountDownLatch gameReadyToStartLatch;
+
 	// times in ms
 	private static final int MIN_WAIT_TIME = 3000;
-	private static final int MAX_RANDOM_DELAY = 10000;
+	private static final int MAX_WAIT_TIME = 10000;
 
-	protected final ExtendedGame extendedGame;
+	@SuppressWarnings("unused")
+	private final ExtendedGame extendedGame;
 
-	Runnable method;
+	private Runnable method;
 
 	// -----------------------------------------------------------------------------
 	// functions
 	// -----------------------------------------------------------------------------
 
+	/**
+	 * Constructor
+	 * 
+	 * @param extendedGame
+	 *            game to notify of random events
+	 * @param gameReadyToStart
+	 *            latch to wait for to start thread
+	 * @param method
+	 *            method to call after a random delay
+	 */
 	public TimeSensor(ExtendedGame extendedGame, CountDownLatch gameReadyToStart, Runnable method) {
 		this.extendedGame = extendedGame;
 		this.gameReadyToStartLatch = gameReadyToStart;
@@ -35,7 +44,7 @@ public class TimeSensor extends Sensor implements Runnable {
 
 		this.start();
 	}
-	
+
 	/**
 	 * Starts listener
 	 */
@@ -48,24 +57,22 @@ public class TimeSensor extends Sensor implements Runnable {
 	@Override
 	public void run() {
 		try {
+			// create new RNG to create sleep timings
 			Random randomGenerator = new Random();
 			this.gameReadyToStartLatch.await();
 
 			while (!this.thread.isInterrupted()) {
-				long randomDelay = randomGenerator.nextInt(TimeSensor.MAX_RANDOM_DELAY);
+				long randomDelay = randomGenerator.nextInt(MAX_WAIT_TIME - MIN_WAIT_TIME);
 				randomDelay += TimeSensor.MIN_WAIT_TIME;
-				Thread.sleep(randomDelay); // not Delay from lejos since it is not interruptable!				
-				LCD.drawString("Toggeling after " + Long.toString(randomDelay), 0, 5);
-				// call method without parameters
-				// this.method.accept(null);
+				Thread.sleep(randomDelay); // not Delay from lejos since it is
+											// not interruptable!
 				this.method.run();
-				// this.extendedGame.newRandomSpeed();
 			}
 
 		} catch (InterruptedException e) {
-			return;
+			return; // return if sleep is interrupted
 		}
-		return;
+		return; // return if thread is interrupted
 	}
 
 	@Override
@@ -74,8 +81,7 @@ public class TimeSensor extends Sensor implements Runnable {
 		try {
 			this.thread.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// can be ignored thread will not be interrupted
 		}
 	}
 }

@@ -4,21 +4,24 @@ import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 
 import lejos.hardware.Sound;
-import lejos.hardware.lcd.LCD;
 import lejos.robotics.RegulatedMotor;
 
 public class MotorListener implements Runnable {
 
+	// variables
 	Sound sounds;
 	private CountDownLatch start;
 	Thread thread;
 	RegulatedMotor motor;
-	ArrayList<LightSensor> sensors;
+	ArrayList<LightSensor> sensors;	
+	
+	final int SLEEP_TIME;
 
 	public MotorListener(CountDownLatch start, RegulatedMotor motor, ArrayList<LightSensor> sensors) {
 		this.start = start;
-		this.motor = motor;	
-		this.sensors = sensors;
+		this.motor = motor;
+		this.sensors = sensors;		
+		this.SLEEP_TIME = Configuration.MOTOR_LISTENER_SLEEP_TIME;
 		this.start();
 	}
 
@@ -46,7 +49,7 @@ public class MotorListener implements Runnable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		try {
 			Thread.sleep(100);
 		} catch (InterruptedException e1) {
@@ -55,8 +58,7 @@ public class MotorListener implements Runnable {
 		}
 
 		while (!this.thread.isInterrupted()) {
-			
-			
+
 			int tacho_count = this.motor.getTachoCount();
 			int current_position = -(tacho_count % 360);
 
@@ -65,10 +67,10 @@ public class MotorListener implements Runnable {
 			case 359:
 			case 0:
 			case 1:
-			//case 2:
+				// case 2:
 				if (this.sensors.get(0).checkForBreach())
 					this.sensors.get(0).notifyGame();
-				break;	
+				break;
 			case 88:
 			case 89:
 			case 90:
@@ -98,7 +100,7 @@ public class MotorListener implements Runnable {
 				Thread.sleep((long) 35);
 			} catch (InterruptedException e) {
 				return;
-			}			
+			}
 		}
 		return;
 	}

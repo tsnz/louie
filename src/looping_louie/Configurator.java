@@ -65,7 +65,7 @@ public class Configurator {
 	/**
 	 * Show initial menu after program start
 	 */
-	public void startupMainMenu() {		
+	public void startupMainMenu() {
 		boolean exit = false;
 		// stay in menu until escape is pressed
 		while (!exit) {
@@ -75,8 +75,7 @@ public class Configurator {
 			int selected_entry = main_menu.select();
 
 			switch (selected_entry) {
-			// start standard game
-			case 0:
+			case 0: // start standard game
 				Game game = new StandardGame(this.configuration, this.display);
 				try {
 					game.startGame();
@@ -85,8 +84,7 @@ public class Configurator {
 					e1.printStackTrace();
 				}
 				break;
-			// start extended game
-			case 1:
+			case 1: // start extended game
 				ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display);
 				try {
 					extendedGame.startGame();
@@ -95,15 +93,13 @@ public class Configurator {
 					e.printStackTrace();
 				}
 				break;
-			// options
-			case 2:
+			case 2: // options menu
 				this.showOptionsMenu();
 				break;
-			// escape pressed
-			default:
+			default: // escape pressed
 				exit = true;
 			}
-			// Wait for player to confirm 'player lost' screen
+			// Wait for player to confirm 'player lost' screen after a game
 			Button.waitForAnyPress();
 		}
 	}
@@ -151,7 +147,7 @@ public class Configurator {
 		boolean configurationFinished = false;
 		while (!configurationFinished) {
 			for (int i = 0; i < 4; i++) {
-				LCD.drawString("Sensor " + Integer.toString(i) + ": " + lightSensors.get(i).getValue() , //Float.toString(lightSensors.get(i).getValue())
+				LCD.drawString("Sensor " + Integer.toString(i) + ": " + lightSensors.get(i).getValue(), // Float.toString(lightSensors.get(i).getValue())
 						0, i);
 			}
 
