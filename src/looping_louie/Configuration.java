@@ -42,7 +42,7 @@ public class Configuration {
 		this.speed = speed;
 	}
 
-	public boolean isRandom() {
+	public boolean randomActive() {
 		return random;
 	}
 

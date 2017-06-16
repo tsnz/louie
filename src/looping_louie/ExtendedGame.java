@@ -46,7 +46,6 @@ public class ExtendedGame extends Game {
 		this.setupLightSensors();
 		Sensor sensor2 = new TimeSensor(this, this.gameReadyToStartLatch, () -> this.toggleMotorDirection());
 		this.additionalSensors.add(sensor2);
-		// this.additionalSensors.add(sensor2);
 		Sensor sensor3 = new TimeSensor(this, this.gameReadyToStartLatch, () -> this.newRandomSpeed());
 		this.additionalSensors.add(sensor3);
 	}
@@ -57,10 +56,10 @@ public class ExtendedGame extends Game {
 	public void toggleMotorDirection() {
 		// check motor direction and change direction to opposite
 		if (this.motor_moving_forward == true) {
-			this.motor.backward();
+			this.motor.forward();
 			this.motor_moving_forward = false;
 		} else {
-			this.motor.forward();
+			this.motor.backward();
 			this.motor_moving_forward = true;
 		}
 	}

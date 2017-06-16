@@ -64,7 +64,7 @@ public class LightSensor extends Sensor {
 		this.player_id = 0;
 		this.sensor_port = sensor_port;
 		this.light_sensor = new NXTLightSensor(sensor_port);
-
+		// initialize variables needed to query the sensor to save time
 		this.ambient = this.light_sensor.getAmbientMode();
 		this.sample_size = ambient.sampleSize();
 		this.sample = new float[sample_size];
@@ -91,7 +91,7 @@ public class LightSensor extends Sensor {
 	public void notifyGame() {
 		this.game.removeLife(this.player_id);
 	}
-
+	
 	/**
 	 * Reads current value from sensor
 	 * 

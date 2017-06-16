@@ -7,6 +7,8 @@ public class Display {
 	final static int DISPLAY_HEIGHT = 8;
 	final static int DISPLAY_WIDTH = 18;
 	
+	final static int DISPLAY_PLAYER_LIFES_X_OFFSET = 4;
+	
 	public Display()  {
 		
 	}
@@ -17,7 +19,7 @@ public class Display {
 	 */
 	public void displayInitialLifes(int default_lifes) {
 		for (int i = 0; i < 4; i++) {
-			LCD.drawString("Spieler " + Integer.toString(i + 1) + ": " + Integer.toString(default_lifes), 4, i + 2);
+			LCD.drawString("Spieler " + Integer.toString(i + 1) + ": " + Integer.toString(default_lifes), DISPLAY_PLAYER_LIFES_X_OFFSET, i + 2);			
 		}
 	}
 	
@@ -28,7 +30,7 @@ public class Display {
 	 */
 	public void displayLifesForPlayer(int player, int lifes) {
 		LCD.clear(player + 2);
-		LCD.drawString("Spieler " + Integer.toString(player + 1 ) + ": " + Integer.toString(lifes), 4, player + 2);
+		LCD.drawString("Spieler " + Integer.toString(player + 1 ) + ": " + Integer.toString(lifes), DISPLAY_PLAYER_LIFES_X_OFFSET, player + 2);
 	}		
 	
 	/**

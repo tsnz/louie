@@ -97,7 +97,7 @@ public class MotorListener implements Runnable {
 			}
 
 			try {
-				Thread.sleep((long) 35);
+				Thread.sleep((long) SLEEP_TIME);
 			} catch (InterruptedException e) {
 				return;
 			}
