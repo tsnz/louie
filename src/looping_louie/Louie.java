@@ -17,7 +17,7 @@ public class Louie {
 		louie.startProgram();
 	}
 
-	private void startProgram() {
+	private void startProgram() {		
 		Configurator configurator = new Configurator();
 		configurator.startupMainMenu();
 	}

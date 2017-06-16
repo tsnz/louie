@@ -8,16 +8,18 @@ public class ExtendedGame extends Game {
 	// -----------------------------------------------------------------------------
 	// variables
 	// -----------------------------------------------------------------------------
-	
+
 	// array containing all non light sensors
 	protected ArrayList<Sensor> additionalSensors;
-
+	
+	// Bluetooth connection to the NXT
+	NXTBluetoothConnection btConnection;
 	// stores current motor direction
 	private boolean motor_moving_forward; // 1 = forward, 0 = backward
 	// minimal speed for the rng to output
 	private int min_speed = 50;
 	// maximal speed for the rng to output
-	private int max_speed = 200;
+	private int max_speed = 150;
 
 	// -----------------------------------------------------------------------------
 	// functions
@@ -25,14 +27,23 @@ public class ExtendedGame extends Game {
 
 	/**
 	 * Constructor
-	 * @param configuration to get settings from
-	 * @param display to display events on
+	 * 
+	 * @param configuration
+	 *            to get settings from
+	 * @param display
+	 *            to display events on
+	 * @param btConnection
+	 *            Bluetooth connection to get commands from the NXT from
 	 */
-	public ExtendedGame(Configuration configuration, Display display) {
+	public ExtendedGame(Configuration configuration, Display display, NXTBluetoothConnection btConnection) {
 		// use constructor of parent class (Game)
 		super(configuration, display);
 		// initialize array for additional sensors
 		this.additionalSensors = new ArrayList<>();
+		
+		this.btConnection = btConnection;
+		if (!(this.btConnection == null))
+			this.setupBTConnection();
 	}
 
 	@Override
@@ -67,7 +78,7 @@ public class ExtendedGame extends Game {
 	/**
 	 * Changes motor speed to a random speed
 	 */
-	public void newRandomSpeed() {		
+	public void newRandomSpeed() {
 		Random randomGenerator = new Random();
 		// new random speed using the given offsets
 		// subtract min_speed to prevent actual speed exceeding max_speed
@@ -75,9 +86,13 @@ public class ExtendedGame extends Game {
 		// add min_speed to generated speed
 		this.motor.setSpeed(randomSpeed + this.min_speed);
 	}
+	
+	private void setupBTConnection() {
+		
+	}
 
 	@Override
-	protected void cleanup() {		
+	protected void cleanup() {
 		this.motorListener.stop();
 		this.motor.close();
 		// stop all light sensors
@@ -88,7 +103,9 @@ public class ExtendedGame extends Game {
 		for (Sensor sensor : additionalSensors) {
 			sensor.stop();
 		}
-
+		// stop NXT BT Connection if initialized
+		if (!(this.btConnection == null))
+			this.btConnection.disconnect();
 	}
 
 }

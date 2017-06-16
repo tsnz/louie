@@ -12,6 +12,7 @@ public class Configurator {
 
 	private Configuration configuration;
 	private Display display;
+	private NXTBluetoothConnection btConnection = null;
 	
 	final static int RETURN_KEY_BITMAP = 8192;
 
@@ -36,7 +37,7 @@ public class Configurator {
 	// options menu
 	private static String options_menu_title = "Optionen";
 	private static String[] options_menu_entries = { "Leben", "Geschwindigkeit", "Richtungswechsel",
-			"Sensoren konfigurieren" };
+			"Sensoren konfigurieren", "Use Remote" };
 	private static TextMenu options_menu = new TextMenu(options_menu_entries, 1, options_menu_title);
 
 	// game life menu
@@ -46,7 +47,7 @@ public class Configurator {
 
 	// game speed menu
 	private static String speed_menu_title = "Geschwindigkeit";
-	private static String[] speed_menu_entries = { "100", "150", "200", "250" };
+	private static String[] speed_menu_entries = { "50", "80", "100", "120" };
 	private static TextMenu speed_menu = new TextMenu(speed_menu_entries, 1, speed_menu_title);
 
 	// -----------------------------------------------------------------------------
@@ -87,7 +88,7 @@ public class Configurator {
 				}
 				break;
 			case 1: // start extended game
-				ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display);
+				ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display, this.btConnection);
 				try {
 					extendedGame.startGame();
 				} catch (InterruptedException e) {
@@ -127,10 +128,37 @@ public class Configurator {
 			case 3:
 				showSensorOutput();
 				break;
+			case 4:
+				this.setuptNXTRemote();
+				break;
 			default:
 				exit = true;
 			}
 		}
+	}
+	
+	/**
+	 * Setup connection to the NXT to which a IR receiver is connected
+	 */
+	private void setuptNXTRemote() {
+		// toggle based on weather a connection is initialized
+		if (!(this.btConnection == null)) {
+			// disconnect from NXT
+			btConnection.disconnect();
+			btConnection = null;
+			this.display.clearDisplay();
+			this.display.displayString("Getrennt", 4, true);
+		} else {
+			// try to connect to NXT
+			this.display.clearDisplay();
+			try {
+				this.btConnection = new NXTBluetoothConnection();
+			} catch (BluetoothConnectionFailed e) {
+				this.display.displayString(e.getMessage(), 4, true);
+			}			
+			this.display.displayString("Verbunden", 4, true);
+		}
+		
 	}
 
 	private void showSensorOutput() {
