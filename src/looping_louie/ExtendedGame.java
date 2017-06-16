@@ -53,8 +53,8 @@ public class ExtendedGame extends Game {
 	}
 
 	@Override
-	protected void setupSensors() {
-		this.setupLightSensors();
+	protected void setupAdditionalSensors() {
+		//this.setupLightSensors();
 		Sensor sensor2 = new TimeSensor(this, this.gameReadyToStartLatch, () -> this.toggleMotorDirection());
 		this.additionalSensors.add(sensor2);
 		Sensor sensor3 = new TimeSensor(this, this.gameReadyToStartLatch, () -> this.newRandomSpeed());

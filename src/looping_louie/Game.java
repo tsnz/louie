@@ -94,7 +94,7 @@ public abstract class Game implements Runnable {
 	/**
 	 * Setup sensors
 	 */
-	protected abstract void setupSensors();
+	protected abstract void setupAdditionalSensors();
 
 	/**
 	 * Setup prerequisites for game
@@ -105,7 +105,8 @@ public abstract class Game implements Runnable {
 	 * Start game
 	 */
 	private void begin() {
-		calibrateArm();
+		this.calibrateArm();
+		this.setupLightSensors();
 		motorListener = new MotorListener(gameReadyToStartLatch, this.motor, this.lightSensors);				
 		this.motor.resetTachoCount();
 		this.motor.setSpeed(this.configuration.getSpeed());
@@ -201,7 +202,7 @@ public abstract class Game implements Runnable {
 	@Override
 	public void run() {
 		LCD.clear();
-		this.setupSensors();
+		this.setupAdditionalSensors();
 		this.setupGame();
 		this.begin();
 		try {

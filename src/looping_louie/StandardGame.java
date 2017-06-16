@@ -21,8 +21,8 @@ public class StandardGame extends Game {
 	}
 
 	@Override
-	protected void setupSensors() {
-		this.setupLightSensors();
+	protected void setupAdditionalSensors() {
+		//this.setupLightSensors();
 	}
 
 	@Override
