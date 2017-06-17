@@ -17,8 +17,7 @@ public class Display {
 	 * @param default_lifes
 	 *            number of default lifes
 	 */
-	public void displayInitialLifes(int default_lifes) {
-		String sDefault_lifes = Integer.toString(default_lifes);
+	public void displayInitialLifes(int default_lifes) {		
 
 		displayString("Spieler 4", 0, true);
 		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 1); // 4th player's
