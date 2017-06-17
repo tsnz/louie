@@ -68,8 +68,7 @@ public class Display {
 			if (centered)
 				x = (DISPLAY_WIDTH - stringToDisplay.length()) / 2;
 		}							
-		LCD.drawString(stringToDisplay, x, y);
-		LCD.dra
+		LCD.drawString(stringToDisplay, x, y);		
 	}
 	
 	

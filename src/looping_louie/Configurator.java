@@ -82,6 +82,8 @@ public class Configurator {
 				Game game = new StandardGame(this.configuration, this.display);
 				try {
 					game.startGame();
+					// Wait for player to confirm 'player lost' screen after a game
+					Button.waitForAnyPress();
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -89,6 +91,8 @@ public class Configurator {
 				break;
 			case 1: // start extended game
 				ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display, this.btConnection);
+				// Wait for player to confirm 'player lost' screen after a game
+				Button.waitForAnyPress();
 				try {
 					extendedGame.startGame();
 				} catch (InterruptedException e) {
@@ -101,9 +105,7 @@ public class Configurator {
 				break;
 			default: // escape pressed
 				exit = true;
-			}
-			// Wait for player to confirm 'player lost' screen after a game
-			Button.waitForAnyPress();
+			}			
 		}
 	}
 
@@ -125,6 +127,9 @@ public class Configurator {
 			case 1:
 				this.selectGameSpeed();
 				break;
+			case 2:
+				this.toggleRandomDirectionChange();
+				break;
 			case 3:
 				showSensorOutput();
 				break;
@@ -135,6 +140,18 @@ public class Configurator {
 				exit = true;
 			}
 		}
+	}
+	
+	private void toggleRandomDirectionChange() {
+		boolean currentValue = this.configuration.randomActive();
+		this.configuration.setRandom(!currentValue);
+		this.display.clearDisplay();
+		if (this.configuration.randomActive() == true)
+			this.display.displayString("Aktiviert", 4, true);
+		else
+			this.display.displayString("Deaktiviert", 4, true);
+		
+		Button.waitForAnyPress();
 	}
 
 	/**
@@ -197,23 +214,26 @@ public class Configurator {
 	 * Shows menu to select default game lifes
 	 */
 	private void selectGameLifes() {
-		LCD.clear();
+		this.display.clearDisplay();
 		int selected_entry = Configurator.lifes_menu.select();
 		// use selected entry to get value from entries
 		// and parse entry to integer
-	
-		this.configuration.setLifes(Integer.valueOf(Configurator.lifes_menu_entries[selected_entry]));
+		// ignore if -1 is returned
+		if (selected_entry != -1)
+			this.configuration.setLifes(Integer.valueOf(Configurator.lifes_menu_entries[selected_entry]));
 	}
 
 	/**
 	 * Shows menu to select default game speed
 	 */
 	private void selectGameSpeed() {
-		LCD.clear();
+		this.display.clearDisplay();
 		int selected_entry = Configurator.speed_menu.select();
 		// use selected entry to get value from entries
 		// and parse entry to integer
-		this.configuration.setSpeed(Integer.valueOf(Configurator.speed_menu_entries[selected_entry]));
+		// ignore if -1 is returned
+		if (selected_entry != -1)
+			this.configuration.setSpeed(Integer.valueOf(Configurator.speed_menu_entries[selected_entry]));
 	}
 
 	/**
