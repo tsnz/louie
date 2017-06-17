@@ -56,7 +56,7 @@ public class ExtendedGame extends Game {
 	@Override
 	protected void setupAdditionalSensors() {
 		// only add if random direction change is activated
-		if (this.configuration.randomActive()) {
+		if (this.configuration.getRandomDirectionChange()) {
 			Sensor sensor2 = new TimeSensor(this, this.gameReadyToStartLatch, () -> this.toggleMotorDirection());
 			this.additionalSensors.add(sensor2);
 		}

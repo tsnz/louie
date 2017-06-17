@@ -143,10 +143,10 @@ public class Configurator {
 	}
 	
 	private void toggleRandomDirectionChange() {
-		boolean currentValue = this.configuration.randomActive();
-		this.configuration.setRandom(!currentValue);
+		boolean currentValue = this.configuration.getRandomDirectionChange();
+		this.configuration.setRandomDirectionChange(!currentValue);
 		this.display.clearDisplay();
-		if (this.configuration.randomActive() == true)
+		if (this.configuration.getRandomDirectionChange() == true)
 			this.display.displayString("Aktiviert", 4, true);
 		else
 			this.display.displayString("Deaktiviert", 4, true);

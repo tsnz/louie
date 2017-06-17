@@ -56,7 +56,7 @@ public abstract class Game implements Runnable {
 		// prepare player lifes
 		this.player_lifes = new int[4];
 		for (int i = 0; i < 4; i++) {
-			this.player_lifes[i] = configuration.getDefaultLifes();
+			this.player_lifes[i] = configuration.getLifes();
 		}
 		// create latches to manage game start and stop
 		this.gameFinishedLatch = new CountDownLatch(1);
@@ -116,7 +116,7 @@ public abstract class Game implements Runnable {
 		this.countdown();
 		this.motor.backward();
 		this.gameReadyToStartLatch.countDown();
-		this.display.displayInitialLifes(this.configuration.getDefaultLifes());
+		this.display.displayInitialLifes(this.configuration.getLifes());
 	}
 
 	/**
