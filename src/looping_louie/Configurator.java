@@ -13,7 +13,7 @@ public class Configurator {
 	private Configuration configuration;
 	private Display display;
 	private NXTBluetoothConnection btConnection = null;
-	
+
 	final static int RETURN_KEY_BITMAP = 8192;
 
 	// -----------------------------------------------------------------------------
@@ -136,7 +136,7 @@ public class Configurator {
 			}
 		}
 	}
-	
+
 	/**
 	 * Setup connection to the NXT to which a IR receiver is connected
 	 */
@@ -155,10 +155,10 @@ public class Configurator {
 				this.btConnection = new NXTBluetoothConnection();
 			} catch (BluetoothConnectionFailed e) {
 				this.display.displayString(e.getMessage(), 4, true);
-			}			
+			}
 			this.display.displayString("Verbunden", 4, true);
 		}
-		
+
 	}
 
 	private void showSensorOutput() {
@@ -176,13 +176,15 @@ public class Configurator {
 
 		boolean configurationFinished = false;
 		while (!configurationFinished) {
-			for (int i = 0; i < 4; i++) {
-				this.display.displayString("Sensor " + Integer.toString(i) + ": " + Math.round((float) lightSensors.get(i).getValue() * 100 )/ 100, i + 2,
-						false); // display sensor value rounded to 2 decimal places
+			this.display.clearDisplay();
+			for (int i = 0; i < 4; i++) {				
+				this.display.displayString("Sensor " + Integer.toString(i) + ": " + lightSensors.get(i).getValue(),
+						i + 2, false); // display sensor value rounded to 2
+										// decimal places
 			}
 
-			int pressedKey = Button.waitForAnyEvent();			
- 
+			int pressedKey = Button.waitForAnyEvent();
+
 			if (pressedKey == RETURN_KEY_BITMAP)
 				configurationFinished = true;
 		}

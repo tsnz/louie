@@ -1,6 +1,5 @@
 package looping_louie;
 
-import lejos.hardware.lcd.LCD;
 import lejos.hardware.port.Port;
 import lejos.hardware.sensor.NXTLightSensor;
 import lejos.hardware.sensor.SensorMode;
@@ -98,8 +97,7 @@ public class LightSensor extends Sensor {
 	 * @return Returns current value
 	 */
 	public float getValue() {
-		this.ambient.fetchSample(this.sample, 0);
-		LCD.drawString(Float.toString(this.sample[0]), 1, 1);
+		this.ambient.fetchSample(this.sample, 0);		
 		return this.sample[0];
 	}
 
