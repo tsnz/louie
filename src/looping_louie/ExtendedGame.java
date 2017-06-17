@@ -82,10 +82,6 @@ public class ExtendedGame extends Game {
 		this.motor.setSpeed(randomSpeed + this.min_speed);
 	}
 
-	private void setupBTConnection() {
-
-	}
-
 	@Override
 	protected void cleanup() {
 		this.motorListener.stop();
