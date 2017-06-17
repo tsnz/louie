@@ -90,7 +90,8 @@ public class Display {
 	 *            integer to on LCD
 	 */
 	public void displayCenteredInteger(int integerToDisplay) {
-		LCD.drawInt(integerToDisplay, DISPLAY_WIDTH / 2, 4);
+		int length = Integer.toString(integerToDisplay).length();
+		LCD.drawInt(integerToDisplay, (DISPLAY_WIDTH - length + 1) / 2, 4);
 	}
 
 	/**
