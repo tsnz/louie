@@ -27,11 +27,11 @@ public class Display {
 																// centred)
 		displayString("Spieler 4", 1, true);
 
-		LCD.drawString(sDefault_lifes + "  übrige Leben" + sDefault_lifes, 0, 3);
-		LCD.drawString("Sp. 1        Sp. 3", 0, 4);
+		LCD.drawString(sDefault_lifes + "     Leben     " + sDefault_lifes, 0, 3);
+		LCD.drawString("Sp.1         Sp.3", 0, 4);
 
-		displayString("Spieler 2", 6, true);
-		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 7); // 2nd player's
+		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 6); 
+		displayString("Spieler 2", 7, true);				  // 2nd player's
 																// lifes (first
 																// line,
 																// centred)
@@ -48,22 +48,22 @@ public class Display {
 	public void displayLifesForPlayer(int player, int lifes) {
 		switch (player) { // sorted from top to bottom
 		case 3: // player 4
-			LCD.clear(0);
+//			LCD.clear(0);
 			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 0);
 			break;
 
 		case 1: // player 2
-			LCD.clear(7);
-			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 7);
+//			LCD.clear(7);
+			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 6);
 			break;
 
 		case 0: // player 1
-			LCD.clear(0, 3, 1);
+//			LCD.clear(0, 3, 1);
 			LCD.drawInt(lifes, 0, 3);
 			break;
 
 		case 2: // player 3
-			LCD.clear(17, 3, 1);
+//			LCD.clear(17, 3, 1);
 			LCD.drawInt(lifes, 17, 3);
 			break;
 
