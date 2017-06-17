@@ -19,18 +19,19 @@ public class Display {
 	 */
 	public void displayInitialLifes(int default_lifes) {		
 
-		displayString("Spieler 4", 0, true);
-		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 1); // 4th player's
+		displayString("Gelb", 0, true);
+		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 1); // yellow player's
 																// lifes (first
 																// line,
 																// centred)
 
-		LCD.drawInt(default_lifes, 0, 3);	// player 1
-		LCD.drawInt(default_lifes, 16, 3);	// player 3
-		LCD.drawString("Sp.1  Leben  Sp.3", 0, 4);
+		LCD.drawInt(default_lifes, 0, 3);	// blue player
+		LCD.drawInt(default_lifes, 16, 3);	// black player
+		displayString("Spieler", 3, true);
+		LCD.drawString("Blau  Leben  Schw", 0, 4);  // word 'life' between blue and black player
 
 		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 6); 
-		displayString("Spieler 2", 7, true);				  // 2nd player's
+		displayString("Rot", 7, true);				  // red player's
 																// lifes (first
 																// line,
 																// centred)
