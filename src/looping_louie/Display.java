@@ -5,8 +5,7 @@ import lejos.hardware.lcd.LCD;
 public class Display {
 
 	final static int DISPLAY_HEIGHT = 8;
-	final static int DISPLAY_WIDTH = 18; // isn't it 16 characters? ->
-											// http://www.lejos.org/nxt/nxj/tutorial/LCD_Sensors/LCD_Sensors.htm
+	final static int DISPLAY_WIDTH = 18; 
 
 	public Display() {
 
@@ -21,14 +20,15 @@ public class Display {
 	public void displayInitialLifes(int default_lifes) {
 		String sDefault_lifes = Integer.toString(default_lifes);
 
-		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 0); // 4th player's
+		displayString("Spieler 4", 0, true);
+		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 1); // 4th player's
 																// lifes (first
 																// line,
 																// centred)
-		displayString("Spieler 4", 1, true);
 
-		LCD.drawString(sDefault_lifes + "     Leben     " + sDefault_lifes, 0, 3);
-		LCD.drawString("Sp.1         Sp.3", 0, 4);
+		LCD.drawInt(default_lifes, 0, 3);	// player 1
+		LCD.drawInt(default_lifes, 16, 3);	// player 3
+		LCD.drawString("Sp.1  Leben  Sp.3", 0, 4);
 
 		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 6); 
 		displayString("Spieler 2", 7, true);				  // 2nd player's
@@ -48,23 +48,19 @@ public class Display {
 	public void displayLifesForPlayer(int player, int lifes) {
 		switch (player) { // sorted from top to bottom
 		case 3: // player 4
-//			LCD.clear(0);
-			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 0);
+			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 1);
 			break;
 
 		case 1: // player 2
-//			LCD.clear(7);
 			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 6);
 			break;
 
 		case 0: // player 1
-//			LCD.clear(0, 3, 1);
 			LCD.drawInt(lifes, 0, 3);
 			break;
 
 		case 2: // player 3
-//			LCD.clear(17, 3, 1);
-			LCD.drawInt(lifes, 17, 3);
+			LCD.drawInt(lifes, 16, 3);
 			break;
 
 		default:
