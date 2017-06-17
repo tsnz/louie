@@ -19,7 +19,7 @@ public class Configuration {
 	final static int ARM_CONFIGURATION_SPEED = 10;
 	final static int ARM_CONFIGURATION_AGLE = 4;
 	final static int ARM_CONFIGURATION_SLEEP_TIME = 200;
-	final static int MOTOR_LISTENER_SLEEP_TIME = 30;
+	final static int MOTOR_LISTENER_SLEEP_TIME = 3;
 	
 	// -----------------------------------------------------------------------------
 	// functions

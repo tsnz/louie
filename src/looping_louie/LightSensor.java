@@ -14,7 +14,7 @@ public class LightSensor extends Sensor {
 	final NXTLightSensor light_sensor;
 	final Port sensor_port;
 	final int player_id;
-	final float threshhold = 0.80f;
+	final static float THRESHOLD = 0.80f;
 
 	protected final Game game;
 
@@ -78,7 +78,7 @@ public class LightSensor extends Sensor {
 	public boolean checkForBreach() {
 		// query sample and compare to threshold
 		this.ambient.fetchSample(this.sample, 0);		
-		if (this.sample[0] < threshhold) {
+		if (this.sample[0] < THRESHOLD) {
 			return true;
 		}
 		return false;

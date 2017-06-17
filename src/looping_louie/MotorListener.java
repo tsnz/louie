@@ -63,29 +63,24 @@ public class MotorListener implements Runnable {
 			int current_position = -(tacho_count % 360);
 
 			switch (current_position) {
-			case 358:
 			case 359:
 			case 0:
-			case 1:
-				// case 2:
+			case 1:							
 				if (this.sensors.get(0).checkForBreach())
 					this.sensors.get(0).notifyGame();
-				break;
-			case 88:
+				break;						
 			case 89:
 			case 90:
 			case 91:
 				if (this.sensors.get(1).checkForBreach())
 					this.sensors.get(1).notifyGame();
-				break;
-			case 178:
+				break;			
 			case 179:
 			case 180:
 			case 181:
 				if (this.sensors.get(2).checkForBreach())
 					this.sensors.get(2).notifyGame();
-				break;
-			case 268:
+				break;			
 			case 269:
 			case 270:
 			case 271:

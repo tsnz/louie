@@ -14,8 +14,8 @@ public class TimeSensor extends Sensor implements Runnable {
 	private CountDownLatch gameReadyToStartLatch;
 
 	// times in ms
-	private static final int MIN_WAIT_TIME = 3000;
-	private static final int MAX_WAIT_TIME = 10000;
+	private static final int MIN_WAIT_TIME = 7000;
+	private static final int MAX_WAIT_TIME = 30000;
 
 	@SuppressWarnings("unused")
 	private final ExtendedGame extendedGame;

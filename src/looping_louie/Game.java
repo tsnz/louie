@@ -1,6 +1,7 @@
 package looping_louie;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
 import lejos.hardware.Sound;
@@ -105,10 +106,12 @@ public abstract class Game implements Runnable {
 	 * Start game
 	 */
 	private void begin() {
-		this.calibrateArm();
+		//this.motor.setAcceleration(210);
 		this.setupLightSensors();
-		motorListener = new MotorListener(gameReadyToStartLatch, this.motor, this.lightSensors);				
+		this.calibrateArm();
 		this.motor.resetTachoCount();
+		this.setArmToRandomPosition();
+		motorListener = new MotorListener(gameReadyToStartLatch, this.motor, this.lightSensors);				
 		this.motor.setSpeed(this.configuration.getSpeed());
 		this.countdown();
 		this.motor.backward();
@@ -155,23 +158,37 @@ public abstract class Game implements Runnable {
 			// check for arms position and move arm to player one
 			if(this.lightSensors.get(0).checkForBreach()) {
 				calibrated = true;			
-			} //else if (this.lightSensors.get(1).checkForBreach()) {				
-//				calibrated = true;
-//				this.motor.rotate(90);			
-//			} else if (this.lightSensors.get(2).checkForBreach()) {
-//				calibrated = true;
-//				this.motor.rotate(-180);
-//			} else if (this.lightSensors.get(3).checkForBreach()) {
-//				calibrated = true;
-//				this.motor.rotate(-90);
-//			}
+			} else if (this.lightSensors.get(1).checkForBreach()) {				
+				calibrated = true;							
+				this.rotateArm(90);
+			} else if (this.lightSensors.get(2).checkForBreach()) {
+				calibrated = true;				
+				this.rotateArm(-180);
+			} else if (this.lightSensors.get(3).checkForBreach()) {
+				calibrated = true;								
+				this.rotateArm(-90);
+			}
 									
 			try {
 				Thread.sleep(Configuration.ARM_CONFIGURATION_SLEEP_TIME);
 			} catch (InterruptedException e) {
 				// can be ignored since no interruption is possible
 			}
-		}		
+		}
+		this.rotateArm(2);
+	}
+	
+	private void rotateArm(int degrees) {
+		int currentSpeed = this.motor.getSpeed();
+		this.motor.setSpeed(50);
+		this.motor.rotate(degrees);
+		this.motor.setSpeed(currentSpeed);
+	}
+	
+	private void setArmToRandomPosition() {
+		Random randomGenerator = new Random();
+		int randomPosition = randomGenerator.nextInt(360);
+		this.rotateArm(randomPosition);
 	}
 
 	/**
@@ -188,9 +205,9 @@ public abstract class Game implements Runnable {
 		this.player_lifes[player] += -1;
 		this.display.displayLifesForPlayer(player, this.player_lifes[player]);
 		if (this.player_lifes[player] >= 1) {
-			Sound.twoBeeps();
-		} else {
 			Sound.beep();
+		} else {
+			Sound.twoBeeps();
 		}
 		if (this.player_lifes[player] == 0) {
 			this.motor.stop();			

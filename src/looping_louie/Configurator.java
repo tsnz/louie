@@ -47,7 +47,7 @@ public class Configurator {
 
 	// game speed menu
 	private static String speed_menu_title = "Geschwindigkeit";
-	private static String[] speed_menu_entries = { "50", "80", "100", "120" };
+	private static String[] speed_menu_entries = { "50", "80", "100", "120", "150" };
 	private static TextMenu speed_menu = new TextMenu(speed_menu_entries, 1, speed_menu_title);
 
 	// -----------------------------------------------------------------------------
@@ -201,6 +201,7 @@ public class Configurator {
 		int selected_entry = Configurator.lifes_menu.select();
 		// use selected entry to get value from entries
 		// and parse entry to integer
+	
 		this.configuration.setLifes(Integer.valueOf(Configurator.lifes_menu_entries[selected_entry]));
 	}
 

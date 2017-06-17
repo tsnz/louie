@@ -47,7 +47,7 @@ public class Display {
 	 * @param integerToDisplay integer to on LCD
 	 */
 	public void displayInteger(int integerToDisplay) {		
-		LCD.drawInt(integerToDisplay, 6, 4);
+		LCD.drawInt(integerToDisplay, 6, 5);
 	}
 	
 	/**
@@ -69,7 +69,9 @@ public class Display {
 				x = (DISPLAY_WIDTH - stringToDisplay.length()) / 2;
 		}							
 		LCD.drawString(stringToDisplay, x, y);
+		LCD.dra
 	}
+	
 	
 	/**
 	 * Clear LCD display

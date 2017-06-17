@@ -50,6 +50,7 @@ public class ExtendedGame extends Game {
 	protected void setupGame() {
 		this.motor_moving_forward = true;
 		this.motor.setSpeed(this.configuration.getSpeed());
+		this.motor.setAcceleration(180);
 	}
 
 	@Override
