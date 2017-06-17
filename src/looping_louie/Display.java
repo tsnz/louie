@@ -5,22 +5,28 @@ import lejos.hardware.lcd.LCD;
 public class Display {
 	
 	final static int DISPLAY_HEIGHT = 8;
-	final static int DISPLAY_WIDTH = 18;
-	
-	final static int DISPLAY_PLAYER_LIFES_X_OFFSET = 4;
+	final static int DISPLAY_WIDTH = 18;  //isn't it 16 characters? -> http://www.lejos.org/nxt/nxj/tutorial/LCD_Sensors/LCD_Sensors.htm
 	
 	public Display()  {
 		
 	}
 	
 	/**
-	 * Display initial lifes (same for every player)
+	 * Display initial lifes (as shape of diamond)
 	 * @param default_lifes number of default lifes
 	 */
 	public void displayInitialLifes(int default_lifes) {
-		for (int i = 0; i < 4; i++) {
-			LCD.drawString("Spieler " + Integer.toString(i + 1) + ": " + Integer.toString(default_lifes), DISPLAY_PLAYER_LIFES_X_OFFSET, i + 2);			
-		}
+		sDefault_lifes = Integer.toString(default_lifes);
+		
+		LCD.drawInt(sDefault_lifes, DISPLAY_WIDTH / 2 -1, 0); // 4th player's lifes (first line, centred)
+		displayString("Spieler 4", 1, true);
+		
+		LCD.drawString(sDefault_lifes +"  übrige Leben"+ sDefault_lifes, 0, 3);
+		LCD.drawString("Sp. 1        Sp. 3", 0, 4);
+		
+
+		displayString("Spieler 2", 6, true);
+		LCD.drawInt(sDefault_lifes, DISPLAY_WIDTH / 2 -1, 7); // 2nd player's lifes (first line, centred)		
 	}
 	
 	/**
@@ -29,8 +35,30 @@ public class Display {
 	 * @param lifes to ddisplay
 	 */
 	public void displayLifesForPlayer(int player, int lifes) {
-		LCD.clear(player + 2);
-		LCD.drawString("Spieler " + Integer.toString(player + 1 ) + ": " + Integer.toString(lifes), DISPLAY_PLAYER_LIFES_X_OFFSET, player + 2);
+		switch (player) {	// sorted from top to bottom
+		case 3: // player 4
+			LCD.clear(0);
+			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 -1, 0);
+			break;
+			
+		case 1: // player 2
+			LCD.clear(7);
+			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 -1, 7);
+			break;
+			
+		case 0: // player 1
+			LCD.clear(0, 3, 1);
+			LCD.drawInt(lifes, 0, 3);
+			break;
+			
+		case 2: // player 3
+			LCD.clear(17, 3, 1);
+			LCD.drawInt(lifes, 17, 3);
+			break;
+			
+		default:
+			break;
+		}
 	}		
 	
 	/**
