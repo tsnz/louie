@@ -193,8 +193,8 @@ public abstract class Game implements Runnable {
 		int randomPosition = randomGenerator.nextInt(360);
 		if (randomPosition > 180) {
 			this.rotateArm(-(360 - randomPosition));
-		}
-		this.rotateArm(randomPosition);
+		} else
+			this.rotateArm(randomPosition);
 	}
 
 	/**
