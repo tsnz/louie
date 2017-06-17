@@ -47,19 +47,19 @@ public class Display {
 	 */
 	public void displayLifesForPlayer(int player, int lifes) {
 		switch (player) { // sorted from top to bottom
-		case 3: // player 4
+		case 3: // yellow player
 			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 1);
 			break;
 
-		case 1: // player 2
+		case 1: // blue player
 			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 6);
 			break;
 
-		case 0: // player 1
+		case 0: // red player
 			LCD.drawInt(lifes, 0, 3);
 			break;
 
-		case 2: // player 3
+		case 2: // black player
 			LCD.drawInt(lifes, 16, 3);
 			break;
 
