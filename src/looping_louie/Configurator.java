@@ -31,7 +31,8 @@ public class Configurator {
 
 	// main menu
 	private static String display_title = "Looping Louie";
-	private static String[] main_menu_entries = { "Standardpiel", "Erweitertes Spiel", "Optionen" };
+	private static String[] main_menu_entries = { "Standardpiel", "Erweitertes Spiel", "Gesteuertes Spiel",
+			"Optionen" };
 	private static TextMenu main_menu = new TextMenu(main_menu_entries, 1, display_title);
 
 	// options menu
@@ -77,35 +78,43 @@ public class Configurator {
 			// get user selection
 			int selected_entry = main_menu.select();
 
-			switch (selected_entry) {
-			case 0: // start standard game
-				Game game = new StandardGame(this.configuration, this.display);
-				try {
+			try {
+
+				switch (selected_entry) {
+				case 0: // start standard game
+					Game game = new StandardGame(this.configuration, this.display);
 					game.startGame();
-					// Wait for player to confirm 'player lost' screen after a game
+					// Wait for player to confirm 'player lost' screen after a
+					// game
 					Button.waitForAnyPress();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				break;
-			case 1: // start extended game
-				ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display, this.btConnection);
-				// Wait for player to confirm 'player lost' screen after a game
-				Button.waitForAnyPress();
-				try {
+					break;
+				case 1: // start extended game
+					ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display);
+					// Wait for player to confirm 'player lost' screen after a
+					// game
+
 					extendedGame.startGame();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					Button.waitForAnyPress();
+
+					break;
+				case 2: // remotely controlled game
+					RemtoelyControlledGame remoteGame = new RemtoelyControlledGame(this.configuration, this.display,
+							this.btConnection);
+
+					remoteGame.startGame();
+					Button.waitForAnyPress();
+
+					break;
+				case 3: // options menu
+					this.showOptionsMenu();
+					break;
+				default: // escape pressed
+					exit = true;
 				}
-				break;
-			case 2: // options menu
-				this.showOptionsMenu();
-				break;
-			default: // escape pressed
-				exit = true;
-			}			
+			} catch (InterruptedException e) {
+				// can be ignored since no thread will interrupt the main game
+				// thread
+			}
 		}
 	}
 
@@ -141,7 +150,7 @@ public class Configurator {
 			}
 		}
 	}
-	
+
 	private void toggleRandomDirectionChange() {
 		boolean currentValue = this.configuration.getRandomDirectionChange();
 		this.configuration.setRandomDirectionChange(!currentValue);
@@ -150,7 +159,7 @@ public class Configurator {
 			this.display.displayString("Aktiviert", 4, true);
 		else
 			this.display.displayString("Deaktiviert", 4, true);
-		
+
 		Button.waitForAnyPress();
 	}
 
@@ -194,7 +203,7 @@ public class Configurator {
 		boolean configurationFinished = false;
 		while (!configurationFinished) {
 			this.display.clearDisplay();
-			for (int i = 0; i < 4; i++) {				
+			for (int i = 0; i < 4; i++) {
 				this.display.displayString("Sensor " + Integer.toString(i) + ": " + lightSensors.get(i).getValue(),
 						i + 2, false); // display sensor value rounded to 2
 										// decimal places

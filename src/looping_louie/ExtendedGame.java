@@ -11,9 +11,7 @@ public class ExtendedGame extends Game {
 
 	// array containing all non light sensors
 	protected ArrayList<Sensor> additionalSensors;
-	
-	// Bluetooth connection to the NXT
-	NXTBluetoothConnection btConnection;
+
 	// stores current motor direction
 	private boolean motor_moving_forward; // 1 = forward, 0 = backward
 	// minimal speed for the rng to output
@@ -32,18 +30,12 @@ public class ExtendedGame extends Game {
 	 *            to get settings from
 	 * @param display
 	 *            to display events on
-	 * @param btConnection
-	 *            Bluetooth connection to get commands from the NXT from
 	 */
-	public ExtendedGame(Configuration configuration, Display display, NXTBluetoothConnection btConnection) {
+	public ExtendedGame(Configuration configuration, Display display) {
 		// use constructor of parent class (Game)
 		super(configuration, display);
 		// initialize array for additional sensors
 		this.additionalSensors = new ArrayList<>();
-		
-		this.btConnection = btConnection;
-		if (!(this.btConnection == null))
-			this.setupBTConnection();
 	}
 
 	@Override
@@ -89,9 +81,9 @@ public class ExtendedGame extends Game {
 		// add min_speed to generated speed
 		this.motor.setSpeed(randomSpeed + this.min_speed);
 	}
-	
+
 	private void setupBTConnection() {
-		
+
 	}
 
 	@Override
@@ -106,9 +98,6 @@ public class ExtendedGame extends Game {
 		for (Sensor sensor : additionalSensors) {
 			sensor.stop();
 		}
-		// stop NXT BT Connection if initialized
-		if (!(this.btConnection == null))
-			this.btConnection.disconnect();
 	}
 
 }

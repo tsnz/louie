@@ -33,7 +33,7 @@ public class Configuration {
 	// -----------------------------------------------------------------------------
 
 	/**
-	 * Constructor. Creates configuration from default values
+	 * Creates configuration from default values
 	 */
 	public Configuration() {
 		this.speed = Configuration.DEFAULT_SPEED;
