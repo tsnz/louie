@@ -107,6 +107,8 @@ public abstract class Game implements Runnable {
 	 */
 	private void begin() {
 		//this.motor.setAcceleration(210);
+		this.display.displayString("Vorbereitung..", 3, true);
+		this.display.displayString("Einen Moment.", 4, true);
 		this.setupLightSensors();
 		this.calibrateArm();
 		this.motor.resetTachoCount();
