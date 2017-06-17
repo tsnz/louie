@@ -125,12 +125,12 @@ public abstract class Game implements Runnable {
 	public void countdown() {		
 		try {
 			Sound.beep();
-			this.display.displayInteger(3);
+			this.display.displayCenteredInteger(3);
 			Thread.sleep(1000);
-			this.display.displayInteger(2);
+			this.display.displayCenteredInteger(2);
 			Sound.beep();
 			Thread.sleep(1000);
-			this.display.displayInteger(1);
+			this.display.displayCenteredInteger(1);
 			Sound.beep();
 			Thread.sleep(1000);
 			this.display.displayString(START, 4, true);
@@ -218,7 +218,7 @@ public abstract class Game implements Runnable {
 
 	@Override
 	public void run() {
-		LCD.clear();
+		this.display.clearDisplay();
 		this.setupAdditionalSensors();
 		this.setupGame();
 		this.begin();

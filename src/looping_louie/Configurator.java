@@ -73,7 +73,7 @@ public class Configurator {
 		boolean exit = false;
 		// stay in menu until escape is pressed
 		while (!exit) {
-			LCD.clear();
+			this.display.clearDisplay();
 
 			// get user selection
 			int selected_entry = main_menu.select();
@@ -188,7 +188,7 @@ public class Configurator {
 	}
 
 	private void showSensorOutput() {
-		LCD.clear();
+		this.display.clearDisplay();
 
 		// available ports
 		Port[] ports = new Port[] { SensorPort.S1, SensorPort.S2, SensorPort.S3, SensorPort.S4 };
