@@ -18,7 +18,7 @@ public class Display {
 	 *            number of default lifes
 	 */
 	public void displayInitialLifes(int default_lifes) {		
-
+		LCD.clear();
 		displayString("Gelb", 0, true);
 		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 1); // yellow player's
 																// lifes (first

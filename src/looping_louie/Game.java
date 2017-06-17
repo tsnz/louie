@@ -126,6 +126,7 @@ public abstract class Game implements Runnable {
 	 */
 	public void countdown() {		
 		try {
+			this.display.clearDisplay();
 			Sound.beep();
 			this.display.displayCenteredInteger(3);
 			Thread.sleep(1000);
