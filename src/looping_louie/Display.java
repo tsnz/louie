@@ -1,6 +1,7 @@
 package looping_louie;
 
 import lejos.hardware.lcd.LCD;
+import lejos.internal.ev3.EV3LCDManager;
 
 public class Display {
 
@@ -8,7 +9,10 @@ public class Display {
 	final static int DISPLAY_WIDTH = 18; 
 
 	public Display() {
-
+		
+		// hide std out
+		EV3LCDManager lcdManager = EV3LCDManager.getLocalLCDManager();
+		lcdManager.getLayer("STDOUT").setVisible(false);
 	}
 
 	/**

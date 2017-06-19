@@ -27,6 +27,16 @@ public class Configuration {
 	// -- motor listener
 	final static int MOTOR_LISTENER_SLEEP_TIME = 3; // sleep time between
 													// position checks
+	// -- bt remote
+	final static int BLUETOOTH_REMOTE_LISTENER_SLEEP_TIME = 400;
+	
+	// -- motor	
+	final static int MAX_MOTOR_SPEED = 150;
+	final static int MIN_MOTOR_SPEED = 50;
+	
+	// -- remote
+	final static int REMOTE_SPEED_CHANGE_STEP = 10;
+	
 
 	// -----------------------------------------------------------------------------
 	// functions

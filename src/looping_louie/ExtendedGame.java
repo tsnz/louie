@@ -3,6 +3,8 @@ package looping_louie;
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.jcraft.jsch.ConfigRepository.Config;
+
 public class ExtendedGame extends Game {
 
 	// -----------------------------------------------------------------------------
@@ -14,10 +16,6 @@ public class ExtendedGame extends Game {
 
 	// stores current motor direction
 	private boolean motor_moving_forward; // 1 = forward, 0 = backward
-	// minimal speed for the rng to output
-	private int min_speed = 50;
-	// maximal speed for the rng to output
-	private int max_speed = 150;
 
 	// -----------------------------------------------------------------------------
 	// functions
@@ -77,9 +75,9 @@ public class ExtendedGame extends Game {
 		Random randomGenerator = new Random();
 		// new random speed using the given offsets
 		// subtract min_speed to prevent actual speed exceeding max_speed
-		int randomSpeed = randomGenerator.nextInt(this.max_speed - this.min_speed);
+		int randomSpeed = randomGenerator.nextInt(Configuration.MAX_MOTOR_SPEED - Configuration.MIN_MOTOR_SPEED);
 		// add min_speed to generated speed
-		this.motor.setSpeed(randomSpeed + this.min_speed);
+		this.motor.setSpeed(randomSpeed + Configuration.MIN_MOTOR_SPEED);
 	}
 
 	@Override

@@ -179,12 +179,14 @@ public class Configurator {
 			this.display.clearDisplay();
 			try {
 				this.btConnection = new NXTBluetoothConnection();
+				this.display.displayString("Verbunden", 4, true);				
 			} catch (BluetoothConnectionFailed e) {
 				this.display.displayString(e.getMessage(), 4, true);
-			}
-			this.display.displayString("Verbunden", 4, true);
+			}			
 		}
-
+		Button.waitForAnyPress();
+		this.display.clearDisplay();
+		LCD.refresh();		
 	}
 
 	private void showSensorOutput() {
