@@ -1,6 +1,7 @@
 package looping_louie;
 
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
@@ -9,11 +10,12 @@ import lejos.hardware.lcd.LCD;
 import lejos.remote.nxt.NXTCommConnector;
 import lejos.remote.nxt.NXTConnection;
 
-public class NXTBluetoothConnection implements Runnable {
+public class NXTBluetoothConnection  implements Runnable {
 
 	static String connectionFailed = "Fehlgeschlagen";
 
 	final static String REMOTE_EV3_NAME = "EV4";
+	final static String DISCONNECT = "DISCONNECT";
 
 	private Thread thread;
 	private CountDownLatch gameReadyToStartLatch;
@@ -44,6 +46,10 @@ public class NXTBluetoothConnection implements Runnable {
 
 	public void disconnect() {
 		try {
+			DataOutputStream bluetoothOutStream = this.connection.openDataOutputStream();
+			bluetoothOutStream.writeUTF(DISCONNECT);
+			bluetoothOutStream.flush();	
+			this.bluetoothInStream.close();
 			this.connection.close();
 		} catch (IOException e) {
 			// can be ignored
