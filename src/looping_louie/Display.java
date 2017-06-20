@@ -7,7 +7,7 @@ public class Display {
 
 	final static int DISPLAY_HEIGHT = 8;
 	final static int DISPLAY_WIDTH = 18; 
-	final static String[] PLAYER_COLLOR = {"Blau","Rot","Schwarz","Gelb"}; // player 1 (internal number 0) has collor blue
+	final static String[] PLAYER_COLLOR = {"Blau","Rot","Schwarz","Gelb"}; // player 1 (internal number 0) has color blue
 
 	public Display() {
 		
