@@ -80,8 +80,8 @@ public class Display {
 	 *            that lost
 	 */
 	public void displayLossForPlayer(int player) {
-		LCD.clear();
-		this.displayString("Spieler " + PLAYER_COLLOR[player] + " verliert!", 4, true);
+		LCD.clear();		
+		this.displayString(PLAYER_COLLOR[player] + " verliert!", 4, true);
 	}
 
 	/**
