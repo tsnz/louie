@@ -7,6 +7,7 @@ public class Display {
 
 	final static int DISPLAY_HEIGHT = 8;
 	final static int DISPLAY_WIDTH = 18; 
+	final static String[] PLAYER_COLLOR = {"Blau","Rot","Schwarz","Gelb"}; // player 1 (internal number 0) has collor blue
 
 	public Display() {
 		
@@ -80,7 +81,7 @@ public class Display {
 	 */
 	public void displayLossForPlayer(int player) {
 		LCD.clear();
-		this.displayString("Spieler " + Integer.toString(player + 1) + " verliert!", 4, true);
+		this.displayString("Spieler " + PLAYER_COLLOR[player] + " verliert!", 4, true);
 	}
 
 	/**
