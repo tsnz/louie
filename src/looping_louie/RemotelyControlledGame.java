@@ -1,15 +1,13 @@
 package looping_louie;
 
-import com.jcraft.jsch.ConfigRepository.Config;
-
-public class RemtoelyControlledGame extends Game {
+public class RemotelyControlledGame extends Game {
 	
 	private boolean motor_moving_forward = true;
 	
 	//Bluetooth connection to the NXT
 	NXTBluetoothConnection btConnection;
 
-	public RemtoelyControlledGame(Configuration configuration, Display display, NXTBluetoothConnection btConnection) {
+	public RemotelyControlledGame(Configuration configuration, Display display, NXTBluetoothConnection btConnection) {
 		super(configuration, display);
 		
 		this.btConnection = btConnection;
@@ -29,7 +27,7 @@ public class RemtoelyControlledGame extends Game {
 
 	@Override
 	protected void cleanup() {		
-		this.btConnection.stopBTListener();
+		this.btConnection.stopBTListener();		
 	}
 	
 	/**

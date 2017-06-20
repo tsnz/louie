@@ -18,13 +18,15 @@ public class NXTBluetoothConnection implements Runnable {
 	private Thread thread;
 	private CountDownLatch gameReadyToStartLatch;
 
+	NXTConnection connection;
+
 	DataInputStream bluetoothInStream;
 
-	RemtoelyControlledGame game;
+	RemotelyControlledGame game;
 
 	public NXTBluetoothConnection() throws BluetoothConnectionFailed {
 		NXTCommConnector connector = Bluetooth.getNXTCommConnector();
-		NXTConnection connection = connector.connect(REMOTE_EV3_NAME, NXTConnection.PACKET);
+		connection = connector.connect(REMOTE_EV3_NAME, NXTConnection.PACKET);
 
 		if (connection == null)
 			throw new BluetoothConnectionFailed(connectionFailed);
@@ -32,7 +34,7 @@ public class NXTBluetoothConnection implements Runnable {
 		this.bluetoothInStream = connection.openDataInputStream();
 	}
 
-	public void setGame(RemtoelyControlledGame game) {
+	public void setGame(RemotelyControlledGame game) {
 		this.game = game;
 	}
 
@@ -41,7 +43,11 @@ public class NXTBluetoothConnection implements Runnable {
 	}
 
 	public void disconnect() {
-
+		try {
+			this.connection.close();
+		} catch (IOException e) {
+			// can be ignored
+		}
 	}
 
 	public void startBTListener() {
@@ -69,18 +75,23 @@ public class NXTBluetoothConnection implements Runnable {
 
 				String bluetoothIn = this.bluetoothInStream.readUTF();
 
-				switch (bluetoothIn) {
-				case "ENTER":
-					this.game.toggleMotorDirection();
-					break;
-				case "DOWN":
-					this.game.decreaseMotorSpeed();
-					break;
-				case "UP":
-					this.game.increaseMotorSpeed();
-					break;
-				default:
-					break;
+				// check if game exists
+				if (this.game != null) {
+
+					switch (bluetoothIn) {
+					case "ENTER":
+						this.game.toggleMotorDirection();
+						break;
+					case "DOWN":
+						this.game.decreaseMotorSpeed();
+						break;
+					case "UP":
+						this.game.increaseMotorSpeed();
+						break;
+					default:
+						break;
+					}
+
 				}
 
 			} catch (IOException e) {

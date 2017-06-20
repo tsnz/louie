@@ -98,7 +98,7 @@ public class Configurator {
 
 					break;
 				case 2: // remotely controlled game
-					RemtoelyControlledGame remoteGame = new RemtoelyControlledGame(this.configuration, this.display,
+					RemotelyControlledGame remoteGame = new RemotelyControlledGame(this.configuration, this.display,
 							this.btConnection);
 
 					remoteGame.startGame();
