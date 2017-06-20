@@ -14,7 +14,7 @@ public class LightSensor extends Sensor {
 	final NXTLightSensor light_sensor;
 	final Port sensor_port;
 	final int player_id;
-	final static float THRESHOLD = 0.80f;
+	final static float THRESHOLD = 0.75f;
 
 	protected final Game game;
 

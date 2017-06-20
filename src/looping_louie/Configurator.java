@@ -178,7 +178,7 @@ public class Configurator {
 			// try to connect to NXT
 			this.display.clearDisplay();
 			try {
-				this.btConnection = new NXTBluetoothConnection();
+				this.btConnection = new NXTBluetoothConnection(this.display);
 				this.display.displayString("Verbunden", 4, true);				
 			} catch (BluetoothConnectionFailed e) {
 				this.display.displayString(e.getMessage(), 4, true);

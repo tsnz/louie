@@ -10,7 +10,7 @@ import lejos.hardware.lcd.LCD;
 import lejos.remote.nxt.NXTCommConnector;
 import lejos.remote.nxt.NXTConnection;
 
-public class NXTBluetoothConnection  implements Runnable {
+public class NXTBluetoothConnection implements Runnable {
 
 	static String connectionFailed = "Fehlgeschlagen";
 
@@ -25,15 +25,18 @@ public class NXTBluetoothConnection  implements Runnable {
 	DataInputStream bluetoothInStream;
 
 	RemotelyControlledGame game;
+	
+	Display display;
 
-	public NXTBluetoothConnection() throws BluetoothConnectionFailed {
-		NXTCommConnector connector = Bluetooth.getNXTCommConnector();
-		connection = connector.connect(REMOTE_EV3_NAME, NXTConnection.PACKET);
-
+	public NXTBluetoothConnection(Display display) throws BluetoothConnectionFailed {
+		this.display = display;
+		this.display.displayString("Verbinden...", 4, true);
+		NXTCommConnector connector = Bluetooth.getNXTCommConnector();		
+		connection = connector.connect(REMOTE_EV3_NAME, NXTConnection.PACKET);		
 		if (connection == null)
 			throw new BluetoothConnectionFailed(connectionFailed);
-
-		this.bluetoothInStream = connection.openDataInputStream();
+		
+		this.display.clearDisplay();
 	}
 
 	public void setGame(RemotelyControlledGame game) {
@@ -48,7 +51,7 @@ public class NXTBluetoothConnection  implements Runnable {
 		try {
 			DataOutputStream bluetoothOutStream = this.connection.openDataOutputStream();
 			bluetoothOutStream.writeUTF(DISCONNECT);
-			bluetoothOutStream.flush();	
+			bluetoothOutStream.flush();
 			this.bluetoothInStream.close();
 			this.connection.close();
 		} catch (IOException e) {
@@ -59,11 +62,18 @@ public class NXTBluetoothConnection  implements Runnable {
 	public void startBTListener() {
 		this.thread = new Thread(this);
 		this.thread.setDaemon(true);
+		this.bluetoothInStream = this.connection.openDataInputStream();
 		this.thread.start();
 	}
 
 	public void stopBTListener() {
 		this.thread.interrupt();
+		try {
+			this.bluetoothInStream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -75,9 +85,8 @@ public class NXTBluetoothConnection  implements Runnable {
 			// can be ignored since latch wont be interrupted
 		}
 
-		while (!this.thread.isInterrupted()) {
-
-			try {
+		try {
+			while (!this.thread.isInterrupted()) {
 
 				String bluetoothIn = this.bluetoothInStream.readUTF();
 
@@ -100,11 +109,9 @@ public class NXTBluetoothConnection  implements Runnable {
 
 				}
 
-			} catch (IOException e) {
-				LCD.clear();
-				LCD.drawString("Error", 0, 3);
 			}
-
+		} catch (IOException e) {
+			// can be ignored
 		}
 		return;
 

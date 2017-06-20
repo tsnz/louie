@@ -27,7 +27,12 @@ public class RemotelyControlledGame extends Game {
 
 	@Override
 	protected void cleanup() {		
-		this.btConnection.stopBTListener();		
+		this.btConnection.stopBTListener();
+		this.motorListener.stop();
+		this.motor.close();
+		for (Sensor sensor : lightSensors) {
+			sensor.stop();
+		}
 	}
 	
 	/**
