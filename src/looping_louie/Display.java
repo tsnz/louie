@@ -6,11 +6,18 @@ import lejos.internal.ev3.EV3LCDManager;
 public class Display {
 
 	final static int DISPLAY_HEIGHT = 8;
-	final static int DISPLAY_WIDTH = 18; 
-	final static String[] PLAYER_COLLOR = {"Blau","Rot","Schwarz","Gelb"}; // player 1 (internal number 0) has color blue
+	final static int DISPLAY_WIDTH = 18;
+	final static String[] PLAYER_COLLOR = { "Blau", "Rot", "Schwarz", "Gelb" }; // player
+																				// 1
+																				// (internal
+																				// number
+																				// 0)
+																				// has
+																				// color
+																				// blue
 
 	public Display() {
-		
+
 		// hide std out
 		EV3LCDManager lcdManager = EV3LCDManager.getLocalLCDManager();
 		lcdManager.getLayer("STDOUT").setVisible(false);
@@ -22,7 +29,7 @@ public class Display {
 	 * @param default_lifes
 	 *            number of default lifes
 	 */
-	public void displayInitialLifes(int default_lifes) {		
+	public void displayInitialLifes(int default_lifes) {
 		LCD.clear();
 		displayString("Gelb", 0, true);
 		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 1); // yellow player's
@@ -30,16 +37,17 @@ public class Display {
 																// line,
 																// centred)
 
-		LCD.drawInt(default_lifes, 0, 3);	// blue player
-		LCD.drawInt(default_lifes, 16, 3);	// black player
+		LCD.drawInt(default_lifes, 0, 3); // blue player
+		LCD.drawInt(default_lifes, 16, 3); // black player
 		displayString("Spieler", 3, true);
-		LCD.drawString("Blau  Leben  Schw", 0, 4);  // word 'life' between blue and black player
+		LCD.drawString("Blau  Leben  Schw", 0, 4); // word 'life' between blue
+													// and black player
 
-		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 6); 
-		displayString("Rot", 7, true);				  // red player's
-																// lifes (first
-																// line,
-																// centred)
+		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 6);
+		displayString("Rot", 7, true); // red player's
+										// lifes (first
+										// line,
+										// centred)
 	}
 
 	/**
@@ -80,7 +88,7 @@ public class Display {
 	 *            that lost
 	 */
 	public void displayLossForPlayer(int player) {
-		LCD.clear();		
+		LCD.clear();
 		this.displayString(PLAYER_COLLOR[player] + " verliert!", 4, true);
 	}
 
