@@ -1,0 +1,2084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_e78mkGZuEeeC7M0ZKcTJ6A" name="Looping">
+    <eAnnotations xmi:id="_gPIFsGZuEeeC7M0ZKcTJ6A" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_gPMXIGZuEeeC7M0ZKcTJ6A" source="codegen">
+        <details xmi:id="_gPMXIWZuEeeC7M0ZKcTJ6A" key="codegenDirectory" value="/Looping/louie/src"/>
+        <details xmi:id="_h60ygGZuEeeC7M0ZKcTJ6A" key="AssociatedSourceCode" value="/Looping/louie/src/looping_louie/BluetoothConnectionFailed.java;1052082046/1;/Looping/louie/src/looping_louie/Configuration.java;3195075566/1;/Looping/louie/src/looping_louie/Configurator.java;2253112550/1;/Looping/louie/src/looping_louie/Display.java;2163100086/1;/Looping/louie/src/looping_louie/ExtendedGame.java;533814095/1;/Looping/louie/src/looping_louie/Game.java;264069685/1;/Looping/louie/src/looping_louie/LightSensor.java;1609445560/1;/Looping/louie/src/looping_louie/Louie.java;2995982758/1;/Looping/louie/src/looping_louie/MotorListener.java;351655342/1;/Looping/louie/src/looping_louie/NXTBluetoothConnection.java;1981177503/1;/Looping/louie/src/looping_louie/RemotelyControlledGame.java;2374357935/1;/Looping/louie/src/looping_louie/Sensor.java;3900260910/1;/Looping/louie/src/looping_louie/StandardGame.java;2379913505/1;/Looping/louie/src/looping_louie/TimeSensor.java;3512282751/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_gLhYEGZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_gLh_IGZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_gLh_IWZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_gLh_ImZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_gLh_I2ZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_gLh_JGZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_gLh_JWZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_gLh_JmZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_gLjNQGZuEeeC7M0ZKcTJ6A">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_gLwooGZuEeeC7M0ZKcTJ6A" name="looping_louie">
+      <packagedElement xmi:type="uml:Class" xmi:id="_gPCmIGZuEeeC7M0ZKcTJ6A" name="BluetoothConnectionFailed">
+        <generalization xmi:id="_gWLI4GZuEeeC7M0ZKcTJ6A" general="_gWJ6wGZuEeeC7M0ZKcTJ6A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gZ3WEGZuEeeC7M0ZKcTJ6A" name="BluetoothConnectionFailed" specification="_gPQokGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gZ3WEWZuEeeC7M0ZKcTJ6A" name="message">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gZ3WEmZuEeeC7M0ZKcTJ6A" type="_gPCmIGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>super(message);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gPQokGZuEeeC7M0ZKcTJ6A" name="BluetoothConnectionFailed" method="_gZ3WEGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gPSdwGZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gPSdwWZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_gPQokWZuEeeC7M0ZKcTJ6A" name="message">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gPTE0GZuEeeC7M0ZKcTJ6A" type="_gPCmIGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gPXWQGZuEeeC7M0ZKcTJ6A" name="Configuration">
+        <ownedAttribute xmi:id="_gWyz8GZuEeeC7M0ZKcTJ6A" name="speed" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gWzbAGZuEeeC7M0ZKcTJ6A" name="lifes" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gW0CEGZuEeeC7M0ZKcTJ6A" name="randomDirectionChange" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gXvPIWZuEeeC7M0ZKcTJ6A" name="DEFAULT_SPEED" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gXv2MGZuEeeC7M0ZKcTJ6A" value="80"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gXxEUGZuEeeC7M0ZKcTJ6A" name="DEFAULT_LIFES" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gXxrYGZuEeeC7M0ZKcTJ6A" value="3"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gXyScWZuEeeC7M0ZKcTJ6A" name="DEFAULT_RANDOM_DIRECTION_CHANGE" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gXyScmZuEeeC7M0ZKcTJ6A" value="false"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gXzgkGZuEeeC7M0ZKcTJ6A" name="ARM_CONFIGURATION_SPEED" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gXzgkWZuEeeC7M0ZKcTJ6A" value="10"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gX0HoWZuEeeC7M0ZKcTJ6A" name="ARM_CONFIGURATION_AGLE" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX0usGZuEeeC7M0ZKcTJ6A" value="4"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gX1VwWZuEeeC7M0ZKcTJ6A" name="ARM_CONFIGURATION_SLEEP_TIME" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX180GZuEeeC7M0ZKcTJ6A" value="200"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gX2j4GZuEeeC7M0ZKcTJ6A" name="MOTOR_LISTENER_SLEEP_TIME" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX2j4WZuEeeC7M0ZKcTJ6A" value="3"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gX3yAGZuEeeC7M0ZKcTJ6A" name="BLUETOOTH_REMOTE_LISTENER_SLEEP_TIME" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX3yAWZuEeeC7M0ZKcTJ6A" value="400"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gX5AIGZuEeeC7M0ZKcTJ6A" name="MAX_MOTOR_SPEED" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX5AIWZuEeeC7M0ZKcTJ6A" value="150"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gX6OQGZuEeeC7M0ZKcTJ6A" name="MIN_MOTOR_SPEED" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX6OQWZuEeeC7M0ZKcTJ6A" value="50"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gX7cYGZuEeeC7M0ZKcTJ6A" name="REMOTE_SPEED_CHANGE_STEP" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX7cYWZuEeeC7M0ZKcTJ6A" value="10"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaExcGZuEeeC7M0ZKcTJ6A" name="Configuration" specification="_gPbAoGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaExcWZuEeeC7M0ZKcTJ6A" type="_gPXWQGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>this.speed = Configuration.DEFAULT_SPEED;&#xD;
+		this.lifes = Configuration.DEFAULT_LIFES;&#xD;
+		this.randomDirectionChange = Configuration.DEFAULT_RANDOM_DIRECTION_CHANGE;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaExcmZuEeeC7M0ZKcTJ6A" name="setSpeed" specification="_gPbnsGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaExc2ZuEeeC7M0ZKcTJ6A" name="speed">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.speed = speed;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaFYgGZuEeeC7M0ZKcTJ6A" name="setRandomDirectionChange" specification="_gPcOwGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaFYgWZuEeeC7M0ZKcTJ6A" name="random">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.randomDirectionChange = random;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaFYgmZuEeeC7M0ZKcTJ6A" name="setLifes" specification="_gPdc4GZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaFYg2ZuEeeC7M0ZKcTJ6A" name="lifes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.lifes = lifes;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gPbAoGZuEeeC7M0ZKcTJ6A" name="Configuration" method="_gaExcGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gPbAoWZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gPbAomZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_garOYGZuEeeC7M0ZKcTJ6A">
+            <body>Creates configuration from default values</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gPbAo2ZuEeeC7M0ZKcTJ6A" type="_gPXWQGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gPbnsGZuEeeC7M0ZKcTJ6A" name="setSpeed" method="_gaExcmZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gar1cGZuEeeC7M0ZKcTJ6A">
+            <body>&#xD;
+	 * @param speed speed for the game to run at</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gPbnsWZuEeeC7M0ZKcTJ6A" name="speed">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gPcOwGZuEeeC7M0ZKcTJ6A" name="setRandomDirectionChange" method="_gaFYgGZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gar1cWZuEeeC7M0ZKcTJ6A">
+            <body>&#xD;
+	 * @param random True to activate random direction changes, false to deactivate them</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gPc10GZuEeeC7M0ZKcTJ6A" name="random">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gPdc4GZuEeeC7M0ZKcTJ6A" name="setLifes" method="_gaFYgmZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gascgGZuEeeC7M0ZKcTJ6A">
+            <body>&#xD;
+	 * @param lifes Initial lifes each player has</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gPdc4WZuEeeC7M0ZKcTJ6A" name="lifes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gP6v4GZuEeeC7M0ZKcTJ6A" name="Configurator">
+        <ownedAttribute xmi:id="_gX9RkGZuEeeC7M0ZKcTJ6A" name="configuration" visibility="private" type="_gPXWQGZuEeeC7M0ZKcTJ6A" association="_gbftwGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gX94oGZuEeeC7M0ZKcTJ6A" name="display" visibility="private" type="_gQU_kGZuEeeC7M0ZKcTJ6A" association="_gbg74GZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gX-fsGZuEeeC7M0ZKcTJ6A" name="btConnection" visibility="private" type="_gRnZAGZuEeeC7M0ZKcTJ6A" association="_gbhi8WZuEeeC7M0ZKcTJ6A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX-fsWZuEeeC7M0ZKcTJ6A" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gX_GwWZuEeeC7M0ZKcTJ6A" name="RETURN_KEY_BITMAP" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gX_t0GZuEeeC7M0ZKcTJ6A" value="8192"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYAU4GZuEeeC7M0ZKcTJ6A" name="errorPausingMenuTrhead" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYAU4WZuEeeC7M0ZKcTJ6A" value="&quot;Menü konnte nicht in den Wartezustand versetzt&quot;&#xD;&#xA;&#x9;&#x9;&#x9;+ &quot;werden. Spiel kann nicht gestartet werden&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYA78GZuEeeC7M0ZKcTJ6A" name="display_title" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYA78WZuEeeC7M0ZKcTJ6A" value="&quot;Looping Louie&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYBjAGZuEeeC7M0ZKcTJ6A" name="main_menu_entries" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYBjAWZuEeeC7M0ZKcTJ6A" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYCKEWZuEeeC7M0ZKcTJ6A" value="{ &quot;Standardpiel&quot;, &quot;Erweitertes Spiel&quot;, &quot;Gesteuertes Spiel&quot;,&#xD;&#xA;&#x9;&#x9;&#x9;&quot;Optionen&quot; }"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYCxIWZuEeeC7M0ZKcTJ6A" name="main_menu" visibility="private" isStatic="true" type="_gUXLAGZuEeeC7M0ZKcTJ6A" association="_gbiKAWZuEeeC7M0ZKcTJ6A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYDYMGZuEeeC7M0ZKcTJ6A" value="new TextMenu(main_menu_entries, 1, display_title)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYEmUGZuEeeC7M0ZKcTJ6A" name="options_menu_title" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYF0cGZuEeeC7M0ZKcTJ6A" value="&quot;Optionen&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYIQsWZuEeeC7M0ZKcTJ6A" name="options_menu_entries" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYI3wGZuEeeC7M0ZKcTJ6A" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYI3wmZuEeeC7M0ZKcTJ6A" value="{ &quot;Leben&quot;, &quot;Geschwindigkeit&quot;, &quot;Richtungswechsel&quot;,&#xD;&#xA;&#x9;&#x9;&#x9;&quot;Sensoren konfigurieren&quot;, &quot;Use Remote&quot; }"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYKs8WZuEeeC7M0ZKcTJ6A" name="options_menu" visibility="private" isStatic="true" type="_gUXLAGZuEeeC7M0ZKcTJ6A" association="_gbj_MWZuEeeC7M0ZKcTJ6A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYLUAGZuEeeC7M0ZKcTJ6A" value="new TextMenu(options_menu_entries, 1, options_menu_title)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYNJMGZuEeeC7M0ZKcTJ6A" name="lifes_menu_title" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYNwQGZuEeeC7M0ZKcTJ6A" value="&quot;Leben&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYOXUWZuEeeC7M0ZKcTJ6A" name="lifes_menu_entries" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYOXUmZuEeeC7M0ZKcTJ6A" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYO-YWZuEeeC7M0ZKcTJ6A" value="{ &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;5&quot;, &quot;8&quot; }"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYPlcWZuEeeC7M0ZKcTJ6A" name="lifes_menu" visibility="private" isStatic="true" type="_gUXLAGZuEeeC7M0ZKcTJ6A" association="_gblNUGZuEeeC7M0ZKcTJ6A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYPlcmZuEeeC7M0ZKcTJ6A" value="new TextMenu(lifes_menu_entries, 1, lifes_menu_title)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYQzkGZuEeeC7M0ZKcTJ6A" name="speed_menu_title" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYQzkWZuEeeC7M0ZKcTJ6A" value="&quot;Geschwindigkeit&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYRaoWZuEeeC7M0ZKcTJ6A" name="speed_menu_entries" visibility="private" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYRaomZuEeeC7M0ZKcTJ6A" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYSBsWZuEeeC7M0ZKcTJ6A" value="{ &quot;50&quot;, &quot;80&quot;, &quot;100&quot;, &quot;120&quot;, &quot;150&quot; }"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYSowGZuEeeC7M0ZKcTJ6A" name="speed_menu" visibility="private" isStatic="true" type="_gUXLAGZuEeeC7M0ZKcTJ6A" association="_gbl0YWZuEeeC7M0ZKcTJ6A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYSowWZuEeeC7M0ZKcTJ6A" value="new TextMenu(speed_menu_entries, 1, speed_menu_title)"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaF_kGZuEeeC7M0ZKcTJ6A" name="Configurator" specification="_gQDSwGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaF_kWZuEeeC7M0ZKcTJ6A" type="_gP6v4GZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>// load saved configuration from file system&#xD;
+&#xD;
+		// create new default configuration if none is found&#xD;
+		this.configuration = new Configuration();&#xD;
+		this.display = new Display();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaGmoGZuEeeC7M0ZKcTJ6A" name="startupMainMenu" specification="_gQEg4GZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>boolean exit = false;&#xD;
+		// stay in menu until escape is pressed&#xD;
+		while (!exit) {&#xD;
+			this.display.clearDisplay();&#xD;
+&#xD;
+			// get user selection&#xD;
+			int selected_entry = main_menu.select();&#xD;
+&#xD;
+			try {&#xD;
+&#xD;
+				switch (selected_entry) {&#xD;
+				case 0: // start standard game&#xD;
+					Game game = new StandardGame(this.configuration, this.display);&#xD;
+					game.startGame();&#xD;
+					// Wait for player to confirm 'player lost' screen after a&#xD;
+					// game&#xD;
+					Button.waitForAnyPress();&#xD;
+					break;&#xD;
+				case 1: // start extended game&#xD;
+					ExtendedGame extendedGame = new ExtendedGame(this.configuration, this.display);&#xD;
+					// Wait for player to confirm 'player lost' screen after a&#xD;
+					// game&#xD;
+&#xD;
+					extendedGame.startGame();&#xD;
+					Button.waitForAnyPress();&#xD;
+&#xD;
+					break;&#xD;
+				case 2: // remotely controlled game&#xD;
+					RemotelyControlledGame remoteGame = new RemotelyControlledGame(this.configuration, this.display,&#xD;
+							this.btConnection);&#xD;
+&#xD;
+					remoteGame.startGame();&#xD;
+					Button.waitForAnyPress();&#xD;
+&#xD;
+					break;&#xD;
+				case 3: // options menu&#xD;
+					this.showOptionsMenu();&#xD;
+					break;&#xD;
+				default: // escape pressed&#xD;
+					exit = true;&#xD;
+				}&#xD;
+			} catch (InterruptedException e) {&#xD;
+				// can be ignored since no thread will interrupt the main game&#xD;
+				// thread&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaGmoWZuEeeC7M0ZKcTJ6A" name="showOptionsMenu" specification="_gQFH8GZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>boolean exit = false;&#xD;
+		while (!exit) {&#xD;
+			LCD.clear();&#xD;
+			// show available options and get selection&#xD;
+			int selected_entry = Configurator.options_menu.select();&#xD;
+			switch (selected_entry) {&#xD;
+			// change default game lifes&#xD;
+			case 0:&#xD;
+				this.selectGameLifes();&#xD;
+				break;&#xD;
+			// change default game speed&#xD;
+			case 1:&#xD;
+				this.selectGameSpeed();&#xD;
+				break;&#xD;
+			case 2:&#xD;
+				this.toggleRandomDirectionChange();&#xD;
+				break;&#xD;
+			case 3:&#xD;
+				showSensorOutput();&#xD;
+				break;&#xD;
+			case 4:&#xD;
+				this.setuptNXTRemote();&#xD;
+				break;&#xD;
+			default:&#xD;
+				exit = true;&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaHNsGZuEeeC7M0ZKcTJ6A" name="toggleRandomDirectionChange" specification="_gQFvAGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>boolean currentValue = this.configuration.getRandomDirectionChange();&#xD;
+		this.configuration.setRandomDirectionChange(!currentValue);&#xD;
+		this.display.clearDisplay();&#xD;
+		if (this.configuration.getRandomDirectionChange() == true)&#xD;
+			this.display.displayString(&quot;Aktiviert&quot;, 4, true);&#xD;
+		else&#xD;
+			this.display.displayString(&quot;Deaktiviert&quot;, 4, true);&#xD;
+&#xD;
+		Button.waitForAnyPress();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaJC4GZuEeeC7M0ZKcTJ6A" name="setuptNXTRemote" specification="_gQGWEGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>// toggle based on weather a connection is initialized&#xD;
+		if (!(this.btConnection == null)) {&#xD;
+			// disconnect from NXT&#xD;
+			btConnection.disconnect();&#xD;
+			btConnection = null;&#xD;
+			this.display.clearDisplay();&#xD;
+			this.display.displayString(&quot;Getrennt&quot;, 4, true);&#xD;
+		} else {&#xD;
+			// try to connect to NXT&#xD;
+			this.display.clearDisplay();&#xD;
+			try {&#xD;
+				this.btConnection = new NXTBluetoothConnection(this.display);&#xD;
+				this.display.displayString(&quot;Verbunden&quot;, 4, true);				&#xD;
+			} catch (BluetoothConnectionFailed e) {&#xD;
+				this.display.displayString(e.getMessage(), 4, true);&#xD;
+			}			&#xD;
+		}&#xD;
+		Button.waitForAnyPress();&#xD;
+		this.display.clearDisplay();&#xD;
+		LCD.refresh();		&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaJp8GZuEeeC7M0ZKcTJ6A" name="showSensorOutput" specification="_gQG9IGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.display.clearDisplay();&#xD;
+&#xD;
+		// available ports&#xD;
+		Port[] ports = new Port[] { SensorPort.S1, SensorPort.S2, SensorPort.S3, SensorPort.S4 };&#xD;
+		// list to store all created sensors&#xD;
+		ArrayList&lt;LightSensor> lightSensors = new ArrayList&lt;>();&#xD;
+		// create a light sensor for each port&#xD;
+		for (int i = 0; i &lt; 4; i++) {&#xD;
+			LightSensor lightsensor = new LightSensor(ports[i]);&#xD;
+			lightSensors.add(lightsensor);&#xD;
+		}&#xD;
+&#xD;
+		boolean configurationFinished = false;&#xD;
+		while (!configurationFinished) {&#xD;
+			this.display.clearDisplay();&#xD;
+			for (int i = 0; i &lt; 4; i++) {&#xD;
+				this.display.displayString(&quot;Sensor &quot; + Integer.toString(i) + &quot;: &quot; + lightSensors.get(i).getValue(),&#xD;
+						i + 2, false); // display sensor value rounded to 2&#xD;
+										// decimal places&#xD;
+			}&#xD;
+&#xD;
+			int pressedKey = Button.waitForAnyEvent();&#xD;
+&#xD;
+			if (pressedKey == RETURN_KEY_BITMAP)&#xD;
+				configurationFinished = true;&#xD;
+		}&#xD;
+		for (LightSensor sensor : lightSensors) {&#xD;
+			sensor.stop();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaKRAGZuEeeC7M0ZKcTJ6A" name="selectGameLifes" specification="_gQG9IWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.display.clearDisplay();&#xD;
+		int selected_entry = Configurator.lifes_menu.select();&#xD;
+		// use selected entry to get value from entries&#xD;
+		// and parse entry to integer&#xD;
+		// ignore if -1 is returned&#xD;
+		if (selected_entry != -1)&#xD;
+			this.configuration.setLifes(Integer.valueOf(Configurator.lifes_menu_entries[selected_entry]));&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaKRAWZuEeeC7M0ZKcTJ6A" name="selectGameSpeed" specification="_gQHkMGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.display.clearDisplay();&#xD;
+		int selected_entry = Configurator.speed_menu.select();&#xD;
+		// use selected entry to get value from entries&#xD;
+		// and parse entry to integer&#xD;
+		// ignore if -1 is returned&#xD;
+		if (selected_entry != -1)&#xD;
+			this.configuration.setSpeed(Integer.valueOf(Configurator.speed_menu_entries[selected_entry]));&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gQDSwGZuEeeC7M0ZKcTJ6A" name="Configurator" method="_gaF_kGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gQD50GZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gQD50WZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_gascgWZuEeeC7M0ZKcTJ6A">
+            <body>Constructor</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gQD50mZuEeeC7M0ZKcTJ6A" type="_gP6v4GZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQEg4GZuEeeC7M0ZKcTJ6A" name="startupMainMenu" method="_gaGmoGZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gascgmZuEeeC7M0ZKcTJ6A">
+            <body>Show initial menu after program start</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQFH8GZuEeeC7M0ZKcTJ6A" name="showOptionsMenu" visibility="private" method="_gaGmoWZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gascg2ZuEeeC7M0ZKcTJ6A">
+            <body>Shows options menu</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQFvAGZuEeeC7M0ZKcTJ6A" name="toggleRandomDirectionChange" visibility="private" method="_gaHNsGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gQGWEGZuEeeC7M0ZKcTJ6A" name="setuptNXTRemote" visibility="private" method="_gaJC4GZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gaschGZuEeeC7M0ZKcTJ6A">
+            <body>Setup connection to the NXT to which a IR receiver is connected</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQG9IGZuEeeC7M0ZKcTJ6A" name="showSensorOutput" visibility="private" method="_gaJp8GZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gQG9IWZuEeeC7M0ZKcTJ6A" name="selectGameLifes" visibility="private" method="_gaKRAGZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gaschWZuEeeC7M0ZKcTJ6A">
+            <body>Shows menu to select default game lifes</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQHkMGZuEeeC7M0ZKcTJ6A" name="selectGameSpeed" visibility="private" method="_gaKRAWZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gatDkGZuEeeC7M0ZKcTJ6A">
+            <body>Shows menu to select default game speed</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQIyUGZuEeeC7M0ZKcTJ6A" name="showErrorMessage">
+          <ownedParameter xmi:id="_gQIyUWZuEeeC7M0ZKcTJ6A" name="error_message">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gWNlIGZuEeeC7M0ZKcTJ6A" name="writeExceptionToLog">
+          <ownedParameter xmi:id="_gWNlIWZuEeeC7M0ZKcTJ6A" name="e" type="_gWJ6wGZuEeeC7M0ZKcTJ6A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gQU_kGZuEeeC7M0ZKcTJ6A" name="Display">
+        <ownedAttribute xmi:id="_gYUd8GZuEeeC7M0ZKcTJ6A" name="DISPLAY_HEIGHT" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYUd8WZuEeeC7M0ZKcTJ6A" value="8"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYVFAWZuEeeC7M0ZKcTJ6A" name="DISPLAY_WIDTH" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYVFAmZuEeeC7M0ZKcTJ6A" value="18"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYVsEWZuEeeC7M0ZKcTJ6A" name="PLAYER_COLLOR" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYWTIGZuEeeC7M0ZKcTJ6A" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYWTImZuEeeC7M0ZKcTJ6A" value="{ &quot;Blau&quot;, &quot;Rot&quot;, &quot;Schwarz&quot;, &quot;Gelb&quot; }"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaK4EGZuEeeC7M0ZKcTJ6A" name="Display" specification="_gQWNsGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaK4EWZuEeeC7M0ZKcTJ6A" type="_gQU_kGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>// hide std out&#xD;
+		EV3LCDManager lcdManager = EV3LCDManager.getLocalLCDManager();&#xD;
+		lcdManager.getLayer(&quot;STDOUT&quot;).setVisible(false);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaLfIGZuEeeC7M0ZKcTJ6A" name="displayInitialLifes" specification="_gQXb0GZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaLfIWZuEeeC7M0ZKcTJ6A" name="default_lifes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>LCD.clear();&#xD;
+		displayString(&quot;Gelb&quot;, 0, true);&#xD;
+		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 1); // yellow player's&#xD;
+																// lifes (first&#xD;
+																// line,&#xD;
+																// centred)&#xD;
+&#xD;
+		LCD.drawInt(default_lifes, 0, 3); // blue player&#xD;
+		LCD.drawInt(default_lifes, 16, 3); // black player&#xD;
+		displayString(&quot;Spieler&quot;, 3, true);&#xD;
+		LCD.drawString(&quot;Blau  Leben  Schw&quot;, 0, 4); // word 'life' between blue&#xD;
+													// and black player&#xD;
+&#xD;
+		LCD.drawInt(default_lifes, DISPLAY_WIDTH / 2 - 1, 6);&#xD;
+		displayString(&quot;Rot&quot;, 7, true); // red player's&#xD;
+										// lifes (first&#xD;
+										// line,&#xD;
+										// centred)&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaLfImZuEeeC7M0ZKcTJ6A" name="displayLifesForPlayer" specification="_gQYC4GZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaLfI2ZuEeeC7M0ZKcTJ6A" name="player">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gaLfJGZuEeeC7M0ZKcTJ6A" name="lifes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>switch (player) { // sorted from top to bottom&#xD;
+		case 3: // yellow player&#xD;
+			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 1);&#xD;
+			break;&#xD;
+&#xD;
+		case 1: // blue player&#xD;
+			LCD.drawInt(lifes, DISPLAY_WIDTH / 2 - 1, 6);&#xD;
+			break;&#xD;
+&#xD;
+		case 0: // red player&#xD;
+			LCD.drawInt(lifes, 0, 3);&#xD;
+			break;&#xD;
+&#xD;
+		case 2: // black player&#xD;
+			LCD.drawInt(lifes, 16, 3);&#xD;
+			break;&#xD;
+&#xD;
+		default:&#xD;
+			break;&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaLfJWZuEeeC7M0ZKcTJ6A" name="displayLossForPlayer" specification="_gQZRAGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaLfJmZuEeeC7M0ZKcTJ6A" name="player">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>LCD.clear();&#xD;
+		this.displayString(PLAYER_COLLOR[player] + &quot; verliert!&quot;, 4, true);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaMGMGZuEeeC7M0ZKcTJ6A" name="displayCenteredInteger" specification="_gQZ4EGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaMGMWZuEeeC7M0ZKcTJ6A" name="integerToDisplay">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>int length = Integer.toString(integerToDisplay).length();&#xD;
+		LCD.drawInt(integerToDisplay, (DISPLAY_WIDTH - length + 1) / 2, 4);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaMGMmZuEeeC7M0ZKcTJ6A" name="displayString" specification="_gQbGMGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaMGM2ZuEeeC7M0ZKcTJ6A" name="stringToDisplay">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gaMGNGZuEeeC7M0ZKcTJ6A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gaMGNWZuEeeC7M0ZKcTJ6A" name="centered">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>// string not centered if string is longer than 18 chars&#xD;
+		int x = 0;&#xD;
+&#xD;
+		// check if string size is valid&#xD;
+		if (!(stringToDisplay.length() > Display.DISPLAY_WIDTH)) {&#xD;
+			// center string if length is &lt; 18 and centered == true&#xD;
+			if (centered)&#xD;
+				x = (DISPLAY_WIDTH - stringToDisplay.length()) / 2;&#xD;
+		}&#xD;
+		LCD.drawString(stringToDisplay, x, y);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaMtQGZuEeeC7M0ZKcTJ6A" name="clearDisplay" specification="_gQbtQWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>LCD.clear();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gQWNsGZuEeeC7M0ZKcTJ6A" name="Display" method="_gaK4EGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gQW0wGZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gQW0wWZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_gQW0wmZuEeeC7M0ZKcTJ6A" type="_gQU_kGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQXb0GZuEeeC7M0ZKcTJ6A" name="displayInitialLifes" method="_gaLfIGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gQXb0WZuEeeC7M0ZKcTJ6A" name="default_lifes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQYC4GZuEeeC7M0ZKcTJ6A" name="displayLifesForPlayer" method="_gaLfImZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gQYp8GZuEeeC7M0ZKcTJ6A" name="player">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gQYp8WZuEeeC7M0ZKcTJ6A" name="lifes">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQZRAGZuEeeC7M0ZKcTJ6A" name="displayLossForPlayer" method="_gaLfJWZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gQZRAWZuEeeC7M0ZKcTJ6A" name="player">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQZ4EGZuEeeC7M0ZKcTJ6A" name="displayCenteredInteger" method="_gaMGMGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gQafIGZuEeeC7M0ZKcTJ6A" name="integerToDisplay">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQbGMGZuEeeC7M0ZKcTJ6A" name="displayString" method="_gaMGMmZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gQbGMWZuEeeC7M0ZKcTJ6A" name="stringToDisplay">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gQbGMmZuEeeC7M0ZKcTJ6A" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gQbtQGZuEeeC7M0ZKcTJ6A" name="centered">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQbtQWZuEeeC7M0ZKcTJ6A" name="clearDisplay" method="_gaMtQGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gQdicGZuEeeC7M0ZKcTJ6A" name="ExtendedGame">
+        <generalization xmi:id="_gUqtAGZuEeeC7M0ZKcTJ6A" general="_gQohkGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYXhQGZuEeeC7M0ZKcTJ6A" name="additionalSensors" visibility="protected" type="_gTx8MGZuEeeC7M0ZKcTJ6A" association="_gbnCgGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYZWcWZuEeeC7M0ZKcTJ6A" name="motor_moving_forward" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaNUUGZuEeeC7M0ZKcTJ6A" name="ExtendedGame" specification="_gUpe4GZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaNUUWZuEeeC7M0ZKcTJ6A" name="configuration" type="_gPXWQGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaNUUmZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaNUU2ZuEeeC7M0ZKcTJ6A" type="_gQdicGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>// use constructor of parent class (Game)&#xD;
+		super(configuration, display);&#xD;
+		// initialize array for additional sensors&#xD;
+		this.additionalSensors = new ArrayList&lt;>();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaN7YGZuEeeC7M0ZKcTJ6A" name="setupGame" specification="_gQf-sGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.motor_moving_forward = true;&#xD;
+		this.motor.setSpeed(this.configuration.getSpeed());&#xD;
+		this.motor.setAcceleration(180);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaN7YWZuEeeC7M0ZKcTJ6A" name="setupAdditionalSensors" specification="_gQhM0mZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>if (this.configuration.getRandomDirectionChange()) {&#xD;
+			Sensor sensor2 = new TimeSensor(this, this.gameReadyToStartLatch, () -> this.toggleMotorDirection());&#xD;
+			this.additionalSensors.add(sensor2);&#xD;
+		}&#xD;
+		Sensor sensor3 = new TimeSensor(this, this.gameReadyToStartLatch, () -> this.newRandomSpeed());&#xD;
+		this.additionalSensors.add(sensor3);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaN7YmZuEeeC7M0ZKcTJ6A" name="toggleMotorDirection" specification="_gQia8mZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>// check motor direction and change direction to opposite&#xD;
+		if (this.motor_moving_forward == true) {&#xD;
+			this.motor.forward();&#xD;
+			this.motor_moving_forward = false;&#xD;
+		} else {&#xD;
+			this.motor.backward();&#xD;
+			this.motor_moving_forward = true;&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaOicGZuEeeC7M0ZKcTJ6A" name="newRandomSpeed" specification="_gQjCAGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>Random randomGenerator = new Random();&#xD;
+		// new random speed using the given offsets&#xD;
+		// subtract min_speed to prevent actual speed exceeding max_speed&#xD;
+		int randomSpeed = randomGenerator.nextInt(Configuration.MAX_MOTOR_SPEED - Configuration.MIN_MOTOR_SPEED);&#xD;
+		// add min_speed to generated speed&#xD;
+		this.motor.setSpeed(randomSpeed + Configuration.MIN_MOTOR_SPEED);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaOicWZuEeeC7M0ZKcTJ6A" name="cleanup" specification="_gQjCAWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.motorListener.stop();&#xD;
+		this.motor.close();&#xD;
+		// stop all light sensors&#xD;
+		for (Sensor sensor : lightSensors) {&#xD;
+			sensor.stop();&#xD;
+		}&#xD;
+		// stop all additional sensors&#xD;
+		for (Sensor sensor : additionalSensors) {&#xD;
+			sensor.stop();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gQf-sGZuEeeC7M0ZKcTJ6A" name="setupGame" visibility="protected" method="_gaN7YGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gQhM0mZuEeeC7M0ZKcTJ6A" name="setupAdditionalSensors" visibility="protected" method="_gaN7YWZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gQia8mZuEeeC7M0ZKcTJ6A" name="toggleMotorDirection" method="_gaN7YmZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gatDkmZuEeeC7M0ZKcTJ6A">
+            <body>Toggles motor direction</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQjCAGZuEeeC7M0ZKcTJ6A" name="newRandomSpeed" method="_gaOicGZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gatDk2ZuEeeC7M0ZKcTJ6A">
+            <body>Changes motor speed to a random speed</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQjCAWZuEeeC7M0ZKcTJ6A" name="cleanup" visibility="protected" method="_gaOicWZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gUpe4GZuEeeC7M0ZKcTJ6A" name="ExtendedGame" method="_gaNUUGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gUqF8WZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gUqF8mZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_gatDkWZuEeeC7M0ZKcTJ6A">
+            <body>Constructor&#xD;
+	 * &#xD;
+	 * @param configuration&#xD;
+	 *            to get settings from&#xD;
+	 * @param display&#xD;
+	 *            to display events on</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gUpe4WZuEeeC7M0ZKcTJ6A" name="configuration" type="_gPXWQGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gUqF8GZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gUqF82ZuEeeC7M0ZKcTJ6A" type="_gQdicGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gQohkGZuEeeC7M0ZKcTJ6A" name="Game" isAbstract="true">
+        <ownedAttribute xmi:id="_gYakkGZuEeeC7M0ZKcTJ6A" name="START" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYbLoGZuEeeC7M0ZKcTJ6A" value="&quot;START!&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYbLoWZuEeeC7M0ZKcTJ6A" name="sounds" visibility="package" type="_gUu-cGZuEeeC7M0ZKcTJ6A" association="_gbnpkWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYbysWZuEeeC7M0ZKcTJ6A" name="thread" visibility="protected" type="_gWX9MGZuEeeC7M0ZKcTJ6A" association="_gbo3sWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYcZwWZuEeeC7M0ZKcTJ6A" name="gameFinishedLatch" visibility="protected" type="_gUsiMGZuEeeC7M0ZKcTJ6A" association="_gbpewWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYdA0WZuEeeC7M0ZKcTJ6A" name="gameReadyToStartLatch" visibility="protected" type="_gUsiMGZuEeeC7M0ZKcTJ6A" association="_gbqs4WZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYeO8GZuEeeC7M0ZKcTJ6A" name="lightSensors" visibility="protected" type="_gTx8MGZuEeeC7M0ZKcTJ6A" association="_gbr7AGZuEeeC7M0ZKcTJ6A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYe2AWZuEeeC7M0ZKcTJ6A" value="new ArrayList&lt;>()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYgEIGZuEeeC7M0ZKcTJ6A" name="motor" visibility="protected" isLeaf="true" type="_gU26QWZuEeeC7M0ZKcTJ6A" isReadOnly="true" association="_gbsiEWZuEeeC7M0ZKcTJ6A">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYgEIWZuEeeC7M0ZKcTJ6A" value="new NXTRegulatedMotor(MotorPort.D)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYgrMWZuEeeC7M0ZKcTJ6A" name="motorListener" visibility="protected" type="_gRe2IWZuEeeC7M0ZKcTJ6A" association="_gbtwMGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYhSQWZuEeeC7M0ZKcTJ6A" name="configuration" isLeaf="true" type="_gPXWQGZuEeeC7M0ZKcTJ6A" isReadOnly="true" association="_gbuXQWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYjugGZuEeeC7M0ZKcTJ6A" name="display" visibility="protected" isLeaf="true" type="_gQU_kGZuEeeC7M0ZKcTJ6A" isReadOnly="true" association="_gbvlYGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYkVkWZuEeeC7M0ZKcTJ6A" name="player_lifes" visibility="protected">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYk8oGZuEeeC7M0ZKcTJ6A" value="*"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_gWWvEGZuEeeC7M0ZKcTJ6A" client="_gQohkGZuEeeC7M0ZKcTJ6A" supplier="_gWRPgGZuEeeC7M0ZKcTJ6A" contract="_gWRPgGZuEeeC7M0ZKcTJ6A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaPJgGZuEeeC7M0ZKcTJ6A" name="Game" specification="_gU7LsGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaPJgWZuEeeC7M0ZKcTJ6A" name="configuration" type="_gPXWQGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaPJgmZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaPJg2ZuEeeC7M0ZKcTJ6A" type="_gQohkGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>// set local variables using parameters&#xD;
+		this.configuration = configuration;&#xD;
+		this.display = display;&#xD;
+		// prepare player lifes&#xD;
+		this.player_lifes = new int[4];&#xD;
+		for (int i = 0; i &lt; 4; i++) {&#xD;
+			this.player_lifes[i] = configuration.getLifes();&#xD;
+		}&#xD;
+		// create latches to manage game start and stop&#xD;
+		this.gameFinishedLatch = new CountDownLatch(1);&#xD;
+		this.gameReadyToStartLatch = new CountDownLatch(1);			&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaPJhGZuEeeC7M0ZKcTJ6A" name="startGame" specification="_gQsL8GZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>// start game in new thread&#xD;
+		this.thread = new Thread(this);&#xD;
+		this.thread.setDaemon(true);&#xD;
+		this.thread.start();&#xD;
+		// resume once game is finished&#xD;
+		this.thread.join();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaPwkGZuEeeC7M0ZKcTJ6A" name="setupLightSensors" specification="_gQtaEGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>// available ports&#xD;
+		Port[] ports = new Port[] { SensorPort.S1, SensorPort.S2, SensorPort.S3, SensorPort.S4 };&#xD;
+		&#xD;
+		// create a light sensor for each port&#xD;
+		for (int i = 0; i &lt; 4; i++) {&#xD;
+			LightSensor lightsensor = new LightSensor(ports[i], i, this);&#xD;
+			this.lightSensors.add(lightsensor);&#xD;
+		}		&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaPwkWZuEeeC7M0ZKcTJ6A" name="begin" specification="_gQuoMWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>//this.motor.setAcceleration(210);&#xD;
+		this.display.displayString(&quot;Vorbereitung..&quot;, 3, true);&#xD;
+		this.display.displayString(&quot;Einen Moment.&quot;, 4, true);&#xD;
+		this.setupLightSensors();&#xD;
+		this.calibrateArm();&#xD;
+		this.motor.resetTachoCount();&#xD;
+		this.setArmToRandomPosition();&#xD;
+		motorListener = new MotorListener(gameReadyToStartLatch, this.motor, this.lightSensors);				&#xD;
+		this.motor.setSpeed(this.configuration.getSpeed());&#xD;
+		this.countdown();&#xD;
+		this.motor.backward();&#xD;
+		this.gameReadyToStartLatch.countDown();&#xD;
+		this.display.displayInitialLifes(this.configuration.getLifes());&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaPwkmZuEeeC7M0ZKcTJ6A" name="countdown" specification="_gQvPQGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>try {&#xD;
+			this.display.clearDisplay();&#xD;
+			Sound.beep();&#xD;
+			this.display.displayCenteredInteger(3);&#xD;
+			Thread.sleep(1000);&#xD;
+			this.display.displayCenteredInteger(2);&#xD;
+			Sound.beep();&#xD;
+			Thread.sleep(1000);&#xD;
+			this.display.displayCenteredInteger(1);&#xD;
+			Sound.beep();&#xD;
+			Thread.sleep(1000);&#xD;
+			this.display.displayString(START, 4, true);&#xD;
+			Sound.twoBeeps();&#xD;
+		} catch (InterruptedException e) {&#xD;
+			// can be ignored. Interruption not possible since this is the only running thread.&#xD;
+			// String cannot be too long since it is not dynamically changing&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaPwk2ZuEeeC7M0ZKcTJ6A" name="calibrateArm" specification="_gQv2UGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>boolean calibrated = false;&#xD;
+		&#xD;
+		this.motor.setSpeed(Configuration.ARM_CONFIGURATION_SPEED);		&#xD;
+		&#xD;
+		while(!calibrated) {&#xD;
+			&#xD;
+			this.motor.rotate(Configuration.ARM_CONFIGURATION_AGLE);&#xD;
+			&#xD;
+			// check for arms position and move arm to player one&#xD;
+			if(this.lightSensors.get(0).checkForBreach()) {&#xD;
+				calibrated = true;			&#xD;
+			} else if (this.lightSensors.get(1).checkForBreach()) {				&#xD;
+				calibrated = true;							&#xD;
+				this.rotateArm(90);&#xD;
+			} else if (this.lightSensors.get(2).checkForBreach()) {&#xD;
+				calibrated = true;				&#xD;
+				this.rotateArm(-180);&#xD;
+			} else if (this.lightSensors.get(3).checkForBreach()) {&#xD;
+				calibrated = true;								&#xD;
+				this.rotateArm(-90);&#xD;
+			}&#xD;
+									&#xD;
+			try {&#xD;
+				Thread.sleep(Configuration.ARM_CONFIGURATION_SLEEP_TIME);&#xD;
+			} catch (InterruptedException e) {&#xD;
+				// can be ignored since no interruption is possible&#xD;
+			}&#xD;
+		}&#xD;
+		this.rotateArm(2);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaQXoGZuEeeC7M0ZKcTJ6A" name="rotateArm" specification="_gQwdYGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaQXoWZuEeeC7M0ZKcTJ6A" name="degrees">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>int currentSpeed = this.motor.getSpeed();&#xD;
+		this.motor.setSpeed(50);&#xD;
+		this.motor.rotate(degrees);&#xD;
+		this.motor.setSpeed(currentSpeed);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaQ-sGZuEeeC7M0ZKcTJ6A" name="setArmToRandomPosition" specification="_gQxEcGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>Random randomGenerator = new Random();&#xD;
+		int randomPosition = randomGenerator.nextInt(360);&#xD;
+		if (randomPosition > 180) {&#xD;
+			this.rotateArm(-(360 - randomPosition));&#xD;
+		} else&#xD;
+			this.rotateArm(randomPosition);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaQ-sWZuEeeC7M0ZKcTJ6A" name="removeLife" specification="_gQySkGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaQ-smZuEeeC7M0ZKcTJ6A" name="player">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.player_lifes[player] += -1;&#xD;
+		this.display.displayLifesForPlayer(player, this.player_lifes[player]);&#xD;
+		if (this.player_lifes[player] >= 1) {&#xD;
+			Sound.beep();&#xD;
+		} else {&#xD;
+			Sound.twoBeeps();&#xD;
+		}&#xD;
+		if (this.player_lifes[player] == 0) {&#xD;
+			this.motor.stop();			&#xD;
+			this.display.displayLossForPlayer(player);			&#xD;
+			this.gameFinishedLatch.countDown();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaRlwGZuEeeC7M0ZKcTJ6A" name="run" specification="_gQy5oGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.display.clearDisplay();&#xD;
+		this.setupAdditionalSensors();&#xD;
+		this.setupGame();&#xD;
+		this.begin();&#xD;
+		try {&#xD;
+			this.gameFinishedLatch.await();&#xD;
+		} catch (InterruptedException e) {&#xD;
+			// interruption not possible since this is the main thread&#xD;
+		}&#xD;
+		this.cleanup();&#xD;
+		return;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gQsL8GZuEeeC7M0ZKcTJ6A" name="startGame" method="_gaPJhGZuEeeC7M0ZKcTJ6A" raisedException="_gWZyYGZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gatqoWZuEeeC7M0ZKcTJ6A">
+            <body>Starts game in new thread and waits for it to finish&#xD;
+	 * &#xD;
+	 * @throws InterruptedException</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQtaEGZuEeeC7M0ZKcTJ6A" name="setupLightSensors" visibility="protected" method="_gaPwkGZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gatqomZuEeeC7M0ZKcTJ6A">
+            <body>Setup all available light sensors</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQuBIGZuEeeC7M0ZKcTJ6A" name="setupAdditionalSensors" visibility="protected" isAbstract="true">
+          <ownedComment xmi:id="_gatqo2ZuEeeC7M0ZKcTJ6A">
+            <body>Setup sensors</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQuoMGZuEeeC7M0ZKcTJ6A" name="setupGame" visibility="protected" isAbstract="true">
+          <ownedComment xmi:id="_gatqpGZuEeeC7M0ZKcTJ6A">
+            <body>Setup prerequisites for game</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQuoMWZuEeeC7M0ZKcTJ6A" name="begin" visibility="private" method="_gaPwkWZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gatqpWZuEeeC7M0ZKcTJ6A">
+            <body>Start game</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQvPQGZuEeeC7M0ZKcTJ6A" name="countdown" method="_gaPwkmZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gatqpmZuEeeC7M0ZKcTJ6A">
+            <body>Count down before game starts</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQv2UGZuEeeC7M0ZKcTJ6A" name="calibrateArm" method="_gaPwk2ZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gatqp2ZuEeeC7M0ZKcTJ6A">
+            <body>Calibrate arm by moving it to its default starting position&#xD;
+	 * This is necessary for the correct sensor timings</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQwdYGZuEeeC7M0ZKcTJ6A" name="rotateArm" visibility="private" method="_gaQXoGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gQwdYWZuEeeC7M0ZKcTJ6A" name="degrees">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQxEcGZuEeeC7M0ZKcTJ6A" name="setArmToRandomPosition" visibility="private" method="_gaQ-sGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gQxrgGZuEeeC7M0ZKcTJ6A" name="cleanup" visibility="protected" isAbstract="true">
+          <ownedComment xmi:id="_gauRsGZuEeeC7M0ZKcTJ6A">
+            <body>Free up used resources</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQySkGZuEeeC7M0ZKcTJ6A" name="removeLife" method="_gaQ-sWZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gQySkmZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gQySk2ZuEeeC7M0ZKcTJ6A" key="synchronized"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_gau4wGZuEeeC7M0ZKcTJ6A">
+            <body>Remove life from player. Stops game if player reaches 0 lifes&#xD;
+	 * &#xD;
+	 * @param player</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gQySkWZuEeeC7M0ZKcTJ6A" name="player">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gQy5oGZuEeeC7M0ZKcTJ6A" name="run" method="_gaRlwGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gU7LsGZuEeeC7M0ZKcTJ6A" name="Game" method="_gaPJgGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gU7ywGZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gU7ywWZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_gatqoGZuEeeC7M0ZKcTJ6A">
+            <body>Constructor&#xD;
+	 * &#xD;
+	 * @param configuration to get settings for the game from</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gU7LsWZuEeeC7M0ZKcTJ6A" name="configuration" type="_gPXWQGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gU7LsmZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gU7ywmZuEeeC7M0ZKcTJ6A" type="_gQohkGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gRQzsGZuEeeC7M0ZKcTJ6A" name="LightSensor">
+        <generalization xmi:id="_gVFjwGZuEeeC7M0ZKcTJ6A" general="_gSF6IGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYnY4GZuEeeC7M0ZKcTJ6A" name="light_sensor" visibility="package" isLeaf="true" type="_gVAEMGZuEeeC7M0ZKcTJ6A" isReadOnly="true" association="_gbwMcWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYn_8WZuEeeC7M0ZKcTJ6A" name="sensor_port" visibility="package" isLeaf="true" type="_gT4C0WZuEeeC7M0ZKcTJ6A" isReadOnly="true" association="_gbxakGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYonAWZuEeeC7M0ZKcTJ6A" name="player_id" visibility="package" isLeaf="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYpOEWZuEeeC7M0ZKcTJ6A" name="THRESHOLD" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gYp1IGZuEeeC7M0ZKcTJ6A" value="0.75f"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYrDQGZuEeeC7M0ZKcTJ6A" name="game" visibility="protected" isLeaf="true" type="_gQohkGZuEeeC7M0ZKcTJ6A" isReadOnly="true" association="_gbyBoWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYrqUGZuEeeC7M0ZKcTJ6A" name="ambient" visibility="package" type="_gVBSUGZuEeeC7M0ZKcTJ6A" association="_gbzPwGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYuGkWZuEeeC7M0ZKcTJ6A" name="sample_size" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gYutoWZuEeeC7M0ZKcTJ6A" name="sample" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYutomZuEeeC7M0ZKcTJ6A" value="*"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaSz4GZuEeeC7M0ZKcTJ6A" name="LightSensor" specification="_gWeq4GZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaSz4WZuEeeC7M0ZKcTJ6A" name="sensor_port" type="_gT4C0WZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaSz4mZuEeeC7M0ZKcTJ6A" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gaSz42ZuEeeC7M0ZKcTJ6A" name="game" type="_gQohkGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaSz5GZuEeeC7M0ZKcTJ6A" type="_gRQzsGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>// store needed variables to run the game&#xD;
+		this.game = game;&#xD;
+		this.player_id = id;&#xD;
+		this.sensor_port = sensor_port;&#xD;
+		this.light_sensor = new NXTLightSensor(sensor_port);&#xD;
+&#xD;
+		// initialize variables needed to query the sensor to save time&#xD;
+		this.ambient = this.light_sensor.getAmbientMode();&#xD;
+		this.sample_size = ambient.sampleSize();&#xD;
+		this.sample = new float[sample_size];&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaUCAGZuEeeC7M0ZKcTJ6A" name="LightSensor" specification="_gWf5AGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaUCAWZuEeeC7M0ZKcTJ6A" name="sensor_port" type="_gT4C0WZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaUCAmZuEeeC7M0ZKcTJ6A" type="_gRQzsGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>this.game = null;&#xD;
+		this.player_id = 0;&#xD;
+		this.sensor_port = sensor_port;&#xD;
+		this.light_sensor = new NXTLightSensor(sensor_port);&#xD;
+		// initialize variables needed to query the sensor to save time&#xD;
+		this.ambient = this.light_sensor.getAmbientMode();&#xD;
+		this.sample_size = ambient.sampleSize();&#xD;
+		this.sample = new float[sample_size];&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaUCA2ZuEeeC7M0ZKcTJ6A" name="checkForBreach" specification="_gRT3AGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaUCBGZuEeeC7M0ZKcTJ6A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>// query sample and compare to threshold&#xD;
+		this.ambient.fetchSample(this.sample, 0);		&#xD;
+		if (this.sample[0] &lt; THRESHOLD) {&#xD;
+			return true;&#xD;
+		}&#xD;
+		return false;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaUCBWZuEeeC7M0ZKcTJ6A" name="notifyGame" specification="_gRVFIGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.game.removeLife(this.player_id);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaUpEGZuEeeC7M0ZKcTJ6A" name="getValue" specification="_gRVFIWZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaUpEWZuEeeC7M0ZKcTJ6A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.ambient.fetchSample(this.sample, 0);		&#xD;
+		return this.sample[0];&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaVQIGZuEeeC7M0ZKcTJ6A" name="stop" specification="_gRVsMWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.light_sensor.close();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gRT3AGZuEeeC7M0ZKcTJ6A" name="checkForBreach" method="_gaUCA2ZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gau4w2ZuEeeC7M0ZKcTJ6A">
+            <body>Check if light sensor is breached&#xD;
+	 * &#xD;
+	 * @return returns true if sensor is breached</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gRUeEGZuEeeC7M0ZKcTJ6A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gRVFIGZuEeeC7M0ZKcTJ6A" name="notifyGame" method="_gaUCBWZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gau4xGZuEeeC7M0ZKcTJ6A">
+            <body>Notify game to remove a life</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gRVFIWZuEeeC7M0ZKcTJ6A" name="getValue" method="_gaUpEGZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gau4xWZuEeeC7M0ZKcTJ6A">
+            <body>Reads current value from sensor&#xD;
+	 * &#xD;
+	 * @return Returns current value</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gRVsMGZuEeeC7M0ZKcTJ6A" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gRVsMWZuEeeC7M0ZKcTJ6A" name="stop" visibility="protected" method="_gaVQIGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gWeq4GZuEeeC7M0ZKcTJ6A" name="LightSensor" method="_gaSz4GZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gWfR8GZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gWfR8WZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_gau4wWZuEeeC7M0ZKcTJ6A">
+            <body>Constructor&#xD;
+	 * &#xD;
+	 * @param sensor_port&#xD;
+	 *            port for the sensor to use&#xD;
+	 * @param id&#xD;
+	 *            player id of the sensors player&#xD;
+	 * @param game&#xD;
+	 *            game to notify if sensor is breached</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gWeq4WZuEeeC7M0ZKcTJ6A" name="sensor_port" type="_gT4C0WZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWeq4mZuEeeC7M0ZKcTJ6A" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_gWeq42ZuEeeC7M0ZKcTJ6A" name="game" type="_gQohkGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWfR8mZuEeeC7M0ZKcTJ6A" type="_gRQzsGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gWf5AGZuEeeC7M0ZKcTJ6A" name="LightSensor" method="_gaUCAGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gWf5AmZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gWf5A2ZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_gau4wmZuEeeC7M0ZKcTJ6A">
+            <body>Constructor for sensor calibration purposes calling other functions than&#xD;
+	 * getValue() and checkForBreach() may cause a NullPointer Exception&#xD;
+	 * &#xD;
+	 * @param sensor_port&#xD;
+	 *            port for the sensor to use</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gWf5AWZuEeeC7M0ZKcTJ6A" name="sensor_port" type="_gT4C0WZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWggEGZuEeeC7M0ZKcTJ6A" type="_gRQzsGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gRcZ4GZuEeeC7M0ZKcTJ6A" name="Louie">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaVQIWZuEeeC7M0ZKcTJ6A" name="main" specification="_gRdoAGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaVQImZuEeeC7M0ZKcTJ6A" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gaVQI2ZuEeeC7M0ZKcTJ6A" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>// -----------------------------------------------------------------------------&#xD;
+		// variables&#xD;
+		// -----------------------------------------------------------------------------&#xD;
+		&#xD;
+		// -----------------------------------------------------------------------------&#xD;
+		// functions&#xD;
+		// -----------------------------------------------------------------------------&#xD;
+&#xD;
+		// Create configurator and start main menu&#xD;
+		Louie louie = new Louie();&#xD;
+		louie.startProgram();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaV3MGZuEeeC7M0ZKcTJ6A" name="startProgram" specification="_gRe2IGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>Configurator configurator = new Configurator();&#xD;
+		configurator.startupMainMenu();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gRdoAGZuEeeC7M0ZKcTJ6A" name="main" isStatic="true" method="_gaVQIWZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gRdoAWZuEeeC7M0ZKcTJ6A" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gRePEGZuEeeC7M0ZKcTJ6A" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gRe2IGZuEeeC7M0ZKcTJ6A" name="startProgram" visibility="private" method="_gaV3MGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gRe2IWZuEeeC7M0ZKcTJ6A" name="MotorListener">
+        <ownedAttribute xmi:id="_gYwi0GZuEeeC7M0ZKcTJ6A" name="sounds" visibility="package" type="_gUu-cGZuEeeC7M0ZKcTJ6A" association="_gbz20WZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYxw8GZuEeeC7M0ZKcTJ6A" name="start" visibility="private" type="_gUsiMGZuEeeC7M0ZKcTJ6A" association="_gb1E8GZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYyYAGZuEeeC7M0ZKcTJ6A" name="thread" visibility="package" type="_gWX9MGZuEeeC7M0ZKcTJ6A" association="_gb2TEWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYy_EGZuEeeC7M0ZKcTJ6A" name="motor" visibility="package" type="_gU26QWZuEeeC7M0ZKcTJ6A" association="_gb4IQWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gYzmIGZuEeeC7M0ZKcTJ6A" name="sensors" visibility="package" type="_gTx8MGZuEeeC7M0ZKcTJ6A" association="_gb5WYWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZJkYGZuEeeC7M0ZKcTJ6A" name="SLEEP_TIME" visibility="package" isLeaf="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:id="_gWhuMGZuEeeC7M0ZKcTJ6A" client="_gRe2IWZuEeeC7M0ZKcTJ6A" supplier="_gWRPgGZuEeeC7M0ZKcTJ6A" contract="_gWRPgGZuEeeC7M0ZKcTJ6A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaWeQGZuEeeC7M0ZKcTJ6A" name="MotorListener" specification="_gWi8UGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaWeQWZuEeeC7M0ZKcTJ6A" name="start" type="_gUsiMGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaWeQmZuEeeC7M0ZKcTJ6A" name="motor" type="_gU26QWZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaWeQ2ZuEeeC7M0ZKcTJ6A" name="sensors" type="_gTx8MGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaWeRGZuEeeC7M0ZKcTJ6A" type="_gRe2IWZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>this.start = start;&#xD;
+		this.motor = motor;&#xD;
+		this.sensors = sensors;		&#xD;
+		this.SLEEP_TIME = Configuration.MOTOR_LISTENER_SLEEP_TIME;&#xD;
+		this.start();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaWeRWZuEeeC7M0ZKcTJ6A" name="start" specification="_gRhSYGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.thread = new Thread(this);&#xD;
+		this.thread.setDaemon(true);&#xD;
+		this.thread.start();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaXFUGZuEeeC7M0ZKcTJ6A" name="stop" specification="_gRhSYWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.thread.interrupt();&#xD;
+		try {&#xD;
+			this.thread.join();&#xD;
+		} catch (InterruptedException e) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaXFUWZuEeeC7M0ZKcTJ6A" name="run" specification="_gRh5cGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>try {&#xD;
+			this.start.await();&#xD;
+		} catch (InterruptedException e) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+&#xD;
+		try {&#xD;
+			Thread.sleep(100);&#xD;
+		} catch (InterruptedException e1) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e1.printStackTrace();&#xD;
+		}&#xD;
+&#xD;
+		while (!this.thread.isInterrupted()) {&#xD;
+&#xD;
+			int tacho_count = this.motor.getTachoCount();&#xD;
+			int current_position = -(tacho_count % 360);&#xD;
+&#xD;
+			switch (current_position) {&#xD;
+			case 359:&#xD;
+			case 0:&#xD;
+			case 1:							&#xD;
+				if (this.sensors.get(0).checkForBreach())&#xD;
+					this.sensors.get(0).notifyGame();&#xD;
+				break;						&#xD;
+			case 89:&#xD;
+			case 90:&#xD;
+			case 91:&#xD;
+				if (this.sensors.get(1).checkForBreach())&#xD;
+					this.sensors.get(1).notifyGame();&#xD;
+				break;			&#xD;
+			case 179:&#xD;
+			case 180:&#xD;
+			case 181:&#xD;
+				if (this.sensors.get(2).checkForBreach())&#xD;
+					this.sensors.get(2).notifyGame();&#xD;
+				break;			&#xD;
+			case 269:&#xD;
+			case 270:&#xD;
+			case 271:&#xD;
+				if (this.sensors.get(3).checkForBreach())&#xD;
+					this.sensors.get(3).notifyGame();&#xD;
+				break;&#xD;
+			default:&#xD;
+				break;&#xD;
+			}&#xD;
+&#xD;
+			try {&#xD;
+				Thread.sleep((long) SLEEP_TIME);&#xD;
+			} catch (InterruptedException e) {&#xD;
+				return;&#xD;
+			}&#xD;
+		}&#xD;
+		return;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gRhSYGZuEeeC7M0ZKcTJ6A" name="start" method="_gaWeRWZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gRhSYWZuEeeC7M0ZKcTJ6A" name="stop" method="_gaXFUGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gRh5cGZuEeeC7M0ZKcTJ6A" name="run" method="_gaXFUWZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gWi8UGZuEeeC7M0ZKcTJ6A" name="MotorListener" method="_gaWeQGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gWjjYWZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gWjjYmZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_gWi8UWZuEeeC7M0ZKcTJ6A" name="start" type="_gUsiMGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWi8UmZuEeeC7M0ZKcTJ6A" name="motor" type="_gU26QWZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWjjYGZuEeeC7M0ZKcTJ6A" name="sensors" type="_gTx8MGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWjjY2ZuEeeC7M0ZKcTJ6A" type="_gRe2IWZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gRnZAGZuEeeC7M0ZKcTJ6A" name="NXTBluetoothConnection">
+        <ownedAttribute xmi:id="_gZMnsGZuEeeC7M0ZKcTJ6A" name="connectionFailed" visibility="package" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gZMnsWZuEeeC7M0ZKcTJ6A" value="&quot;Fehlgeschlagen&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gZN10GZuEeeC7M0ZKcTJ6A" name="REMOTE_EV3_NAME" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gZN10WZuEeeC7M0ZKcTJ6A" value="&quot;EV4&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gZOc4WZuEeeC7M0ZKcTJ6A" name="DISCONNECT" visibility="package" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gZOc4mZuEeeC7M0ZKcTJ6A" value="&quot;DISCONNECT&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gZPrAGZuEeeC7M0ZKcTJ6A" name="thread" visibility="private" type="_gWX9MGZuEeeC7M0ZKcTJ6A" association="_gb59cWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZQSEWZuEeeC7M0ZKcTJ6A" name="gameReadyToStartLatch" visibility="private" type="_gUsiMGZuEeeC7M0ZKcTJ6A" association="_gb7LkWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZVxoGZuEeeC7M0ZKcTJ6A" name="connection" visibility="package" type="_gVSYEWZuEeeC7M0ZKcTJ6A" association="_gb8ZsGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZWYsWZuEeeC7M0ZKcTJ6A" name="bluetoothInStream" visibility="package" type="_gVMRcGZuEeeC7M0ZKcTJ6A" association="_gb9AwWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZW_wWZuEeeC7M0ZKcTJ6A" name="game" visibility="package" type="_gR8JIGZuEeeC7M0ZKcTJ6A" association="_gb-O4GZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZYN4WZuEeeC7M0ZKcTJ6A" name="display" visibility="package" type="_gQU_kGZuEeeC7M0ZKcTJ6A" association="_gb-18WZuEeeC7M0ZKcTJ6A"/>
+        <interfaceRealization xmi:id="_gWl_oGZuEeeC7M0ZKcTJ6A" client="_gRnZAGZuEeeC7M0ZKcTJ6A" supplier="_gWRPgGZuEeeC7M0ZKcTJ6A" contract="_gWRPgGZuEeeC7M0ZKcTJ6A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaXsYGZuEeeC7M0ZKcTJ6A" name="NXTBluetoothConnection" specification="_gVUNQGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaXsYWZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaYTcGZuEeeC7M0ZKcTJ6A" type="_gRnZAGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>this.display = display;&#xD;
+		this.display.displayString(&quot;Verbinden...&quot;, 4, true);&#xD;
+		NXTCommConnector connector = Bluetooth.getNXTCommConnector();		&#xD;
+		connection = connector.connect(REMOTE_EV3_NAME, NXTConnection.PACKET);		&#xD;
+		if (connection == null)&#xD;
+			throw new BluetoothConnectionFailed(connectionFailed);&#xD;
+		&#xD;
+		this.display.clearDisplay();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaYTcWZuEeeC7M0ZKcTJ6A" name="setGame" specification="_gVX3oGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaYTcmZuEeeC7M0ZKcTJ6A" name="game" type="_gR8JIGZuEeeC7M0ZKcTJ6A"/>
+          <language>java</language>
+          <body>this.game = game;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaY6gGZuEeeC7M0ZKcTJ6A" name="setGameReadyToStartLatch" specification="_gWn00GZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaY6gWZuEeeC7M0ZKcTJ6A" name="gameReadyToStartLatch" type="_gUsiMGZuEeeC7M0ZKcTJ6A"/>
+          <language>java</language>
+          <body>this.gameReadyToStartLatch = gameReadyToStartLatch;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaY6gmZuEeeC7M0ZKcTJ6A" name="disconnect" specification="_gRqcUGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>try {&#xD;
+			DataOutputStream bluetoothOutStream = this.connection.openDataOutputStream();&#xD;
+			bluetoothOutStream.writeUTF(DISCONNECT);&#xD;
+			bluetoothOutStream.flush();&#xD;
+			this.bluetoothInStream.close();&#xD;
+			this.connection.close();&#xD;
+		} catch (IOException e) {&#xD;
+			// can be ignored&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaZhkGZuEeeC7M0ZKcTJ6A" name="startBTListener" specification="_gRrDYGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.thread = new Thread(this);&#xD;
+		this.thread.setDaemon(true);&#xD;
+		this.bluetoothInStream = this.connection.openDataInputStream();&#xD;
+		this.thread.start();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaZhkWZuEeeC7M0ZKcTJ6A" name="stopBTListener" specification="_gRrDYWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.thread.interrupt();&#xD;
+		try {&#xD;
+			this.bluetoothInStream.close();&#xD;
+		} catch (IOException e) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaaIoGZuEeeC7M0ZKcTJ6A" name="run" specification="_gRrqcGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>try {&#xD;
+			this.gameReadyToStartLatch.await();&#xD;
+		} catch (InterruptedException e) {&#xD;
+			// can be ignored since latch wont be interrupted&#xD;
+		}&#xD;
+&#xD;
+		try {&#xD;
+			while (!this.thread.isInterrupted()) {&#xD;
+&#xD;
+				String bluetoothIn = this.bluetoothInStream.readUTF();&#xD;
+&#xD;
+				// check if game exists&#xD;
+				if (this.game != null) {&#xD;
+&#xD;
+					switch (bluetoothIn) {&#xD;
+					case &quot;ENTER&quot;:&#xD;
+						this.game.toggleMotorDirection();&#xD;
+						break;&#xD;
+					case &quot;DOWN&quot;:&#xD;
+						this.game.decreaseMotorSpeed();&#xD;
+						break;&#xD;
+					case &quot;UP&quot;:&#xD;
+						this.game.increaseMotorSpeed();&#xD;
+						break;&#xD;
+					default:&#xD;
+						break;&#xD;
+					}&#xD;
+&#xD;
+				}&#xD;
+&#xD;
+			}&#xD;
+		} catch (IOException e) {&#xD;
+			// can be ignored&#xD;
+		}&#xD;
+		return;&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gRqcUGZuEeeC7M0ZKcTJ6A" name="disconnect" method="_gaY6gmZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gRrDYGZuEeeC7M0ZKcTJ6A" name="startBTListener" method="_gaZhkGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gRrDYWZuEeeC7M0ZKcTJ6A" name="stopBTListener" method="_gaZhkWZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gRrqcGZuEeeC7M0ZKcTJ6A" name="run" method="_gaaIoGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gVUNQGZuEeeC7M0ZKcTJ6A" name="NXTBluetoothConnection" method="_gaXsYGZuEeeC7M0ZKcTJ6A" raisedException="_gPCmIGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gVU0UGZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gVU0UWZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_gVUNQWZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gVU0UmZuEeeC7M0ZKcTJ6A" type="_gRnZAGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gVX3oGZuEeeC7M0ZKcTJ6A" name="setGame" method="_gaYTcWZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gVYesGZuEeeC7M0ZKcTJ6A" name="game" type="_gR8JIGZuEeeC7M0ZKcTJ6A"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gWn00GZuEeeC7M0ZKcTJ6A" name="setGameReadyToStartLatch" method="_gaY6gGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gWn00WZuEeeC7M0ZKcTJ6A" name="gameReadyToStartLatch" type="_gUsiMGZuEeeC7M0ZKcTJ6A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gR8JIGZuEeeC7M0ZKcTJ6A" name="RemotelyControlledGame">
+        <generalization xmi:id="_gVgagGZuEeeC7M0ZKcTJ6A" general="_gQohkGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZZcAGZuEeeC7M0ZKcTJ6A" name="motor_moving_forward" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gZaDEGZuEeeC7M0ZKcTJ6A" value="true"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gZaqIGZuEeeC7M0ZKcTJ6A" name="btConnection" visibility="package" type="_gRnZAGZuEeeC7M0ZKcTJ6A" association="_gb_dAWZuEeeC7M0ZKcTJ6A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaavsGZuEeeC7M0ZKcTJ6A" name="RemotelyControlledGame" specification="_gVbiAGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gaavsWZuEeeC7M0ZKcTJ6A" name="configuration" type="_gPXWQGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaavsmZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaavs2ZuEeeC7M0ZKcTJ6A" name="btConnection" type="_gRnZAGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gaavtGZuEeeC7M0ZKcTJ6A" type="_gR8JIGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>super(configuration, display);&#xD;
+		&#xD;
+		this.btConnection = btConnection;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gaavtWZuEeeC7M0ZKcTJ6A" name="setupAdditionalSensors" specification="_gR9-UGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.btConnection.setGame(this);&#xD;
+		this.btConnection.setGameReadyToStartLatch(this.gameReadyToStartLatch);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gabWwGZuEeeC7M0ZKcTJ6A" name="setupGame" specification="_gR_McmZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.motor.setSpeed(this.configuration.getSpeed());	&#xD;
+		this.btConnection.startBTListener();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gabWwWZuEeeC7M0ZKcTJ6A" name="cleanup" specification="_gSAakWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.btConnection.stopBTListener();&#xD;
+		this.motorListener.stop();&#xD;
+		this.motor.close();&#xD;
+		for (Sensor sensor : lightSensors) {&#xD;
+			sensor.stop();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gabWwmZuEeeC7M0ZKcTJ6A" name="toggleMotorDirection" specification="_gSCPwGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>// check motor direction and change direction to opposite&#xD;
+		if (this.motor_moving_forward == true) {&#xD;
+			this.motor.forward();&#xD;
+			this.motor_moving_forward = false;&#xD;
+		} else {&#xD;
+			this.motor.backward();&#xD;
+			this.motor_moving_forward = true;&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gab90GZuEeeC7M0ZKcTJ6A" name="decreaseMotorSpeed" specification="_gSCPwWZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>int currentSpeed = this.motor.getSpeed();&#xD;
+		int newSpeed = currentSpeed - Configuration.REMOTE_SPEED_CHANGE_STEP;&#xD;
+		if (newSpeed >= Configuration.MIN_MOTOR_SPEED)&#xD;
+			this.motor.setSpeed(newSpeed);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gab90WZuEeeC7M0ZKcTJ6A" name="increaseMotorSpeed" specification="_gSC20GZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>int currentSpeed = this.motor.getSpeed();&#xD;
+		int newSpeed = currentSpeed + Configuration.REMOTE_SPEED_CHANGE_STEP;&#xD;
+		if (newSpeed &lt;= Configuration.MAX_MOTOR_SPEED)&#xD;
+			this.motor.setSpeed(newSpeed);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gR9-UGZuEeeC7M0ZKcTJ6A" name="setupAdditionalSensors" visibility="protected" method="_gaavtWZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gR_McmZuEeeC7M0ZKcTJ6A" name="setupGame" visibility="protected" method="_gabWwGZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gSAakWZuEeeC7M0ZKcTJ6A" name="cleanup" visibility="protected" method="_gabWwWZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gSCPwGZuEeeC7M0ZKcTJ6A" name="toggleMotorDirection" method="_gabWwmZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gavf0GZuEeeC7M0ZKcTJ6A">
+            <body>Toggles motor direction</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gSCPwWZuEeeC7M0ZKcTJ6A" name="decreaseMotorSpeed" method="_gab90GZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gSC20GZuEeeC7M0ZKcTJ6A" name="increaseMotorSpeed" method="_gab90WZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gVbiAGZuEeeC7M0ZKcTJ6A" name="RemotelyControlledGame" method="_gaavsGZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gVcwImZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gVcwI2ZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_gVcJEGZuEeeC7M0ZKcTJ6A" name="configuration" type="_gPXWQGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gVcwIGZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gVcwIWZuEeeC7M0ZKcTJ6A" name="btConnection" type="_gRnZAGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gVcwJGZuEeeC7M0ZKcTJ6A" type="_gR8JIGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gSF6IGZuEeeC7M0ZKcTJ6A" name="Sensor" isAbstract="true">
+        <ownedOperation xmi:id="_gSHIQGZuEeeC7M0ZKcTJ6A" name="stop" visibility="protected" isAbstract="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gSHvUGZuEeeC7M0ZKcTJ6A" name="StandardGame">
+        <generalization xmi:id="_gV74UGZuEeeC7M0ZKcTJ6A" general="_gQohkGZuEeeC7M0ZKcTJ6A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gack4GZuEeeC7M0ZKcTJ6A" name="StandardGame" specification="_gV6DIGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gack4WZuEeeC7M0ZKcTJ6A" name="configuration" type="_gPXWQGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gack4mZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gack42ZuEeeC7M0ZKcTJ6A" type="_gSHvUGZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>// use constructor of parent class (Game)&#xD;
+		super(configuration, display);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gack5GZuEeeC7M0ZKcTJ6A" name="setupGame" specification="_gSI9cGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.motor.setSpeed(this.configuration.getSpeed());&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gadL8GZuEeeC7M0ZKcTJ6A" name="cleanup" specification="_gSLZsmZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.motorListener.stop();&#xD;
+		this.motor.close();&#xD;
+		for (Sensor sensor : lightSensors) {&#xD;
+			sensor.stop();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gSI9cGZuEeeC7M0ZKcTJ6A" name="setupGame" visibility="protected" method="_gack5GZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gSKLkmZuEeeC7M0ZKcTJ6A" name="setupAdditionalSensors" visibility="protected"/>
+        <ownedOperation xmi:id="_gSLZsmZuEeeC7M0ZKcTJ6A" name="cleanup" visibility="protected" method="_gadL8GZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gV6DIGZuEeeC7M0ZKcTJ6A" name="StandardGame" method="_gack4GZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gV7RQWZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gV7RQmZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_gV6qMGZuEeeC7M0ZKcTJ6A" name="configuration" type="_gPXWQGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gV7RQGZuEeeC7M0ZKcTJ6A" name="display" type="_gQU_kGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gV7RQ2ZuEeeC7M0ZKcTJ6A" type="_gSHvUGZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gSN18GZuEeeC7M0ZKcTJ6A" name="TimeSensor">
+        <generalization xmi:id="_gV9tgGZuEeeC7M0ZKcTJ6A" general="_gSF6IGZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZb4QGZuEeeC7M0ZKcTJ6A" name="thread" visibility="private" type="_gWX9MGZuEeeC7M0ZKcTJ6A" association="_gcArIWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZcfUGZuEeeC7M0ZKcTJ6A" name="gameReadyToStartLatch" visibility="private" type="_gUsiMGZuEeeC7M0ZKcTJ6A" association="_gcBSMWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZdtcGZuEeeC7M0ZKcTJ6A" name="MIN_WAIT_TIME" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gZdtcWZuEeeC7M0ZKcTJ6A" value="7000"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gZdtcmZuEeeC7M0ZKcTJ6A" name="MAX_WAIT_TIME" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_gZeUgGZuEeeC7M0ZKcTJ6A" value="30000"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_gZeUgWZuEeeC7M0ZKcTJ6A" name="extendedGame" visibility="private" isLeaf="true" type="_gQdicGZuEeeC7M0ZKcTJ6A" isReadOnly="true" association="_gcCgUWZuEeeC7M0ZKcTJ6A"/>
+        <ownedAttribute xmi:id="_gZgwwGZuEeeC7M0ZKcTJ6A" name="method" visibility="private" type="_gWRPgGZuEeeC7M0ZKcTJ6A" association="_gcDucGZuEeeC7M0ZKcTJ6A"/>
+        <interfaceRealization xmi:id="_gWqREGZuEeeC7M0ZKcTJ6A" client="_gSN18GZuEeeC7M0ZKcTJ6A" supplier="_gWRPgGZuEeeC7M0ZKcTJ6A" contract="_gWRPgGZuEeeC7M0ZKcTJ6A"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gadL8WZuEeeC7M0ZKcTJ6A" name="TimeSensor" specification="_gWrfMGZuEeeC7M0ZKcTJ6A">
+          <ownedParameter xmi:id="_gadL8mZuEeeC7M0ZKcTJ6A" name="extendedGame" type="_gQdicGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gadL82ZuEeeC7M0ZKcTJ6A" name="gameReadyToStart" type="_gUsiMGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gadL9GZuEeeC7M0ZKcTJ6A" name="method" type="_gWRPgGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gadL9WZuEeeC7M0ZKcTJ6A" type="_gSN18GZuEeeC7M0ZKcTJ6A" direction="return"/>
+          <language>java</language>
+          <body>this.extendedGame = extendedGame;&#xD;
+		this.gameReadyToStartLatch = gameReadyToStart;&#xD;
+&#xD;
+		this.method = method;&#xD;
+&#xD;
+		this.start();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gadzAGZuEeeC7M0ZKcTJ6A" name="start" specification="_gSqh4GZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.thread = new Thread(this);&#xD;
+		this.thread.setDaemon(true);&#xD;
+		this.thread.start();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gadzAWZuEeeC7M0ZKcTJ6A" name="run" specification="_gSrwAGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>try {&#xD;
+			// create new RNG to create sleep timings&#xD;
+			Random randomGenerator = new Random();&#xD;
+			this.gameReadyToStartLatch.await();&#xD;
+&#xD;
+			while (!this.thread.isInterrupted()) {&#xD;
+				long randomDelay = randomGenerator.nextInt(MAX_WAIT_TIME - MIN_WAIT_TIME);&#xD;
+				randomDelay += TimeSensor.MIN_WAIT_TIME;&#xD;
+				Thread.sleep(randomDelay); // not Delay from lejos since it is&#xD;
+											// not interruptable!&#xD;
+				this.method.run();&#xD;
+			}&#xD;
+&#xD;
+		} catch (InterruptedException e) {&#xD;
+			return; // return if sleep is interrupted&#xD;
+		}&#xD;
+		return; // return if thread is interrupted&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gadzAmZuEeeC7M0ZKcTJ6A" name="stop" specification="_gSwogGZuEeeC7M0ZKcTJ6A">
+          <language>java</language>
+          <body>this.thread.interrupt();&#xD;
+		try {&#xD;
+			this.thread.join();&#xD;
+		} catch (InterruptedException e) {&#xD;
+			// can be ignored thread will not be interrupted&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_gSqh4GZuEeeC7M0ZKcTJ6A" name="start" visibility="protected" method="_gadzAGZuEeeC7M0ZKcTJ6A">
+          <ownedComment xmi:id="_gawt8GZuEeeC7M0ZKcTJ6A">
+            <body>Starts listener</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_gSrwAGZuEeeC7M0ZKcTJ6A" name="run" method="_gadzAWZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gSwogGZuEeeC7M0ZKcTJ6A" name="stop" visibility="protected" method="_gadzAmZuEeeC7M0ZKcTJ6A"/>
+        <ownedOperation xmi:id="_gWrfMGZuEeeC7M0ZKcTJ6A" name="TimeSensor" method="_gadL8WZuEeeC7M0ZKcTJ6A">
+          <eAnnotations xmi:id="_gWsGQ2ZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_gWsGRGZuEeeC7M0ZKcTJ6A" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_gawG4WZuEeeC7M0ZKcTJ6A">
+            <body>Constructor&#xD;
+	 * &#xD;
+	 * @param extendedGame&#xD;
+	 *            game to notify of random events&#xD;
+	 * @param gameReadyToStart&#xD;
+	 *            latch to wait for to start thread&#xD;
+	 * @param method&#xD;
+	 *            method to call after a random delay</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_gWsGQGZuEeeC7M0ZKcTJ6A" name="extendedGame" type="_gQdicGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWsGQWZuEeeC7M0ZKcTJ6A" name="gameReadyToStart" type="_gUsiMGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWsGQmZuEeeC7M0ZKcTJ6A" name="method" type="_gWRPgGZuEeeC7M0ZKcTJ6A"/>
+          <ownedParameter xmi:id="_gWsGRWZuEeeC7M0ZKcTJ6A" type="_gSN18GZuEeeC7M0ZKcTJ6A" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gWJ6wGZuEeeC7M0ZKcTJ6A" name="Exception"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_gWRPgGZuEeeC7M0ZKcTJ6A" name="Runnable"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gWX9MGZuEeeC7M0ZKcTJ6A" name="Thread"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gWZyYGZuEeeC7M0ZKcTJ6A" name="InterruptedException"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbftwGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbftwWZuEeeC7M0ZKcTJ6A _gX9RkGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbftwWZuEeeC7M0ZKcTJ6A" name="" type="_gP6v4GZuEeeC7M0ZKcTJ6A" association="_gbftwGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbg74GZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbg74WZuEeeC7M0ZKcTJ6A _gX94oGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbg74WZuEeeC7M0ZKcTJ6A" name="" type="_gP6v4GZuEeeC7M0ZKcTJ6A" association="_gbg74GZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbhi8WZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbhi8mZuEeeC7M0ZKcTJ6A _gX-fsGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbhi8mZuEeeC7M0ZKcTJ6A" name="" type="_gP6v4GZuEeeC7M0ZKcTJ6A" association="_gbhi8WZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbiKAWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbiKAmZuEeeC7M0ZKcTJ6A _gYCxIWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbiKAmZuEeeC7M0ZKcTJ6A" name="" type="_gP6v4GZuEeeC7M0ZKcTJ6A" association="_gbiKAWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbj_MWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbj_MmZuEeeC7M0ZKcTJ6A _gYKs8WZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbj_MmZuEeeC7M0ZKcTJ6A" name="" type="_gP6v4GZuEeeC7M0ZKcTJ6A" association="_gbj_MWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gblNUGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gblNUWZuEeeC7M0ZKcTJ6A _gYPlcWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gblNUWZuEeeC7M0ZKcTJ6A" name="" type="_gP6v4GZuEeeC7M0ZKcTJ6A" association="_gblNUGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbl0YWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbl0YmZuEeeC7M0ZKcTJ6A _gYSowGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbl0YmZuEeeC7M0ZKcTJ6A" name="" type="_gP6v4GZuEeeC7M0ZKcTJ6A" association="_gbl0YWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbnCgGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbnCgWZuEeeC7M0ZKcTJ6A _gYXhQGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbnCgWZuEeeC7M0ZKcTJ6A" name="" type="_gQdicGZuEeeC7M0ZKcTJ6A" association="_gbnCgGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbnpkWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbnpkmZuEeeC7M0ZKcTJ6A _gYbLoWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbnpkmZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbnpkWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbo3sWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbo3smZuEeeC7M0ZKcTJ6A _gYbysWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbo3smZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbo3sWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbpewWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbpewmZuEeeC7M0ZKcTJ6A _gYcZwWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbpewmZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbpewWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbqs4WZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbqs4mZuEeeC7M0ZKcTJ6A _gYdA0WZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbqs4mZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbqs4WZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbr7AGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbr7AWZuEeeC7M0ZKcTJ6A _gYeO8GZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbr7AWZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbr7AGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbsiEWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbsiEmZuEeeC7M0ZKcTJ6A _gYgEIGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbsiEmZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbsiEWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbtwMGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbtwMWZuEeeC7M0ZKcTJ6A _gYgrMWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbtwMWZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbtwMGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbuXQWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbuXQmZuEeeC7M0ZKcTJ6A _gYhSQWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbuXQmZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbuXQWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbvlYGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbvlYWZuEeeC7M0ZKcTJ6A _gYjugGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbvlYWZuEeeC7M0ZKcTJ6A" name="" type="_gQohkGZuEeeC7M0ZKcTJ6A" association="_gbvlYGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbwMcWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbwMcmZuEeeC7M0ZKcTJ6A _gYnY4GZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbwMcmZuEeeC7M0ZKcTJ6A" name="" type="_gRQzsGZuEeeC7M0ZKcTJ6A" association="_gbwMcWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbxakGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbxakWZuEeeC7M0ZKcTJ6A _gYn_8WZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbxakWZuEeeC7M0ZKcTJ6A" name="" type="_gRQzsGZuEeeC7M0ZKcTJ6A" association="_gbxakGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbyBoWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbyBomZuEeeC7M0ZKcTJ6A _gYrDQGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbyBomZuEeeC7M0ZKcTJ6A" name="" type="_gRQzsGZuEeeC7M0ZKcTJ6A" association="_gbyBoWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbzPwGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbzPwWZuEeeC7M0ZKcTJ6A _gYrqUGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbzPwWZuEeeC7M0ZKcTJ6A" name="" type="_gRQzsGZuEeeC7M0ZKcTJ6A" association="_gbzPwGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gbz20WZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gbz20mZuEeeC7M0ZKcTJ6A _gYwi0GZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gbz20mZuEeeC7M0ZKcTJ6A" name="" type="_gRe2IWZuEeeC7M0ZKcTJ6A" association="_gbz20WZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb1E8GZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb1E8WZuEeeC7M0ZKcTJ6A _gYxw8GZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb1E8WZuEeeC7M0ZKcTJ6A" name="" type="_gRe2IWZuEeeC7M0ZKcTJ6A" association="_gb1E8GZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb2TEWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb2TEmZuEeeC7M0ZKcTJ6A _gYyYAGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb2TEmZuEeeC7M0ZKcTJ6A" name="" type="_gRe2IWZuEeeC7M0ZKcTJ6A" association="_gb2TEWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb4IQWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb4IQmZuEeeC7M0ZKcTJ6A _gYy_EGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb4IQmZuEeeC7M0ZKcTJ6A" name="" type="_gRe2IWZuEeeC7M0ZKcTJ6A" association="_gb4IQWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb5WYWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb5WYmZuEeeC7M0ZKcTJ6A _gYzmIGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb5WYmZuEeeC7M0ZKcTJ6A" name="" type="_gRe2IWZuEeeC7M0ZKcTJ6A" association="_gb5WYWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb59cWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb6kgGZuEeeC7M0ZKcTJ6A _gZPrAGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb6kgGZuEeeC7M0ZKcTJ6A" name="" type="_gRnZAGZuEeeC7M0ZKcTJ6A" association="_gb59cWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb7LkWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb7LkmZuEeeC7M0ZKcTJ6A _gZQSEWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb7LkmZuEeeC7M0ZKcTJ6A" name="" type="_gRnZAGZuEeeC7M0ZKcTJ6A" association="_gb7LkWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb8ZsGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb8ZsWZuEeeC7M0ZKcTJ6A _gZVxoGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb8ZsWZuEeeC7M0ZKcTJ6A" name="" type="_gRnZAGZuEeeC7M0ZKcTJ6A" association="_gb8ZsGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb9AwWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb9AwmZuEeeC7M0ZKcTJ6A _gZWYsWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb9AwmZuEeeC7M0ZKcTJ6A" name="" type="_gRnZAGZuEeeC7M0ZKcTJ6A" association="_gb9AwWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb-O4GZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb-O4WZuEeeC7M0ZKcTJ6A _gZW_wWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb-O4WZuEeeC7M0ZKcTJ6A" name="" type="_gRnZAGZuEeeC7M0ZKcTJ6A" association="_gb-O4GZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb-18WZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb-18mZuEeeC7M0ZKcTJ6A _gZYN4WZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb-18mZuEeeC7M0ZKcTJ6A" name="" type="_gRnZAGZuEeeC7M0ZKcTJ6A" association="_gb-18WZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gb_dAWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gb_dAmZuEeeC7M0ZKcTJ6A _gZaqIGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gb_dAmZuEeeC7M0ZKcTJ6A" name="" type="_gR8JIGZuEeeC7M0ZKcTJ6A" association="_gb_dAWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gcArIWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gcArImZuEeeC7M0ZKcTJ6A _gZb4QGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gcArImZuEeeC7M0ZKcTJ6A" name="" type="_gSN18GZuEeeC7M0ZKcTJ6A" association="_gcArIWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gcBSMWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gcBSMmZuEeeC7M0ZKcTJ6A _gZcfUGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gcBSMmZuEeeC7M0ZKcTJ6A" name="" type="_gSN18GZuEeeC7M0ZKcTJ6A" association="_gcBSMWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gcCgUWZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gcCgUmZuEeeC7M0ZKcTJ6A _gZeUgWZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gcCgUmZuEeeC7M0ZKcTJ6A" name="" type="_gSN18GZuEeeC7M0ZKcTJ6A" association="_gcCgUWZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gcDucGZuEeeC7M0ZKcTJ6A" name="" memberEnd="_gcDucWZuEeeC7M0ZKcTJ6A _gZgwwGZuEeeC7M0ZKcTJ6A">
+        <ownedEnd xmi:id="_gcDucWZuEeeC7M0ZKcTJ6A" name="" type="_gSN18GZuEeeC7M0ZKcTJ6A" association="_gcDucGZuEeeC7M0ZKcTJ6A"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_gMmWIGZuEeeC7M0ZKcTJ6A" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_gMm9MGZuEeeC7M0ZKcTJ6A" name="util">
+        <packagedElement xmi:type="uml:Package" xmi:id="_gNaOcGZuEeeC7M0ZKcTJ6A" name="concurrent">
+          <packagedElement xmi:type="uml:Class" xmi:id="_gUsiMGZuEeeC7M0ZKcTJ6A" name="CountDownLatch"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gTx8MGZuEeeC7M0ZKcTJ6A" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gUmbkGZuEeeC7M0ZKcTJ6A" name="Random"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gNxa0GZuEeeC7M0ZKcTJ6A" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_gVMRcGZuEeeC7M0ZKcTJ6A" name="DataInputStream"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gVOGoGZuEeeC7M0ZKcTJ6A" name="DataOutputStream"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gVOtsWZuEeeC7M0ZKcTJ6A" name="IOException"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_gMnkQGZuEeeC7M0ZKcTJ6A" name="lejos">
+      <packagedElement xmi:type="uml:Package" xmi:id="_gMnkQWZuEeeC7M0ZKcTJ6A" name="hardware">
+        <packagedElement xmi:type="uml:Package" xmi:id="_gMnkQmZuEeeC7M0ZKcTJ6A" name="lcd">
+          <packagedElement xmi:type="uml:Class" xmi:id="_gT20sGZuEeeC7M0ZKcTJ6A" name="LCD"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_gMoLUGZuEeeC7M0ZKcTJ6A" name="port">
+          <packagedElement xmi:type="uml:Class" xmi:id="_gT4C0WZuEeeC7M0ZKcTJ6A" name="Port"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_gT5Q8WZuEeeC7M0ZKcTJ6A" name="SensorPort"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_gU1FEWZuEeeC7M0ZKcTJ6A" name="MotorPort"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_gNaOcWZuEeeC7M0ZKcTJ6A" name="motor">
+          <packagedElement xmi:type="uml:Class" xmi:id="_gUz28GZuEeeC7M0ZKcTJ6A" name="NXTRegulatedMotor"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_gNj_cGZuEeeC7M0ZKcTJ6A" name="sensor">
+          <packagedElement xmi:type="uml:Class" xmi:id="_gVAEMGZuEeeC7M0ZKcTJ6A" name="NXTLightSensor"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_gVBSUGZuEeeC7M0ZKcTJ6A" name="SensorMode"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gT1mkGZuEeeC7M0ZKcTJ6A" name="Button"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gUu-cGZuEeeC7M0ZKcTJ6A" name="Sound"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gVP70WZuEeeC7M0ZKcTJ6A" name="Bluetooth"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gMoLUWZuEeeC7M0ZKcTJ6A" name="utility">
+        <packagedElement xmi:type="uml:Class" xmi:id="_gUXLAGZuEeeC7M0ZKcTJ6A" name="TextMenu"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gM1msGZuEeeC7M0ZKcTJ6A" name="internal">
+        <packagedElement xmi:type="uml:Package" xmi:id="_gM1msWZuEeeC7M0ZKcTJ6A" name="ev3">
+          <packagedElement xmi:type="uml:Class" xmi:id="_gUiKIGZuEeeC7M0ZKcTJ6A" name="EV3LCDManager"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gNa1gGZuEeeC7M0ZKcTJ6A" name="robotics">
+        <packagedElement xmi:type="uml:Class" xmi:id="_gU26QWZuEeeC7M0ZKcTJ6A" name="RegulatedMotor"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gNyB4GZuEeeC7M0ZKcTJ6A" name="remote">
+        <packagedElement xmi:type="uml:Package" xmi:id="_gNyB4WZuEeeC7M0ZKcTJ6A" name="nxt">
+          <packagedElement xmi:type="uml:Class" xmi:id="_gVRJ8WZuEeeC7M0ZKcTJ6A" name="NXTCommConnector"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_gVSYEWZuEeeC7M0ZKcTJ6A" name="NXTConnection"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_gNUu4GZuEeeC7M0ZKcTJ6A" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_gNUu4WZuEeeC7M0ZKcTJ6A" name="jcraft">
+        <packagedElement xmi:type="uml:Package" xmi:id="_gNVV8GZuEeeC7M0ZKcTJ6A" name="jsch">
+          <packagedElement xmi:type="uml:Package" xmi:id="_gNVV8WZuEeeC7M0ZKcTJ6A" name="ConfigRepository">
+            <packagedElement xmi:type="uml:Class" xmi:id="_gUnpsWZuEeeC7M0ZKcTJ6A" name="Config"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_fQfTMGZuEeeC7M0ZKcTJ6A">
+      <eAnnotations xmi:id="_fQmA4GZuEeeC7M0ZKcTJ6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_fQtVoGZuEeeC7M0ZKcTJ6A" base_Package="_e78mkGZuEeeC7M0ZKcTJ6A">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gPOzYGZuEeeC7M0ZKcTJ6A" base_Element="_gPCmIGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:StyledElement xmi:id="_gPTE0WZuEeeC7M0ZKcTJ6A" base_Element="_gPQokGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gPVhEGZuEeeC7M0ZKcTJ6A" base_Element="_gPCmIGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gPVhEWZuEeeC7M0ZKcTJ6A" name="SuppressWarnings">
+      <annotationParameters xmi:id="_gPWIIGZuEeeC7M0ZKcTJ6A" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_gaqnUGZuEeeC7M0ZKcTJ6A" value="&quot;serial&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gQJZYGZuEeeC7M0ZKcTJ6A" base_Element="_gQIyUGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gQglwGZuEeeC7M0ZKcTJ6A" base_Element="_gQf-sGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gQhM0GZuEeeC7M0ZKcTJ6A" base_Element="_gQf-sGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gQhM0WZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gQhz4GZuEeeC7M0ZKcTJ6A" base_Element="_gQhM0mZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gQia8GZuEeeC7M0ZKcTJ6A" base_Element="_gQhM0mZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gQia8WZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gQjpEGZuEeeC7M0ZKcTJ6A" base_Element="_gQjCAWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gQk3MGZuEeeC7M0ZKcTJ6A" base_Element="_gQjCAWZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gQleQGZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gQzgsGZuEeeC7M0ZKcTJ6A" base_Element="_gQy5oGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gQzgsWZuEeeC7M0ZKcTJ6A" base_Element="_gQy5oGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gQzgsmZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gRWTQGZuEeeC7M0ZKcTJ6A" base_Element="_gRVsMWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gRW6UGZuEeeC7M0ZKcTJ6A" base_Element="_gRVsMWZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gRW6UWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gRiggGZuEeeC7M0ZKcTJ6A" base_Element="_gRh5cGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gRjHkGZuEeeC7M0ZKcTJ6A" base_Element="_gRh5cGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gRjHkWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gRrqcWZuEeeC7M0ZKcTJ6A" base_Element="_gRrqcGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gRs4kGZuEeeC7M0ZKcTJ6A" base_Element="_gRrqcGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gRs4kWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gR-lYGZuEeeC7M0ZKcTJ6A" base_Element="_gR9-UGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gR_McGZuEeeC7M0ZKcTJ6A" base_Element="_gR9-UGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gR_McWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gR_zgGZuEeeC7M0ZKcTJ6A" base_Element="_gR_McmZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gR_zgWZuEeeC7M0ZKcTJ6A" base_Element="_gR_McmZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gSAakGZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gSBBoGZuEeeC7M0ZKcTJ6A" base_Element="_gSAakWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gSBosGZuEeeC7M0ZKcTJ6A" base_Element="_gSAakWZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gSBosWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gSJkgGZuEeeC7M0ZKcTJ6A" base_Element="_gSI9cGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gSKLkGZuEeeC7M0ZKcTJ6A" base_Element="_gSI9cGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gSKLkWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gSKyoGZuEeeC7M0ZKcTJ6A" base_Element="_gSKLkmZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gSLZsGZuEeeC7M0ZKcTJ6A" base_Element="_gSKLkmZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gSLZsWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gSMAwGZuEeeC7M0ZKcTJ6A" base_Element="_gSLZsmZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gSMn0GZuEeeC7M0ZKcTJ6A" base_Element="_gSLZsmZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gSMn0WZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gStlMGZuEeeC7M0ZKcTJ6A" base_Element="_gSrwAGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gSwBcGZuEeeC7M0ZKcTJ6A" base_Element="_gSrwAGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gSwBcWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gSydsGZuEeeC7M0ZKcTJ6A" base_Element="_gSwogGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gSzEwGZuEeeC7M0ZKcTJ6A" base_Element="_gSwogGZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gSzEwWZuEeeC7M0ZKcTJ6A" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_gTzxYGZuEeeC7M0ZKcTJ6A" base_Element="_gTx8MGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gT2NoGZuEeeC7M0ZKcTJ6A" base_Element="_gT1mkGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gT4C0GZuEeeC7M0ZKcTJ6A" base_Element="_gT20sGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gT5Q8GZuEeeC7M0ZKcTJ6A" base_Element="_gT4C0WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gT7tMGZuEeeC7M0ZKcTJ6A" base_Element="_gT5Q8WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gUbccGZuEeeC7M0ZKcTJ6A" base_Element="_gUXLAGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gUkmYGZuEeeC7M0ZKcTJ6A" base_Element="_gUiKIGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gUnpsGZuEeeC7M0ZKcTJ6A" base_Element="_gUmbkGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gUo30GZuEeeC7M0ZKcTJ6A" base_Element="_gUnpsWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gUuXYGZuEeeC7M0ZKcTJ6A" base_Element="_gUsiMGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gUzP4GZuEeeC7M0ZKcTJ6A" base_Element="_gUu-cGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gU1FEGZuEeeC7M0ZKcTJ6A" base_Element="_gUz28GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gU26QGZuEeeC7M0ZKcTJ6A" base_Element="_gU1FEWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gU4vcGZuEeeC7M0ZKcTJ6A" base_Element="_gU26QWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gVArQGZuEeeC7M0ZKcTJ6A" base_Element="_gVAEMGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gVEVoGZuEeeC7M0ZKcTJ6A" base_Element="_gVBSUGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gVNfkGZuEeeC7M0ZKcTJ6A" base_Element="_gVMRcGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gVOtsGZuEeeC7M0ZKcTJ6A" base_Element="_gVOGoGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gVP70GZuEeeC7M0ZKcTJ6A" base_Element="_gVOtsWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gVRJ8GZuEeeC7M0ZKcTJ6A" base_Element="_gVP70WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gVSYEGZuEeeC7M0ZKcTJ6A" base_Element="_gVRJ8WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gVS_IGZuEeeC7M0ZKcTJ6A" base_Element="_gVSYEWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gWKh0GZuEeeC7M0ZKcTJ6A" base_Element="_gWJ6wGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gWOMMGZuEeeC7M0ZKcTJ6A" base_Element="_gWNlIGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gWR2kGZuEeeC7M0ZKcTJ6A" base_Element="_gWRPgGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gWYkQGZuEeeC7M0ZKcTJ6A" base_Element="_gWX9MGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gWaZcGZuEeeC7M0ZKcTJ6A" base_Element="_gWZyYGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Generics xmi:id="_gWkxgGZuEeeC7M0ZKcTJ6A" genericsValue="LightSensor" base_Element="_gWjjYGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gW0CEWZuEeeC7M0ZKcTJ6A" base_Element="_gW0CEGZuEeeC7M0ZKcTJ6A">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_gXtZ8GZuEeeC7M0ZKcTJ6A" name="getRandomDirectionChange" method="_gZ-q0GZuEeeC7M0ZKcTJ6A">
+      <ownedParameter xmi:id="_gXvPIGZuEeeC7M0ZKcTJ6A" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gXwdQGZuEeeC7M0ZKcTJ6A" base_Element="_gXvPIWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gXyScGZuEeeC7M0ZKcTJ6A" base_Element="_gXxEUGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gXy5gGZuEeeC7M0ZKcTJ6A" base_Element="_gXyScWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX0HoGZuEeeC7M0ZKcTJ6A" base_Element="_gXzgkGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX1VwGZuEeeC7M0ZKcTJ6A" base_Element="_gX0HoWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX180WZuEeeC7M0ZKcTJ6A" base_Element="_gX1VwWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX3K8GZuEeeC7M0ZKcTJ6A" base_Element="_gX2j4GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX4ZEGZuEeeC7M0ZKcTJ6A" base_Element="_gX3yAGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX5nMGZuEeeC7M0ZKcTJ6A" base_Element="_gX5AIGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX61UGZuEeeC7M0ZKcTJ6A" base_Element="_gX6OQGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX8DcGZuEeeC7M0ZKcTJ6A" base_Element="_gX7cYGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX9RkWZuEeeC7M0ZKcTJ6A" base_Element="_gX9RkGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX94oWZuEeeC7M0ZKcTJ6A" base_Element="_gX94oGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX_GwGZuEeeC7M0ZKcTJ6A" base_Element="_gX-fsGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gX_t0WZuEeeC7M0ZKcTJ6A" base_Element="_gX_GwWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYA78mZuEeeC7M0ZKcTJ6A" base_Element="_gYA78GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Array xmi:id="_gYCKEGZuEeeC7M0ZKcTJ6A" base_Element="_gYBjAGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYCxIGZuEeeC7M0ZKcTJ6A" base_Element="_gYBjAGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYD_QGZuEeeC7M0ZKcTJ6A" base_Element="_gYCxIWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYIQsGZuEeeC7M0ZKcTJ6A" base_Element="_gYEmUGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Array xmi:id="_gYI3wWZuEeeC7M0ZKcTJ6A" base_Element="_gYIQsWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYKs8GZuEeeC7M0ZKcTJ6A" base_Element="_gYIQsWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYLUAWZuEeeC7M0ZKcTJ6A" base_Element="_gYKs8WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYOXUGZuEeeC7M0ZKcTJ6A" base_Element="_gYNJMGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Array xmi:id="_gYO-YGZuEeeC7M0ZKcTJ6A" base_Element="_gYOXUWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYPlcGZuEeeC7M0ZKcTJ6A" base_Element="_gYOXUWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYQMgGZuEeeC7M0ZKcTJ6A" base_Element="_gYPlcWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYRaoGZuEeeC7M0ZKcTJ6A" base_Element="_gYQzkGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Array xmi:id="_gYSBsGZuEeeC7M0ZKcTJ6A" base_Element="_gYRaoWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYSBsmZuEeeC7M0ZKcTJ6A" base_Element="_gYRaoWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYTP0GZuEeeC7M0ZKcTJ6A" base_Element="_gYSowGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYVFAGZuEeeC7M0ZKcTJ6A" base_Element="_gYUd8GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYVsEGZuEeeC7M0ZKcTJ6A" base_Element="_gYVFAWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Array xmi:id="_gYWTIWZuEeeC7M0ZKcTJ6A" base_Element="_gYVsEWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYW6MGZuEeeC7M0ZKcTJ6A" base_Element="_gYVsEWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Generics xmi:id="_gYYvYGZuEeeC7M0ZKcTJ6A" genericsValue="Sensor" base_Element="_gYXhQGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYZWcGZuEeeC7M0ZKcTJ6A" base_Element="_gYXhQGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYZ9gGZuEeeC7M0ZKcTJ6A" base_Element="_gYZWcWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYbysGZuEeeC7M0ZKcTJ6A" base_Element="_gYbLoWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYcZwGZuEeeC7M0ZKcTJ6A" base_Element="_gYbysWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYdA0GZuEeeC7M0ZKcTJ6A" base_Element="_gYcZwWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYdn4GZuEeeC7M0ZKcTJ6A" base_Element="_gYdA0WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Generics xmi:id="_gYe2AGZuEeeC7M0ZKcTJ6A" genericsValue="LightSensor" base_Element="_gYeO8GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYfdEGZuEeeC7M0ZKcTJ6A" base_Element="_gYeO8GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYgrMGZuEeeC7M0ZKcTJ6A" base_Element="_gYgEIGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYhSQGZuEeeC7M0ZKcTJ6A" base_Element="_gYgrMWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYigYGZuEeeC7M0ZKcTJ6A" base_Element="_gYhSQWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYkVkGZuEeeC7M0ZKcTJ6A" base_Element="_gYjugGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Array xmi:id="_gYljsGZuEeeC7M0ZKcTJ6A" base_Element="_gYkVkWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYmKwGZuEeeC7M0ZKcTJ6A" base_Element="_gYkVkWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYn_8GZuEeeC7M0ZKcTJ6A" base_Element="_gYnY4GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYonAGZuEeeC7M0ZKcTJ6A" base_Element="_gYn_8WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYpOEGZuEeeC7M0ZKcTJ6A" base_Element="_gYonAWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYqcMGZuEeeC7M0ZKcTJ6A" base_Element="_gYpOEWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYrDQWZuEeeC7M0ZKcTJ6A" base_Element="_gYrDQGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYuGkGZuEeeC7M0ZKcTJ6A" base_Element="_gYrqUGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYutoGZuEeeC7M0ZKcTJ6A" base_Element="_gYuGkWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Array xmi:id="_gYvUsGZuEeeC7M0ZKcTJ6A" dimensions="1" base_Element="_gYutoWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYv7wGZuEeeC7M0ZKcTJ6A" base_Element="_gYutoWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYxJ4GZuEeeC7M0ZKcTJ6A" base_Element="_gYwi0GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYxw8WZuEeeC7M0ZKcTJ6A" base_Element="_gYxw8GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYyYAWZuEeeC7M0ZKcTJ6A" base_Element="_gYyYAGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gYy_EWZuEeeC7M0ZKcTJ6A" base_Element="_gYy_EGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Generics xmi:id="_gZHIIGZuEeeC7M0ZKcTJ6A" genericsValue="LightSensor" base_Element="_gYzmIGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZI9UGZuEeeC7M0ZKcTJ6A" base_Element="_gYzmIGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZLZkGZuEeeC7M0ZKcTJ6A" base_Element="_gZJkYGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZNOwGZuEeeC7M0ZKcTJ6A" base_Element="_gZMnsGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZOc4GZuEeeC7M0ZKcTJ6A" base_Element="_gZN10GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZPD8GZuEeeC7M0ZKcTJ6A" base_Element="_gZOc4WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZQSEGZuEeeC7M0ZKcTJ6A" base_Element="_gZPrAGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZVKkGZuEeeC7M0ZKcTJ6A" base_Element="_gZQSEWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZWYsGZuEeeC7M0ZKcTJ6A" base_Element="_gZVxoGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZW_wGZuEeeC7M0ZKcTJ6A" base_Element="_gZWYsWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZYN4GZuEeeC7M0ZKcTJ6A" base_Element="_gZW_wWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZY08GZuEeeC7M0ZKcTJ6A" base_Element="_gZYN4WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZaDEWZuEeeC7M0ZKcTJ6A" base_Element="_gZZcAGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZaqIWZuEeeC7M0ZKcTJ6A" base_Element="_gZaqIGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZb4QWZuEeeC7M0ZKcTJ6A" base_Element="_gZb4QGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZdGYGZuEeeC7M0ZKcTJ6A" base_Element="_gZcfUGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZfioGZuEeeC7M0ZKcTJ6A" base_Element="_gZeUgWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Annotations xmi:id="_gZgJsGZuEeeC7M0ZKcTJ6A" base_Element="_gZeUgWZuEeeC7M0ZKcTJ6A">
+    <annotations xmi:id="_gZgJsWZuEeeC7M0ZKcTJ6A" name="SuppressWarnings">
+      <annotationParameters xmi:id="_gZgJsmZuEeeC7M0ZKcTJ6A" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_gawG4GZuEeeC7M0ZKcTJ6A" value="&quot;unused&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_gZgwwWZuEeeC7M0ZKcTJ6A" base_Element="_gZgwwGZuEeeC7M0ZKcTJ6A"/>
+  <uml:OpaqueBehavior xmi:id="_gZ-q0GZuEeeC7M0ZKcTJ6A" name="getRandomDirectionChange" specification="_gXtZ8GZuEeeC7M0ZKcTJ6A">
+    <ownedParameter xmi:id="_gZ_R4GZuEeeC7M0ZKcTJ6A" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return this.randomDirectionChange;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:Reference xmi:id="_gbgU0GZuEeeC7M0ZKcTJ6A" base_Element="_gbftwGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbhi8GZuEeeC7M0ZKcTJ6A" base_Element="_gbg74GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbiKAGZuEeeC7M0ZKcTJ6A" base_Element="_gbhi8WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbj_MGZuEeeC7M0ZKcTJ6A" base_Element="_gbiKAWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbkmQGZuEeeC7M0ZKcTJ6A" base_Element="_gbj_MWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbl0YGZuEeeC7M0ZKcTJ6A" base_Element="_gblNUGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbmbcGZuEeeC7M0ZKcTJ6A" base_Element="_gbl0YWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbnpkGZuEeeC7M0ZKcTJ6A" base_Element="_gbnCgGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbo3sGZuEeeC7M0ZKcTJ6A" base_Element="_gbnpkWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbpewGZuEeeC7M0ZKcTJ6A" base_Element="_gbo3sWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbqs4GZuEeeC7M0ZKcTJ6A" base_Element="_gbpewWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbrT8GZuEeeC7M0ZKcTJ6A" base_Element="_gbqs4WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbsiEGZuEeeC7M0ZKcTJ6A" base_Element="_gbr7AGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbtJIGZuEeeC7M0ZKcTJ6A" base_Element="_gbsiEWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbuXQGZuEeeC7M0ZKcTJ6A" base_Element="_gbtwMGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbu-UGZuEeeC7M0ZKcTJ6A" base_Element="_gbuXQWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbwMcGZuEeeC7M0ZKcTJ6A" base_Element="_gbvlYGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbwzgGZuEeeC7M0ZKcTJ6A" base_Element="_gbwMcWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbyBoGZuEeeC7M0ZKcTJ6A" base_Element="_gbxakGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbyosGZuEeeC7M0ZKcTJ6A" base_Element="_gbyBoWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gbz20GZuEeeC7M0ZKcTJ6A" base_Element="_gbzPwGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb0d4GZuEeeC7M0ZKcTJ6A" base_Element="_gbz20WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb2TEGZuEeeC7M0ZKcTJ6A" base_Element="_gb1E8GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb4IQGZuEeeC7M0ZKcTJ6A" base_Element="_gb2TEWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb5WYGZuEeeC7M0ZKcTJ6A" base_Element="_gb4IQWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb59cGZuEeeC7M0ZKcTJ6A" base_Element="_gb5WYWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb7LkGZuEeeC7M0ZKcTJ6A" base_Element="_gb59cWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb7yoGZuEeeC7M0ZKcTJ6A" base_Element="_gb7LkWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb9AwGZuEeeC7M0ZKcTJ6A" base_Element="_gb8ZsGZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb9n0GZuEeeC7M0ZKcTJ6A" base_Element="_gb9AwWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb-18GZuEeeC7M0ZKcTJ6A" base_Element="_gb-O4GZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gb_dAGZuEeeC7M0ZKcTJ6A" base_Element="_gb-18WZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gcArIGZuEeeC7M0ZKcTJ6A" base_Element="_gb_dAWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gcBSMGZuEeeC7M0ZKcTJ6A" base_Element="_gcArIWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gcCgUGZuEeeC7M0ZKcTJ6A" base_Element="_gcBSMWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gcDHYGZuEeeC7M0ZKcTJ6A" base_Element="_gcCgUWZuEeeC7M0ZKcTJ6A"/>
+  <UMLLabProfile:Reference xmi:id="_gcEVgGZuEeeC7M0ZKcTJ6A" base_Element="_gcDucGZuEeeC7M0ZKcTJ6A"/>
+</xmi:XMI>
